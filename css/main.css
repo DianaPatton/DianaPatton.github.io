@@ -11087,8 +11087,15 @@ h5, .h5 {
 
 .link-with-duble-arrow {
 	position: relative;
+	display: inline-block;
 	padding-right: 28px;
-	font-size: 16px;
+	font-size: 14px;
+}
+
+@media only screen and (min-width: 576px) {
+	.link-with-duble-arrow {
+		font-size: 16px;
+	}
 }
 
 .link-with-duble-arrow:after {
@@ -12628,8 +12635,19 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .table-pricing tbody tr th {
 	color: #2A2C33;
-	width: 220px;
-	min-width: 220px;
+	width: 150px;
+	min-width: 150px;
+	position: sticky;
+	left: 0;
+	background-color: #ffffff;
+	z-index: 10;
+}
+
+@media only screen and (min-width: 576px) {
+	.table-pricing tbody tr th {
+		width: 220px;
+		min-width: 220px;
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -12751,8 +12769,19 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .table-pricing__first-col {
 	padding: 0 !important;
-	width: 220px;
-	min-width: 220px;
+	width: 150px;
+	min-width: 150px;
+	position: sticky;
+	left: 0;
+	background-color: #ffffff;
+	z-index: 10;
+}
+
+@media only screen and (min-width: 576px) {
+	.table-pricing__first-col {
+		width: 220px;
+		min-width: 220px;
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -12764,8 +12793,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .table-pricing__first-col-content {
 	background-color: #F8F9FB;
-	margin: 0 12px 12px 0;
-	padding: 40px 24px 32px;
+	margin: 0 8px 8px 0;
+	padding: 30px 12px;
+}
+
+@media only screen and (min-width: 576px) {
+	.table-pricing__first-col-content {
+		padding: 40px 24px 32px;
+		margin: 0 12px 12px 0;
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -12784,7 +12820,12 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .table-pricing__first-col-text {
 	margin-bottom: 16px;
-	padding-right: 35px;
+}
+
+@media only screen and (min-width: 576px) {
+	.table-pricing__first-col-text {
+		padding-right: 35px;
+	}
 }
 
 .table-pricing__top-line-block {
@@ -12793,7 +12834,13 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 	background-color: #F8F9FB;
 	height: 50px;
 	padding: 10px 15px !important;
-	border-bottom: 12px solid #ffffff !important;
+	border-bottom: 6px solid #ffffff !important;
+}
+
+@media only screen and (min-width: 576px) {
+	.table-pricing__top-line-block {
+		border-width: 12px !important;
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -12843,7 +12890,12 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 .table-pricing__tarif-desc {
 	padding-top: 16px;
 	text-align: left;
-	padding-right: 10px;
+}
+
+@media only screen and (min-width: 576px) {
+	.table-pricing__tarif-desc {
+		padding-right: 10px;
+	}
 }
 
 .table-pricing__tarif-badge {
