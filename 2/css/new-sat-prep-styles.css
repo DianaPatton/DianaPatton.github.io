@@ -1,0 +1,123 @@
+/*sat offer section*/
+.sat-offer-section .img-text-block,
+.sat-offer-section .text-img-block {
+  margin-bottom: 120px;
+}
+
+/*sat tutors showcase section*/
+.sat-tutors-section {
+  text-align: center;
+}
+.sat-tutors-section .row {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.sat-tutors-section img {
+  width: 127px;
+  height: 127px;
+}
+.sat-tutors-section .col {
+  align-items: center;
+  width: 300px;
+  margin-bottom: 50px;
+}
+.sat-tutors-section p {
+  margin-top: 10px;
+}
+
+/*free ebook section*/
+.free-ebook-section .col {
+  align-self: center;
+}
+/* .free-ebook-section img {
+  margin-right: -64px;
+} */
+
+/* .large-review-section .small-review-block:last-child {
+  margin-right: 0;
+} */
+/*hero section adjustments*/
+.new-sat-prep-hero {
+  padding: 50px 0px 0px 0px;
+}
+.new-sat-prep-hero h1 {
+  color: var(--brand-blue);
+  text-align: left;
+  font: 500 50px/70px var(--title-font);
+  letter-spacing: -0.75px;
+  margin-bottom: 10px;
+}
+.new-sat-prep-hero p {
+  margin-bottom: 50px;
+}
+.new-sat-prep-hero .col {
+  align-items: flex-start;
+}
+.main-img {
+  margin-bottom: -7px;
+}
+.selling-points .selling-points-card:nth-child(1) {
+  bottom: 20px;
+}
+.selling-points .selling-points-card:nth-child(2) {
+  bottom: 20px;
+}
+.selling-points .selling-points-card:nth-child(3) {
+}
+/*sat improvement section*/
+.sat-improvement-section .container > .row {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*get productive section*/
+.get-productive-section {
+  display: flex;
+}
+
+@media screen and (max-width: 1120px) {
+  .sat-improvement-section .container > .row {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 850px) {
+  .new-sat-prep-hero {
+    padding: 50px 0px 50px 0px;
+  }
+  .sat-offer-section .text-img-block:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sat-improvement-section .container > .row {
+    justify-content: center;
+  }
+  /*free ebook section*/
+  .free-ebook-section .col {
+    text-align: center;
+  }
+  .free-ebook-section img {
+    margin-right: -70px;
+  }
+  /*founders section*/
+  .founders-section col {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .new-sat-prep-hero .container > .row {
+    flex-direction: column-reverse;
+  }
+  .new-sat-prep-hero .col {
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+  }
+  .new-sat-prep-hero h1 {
+    text-align: center;
+  }
+  .free-ebook-section img {
+    width: 90%;
+  }
+}
