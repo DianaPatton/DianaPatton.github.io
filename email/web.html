@@ -84,13 +84,13 @@
             //?1=[survey]&2=[sendee]&3=[owner]&4=[ext]
             var params = window.location.search.replace(/[?&=]/gi, ",");
             var vals = params.split(",");
-            document.getElementById("PSLINK").href="https://dp26.typeform.com/to/"+vals[1]+"#email="+vals[3];
+            document.getElementById("PSLINK").href="https://dp26.typeform.com/to/"+vals[2]+"#email="+vals[4];
             var psOwner = document.getElementById("PSOWNER");
-            psOwner.href = "mailto:" + vals[5] + "@prepscholar.com";
-            psOwner.innerHTML = vals[5] + "@prepscholar.com";
+            psOwner.href = "mailto:" + vals[6] + "@prepscholar.com";
+            psOwner.innerHTML = vals[6] + "@prepscholar.com";
             var psExt = document.getElementById("PSEXT");
-            psExt.href="tel:+18668115546p" + vals[7];
-            psExt.innerHTML="866-811-5546 ext " + vals[7] + "#";
+            psExt.href="tel:+18668115546p" + vals[8];
+            psExt.innerHTML="866-811-5546 ext " + vals[8] + "#";
         });
     </script>
 </head>
