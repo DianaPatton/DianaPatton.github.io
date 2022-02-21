@@ -1,0 +1,243 @@
+@include title-sizes();
+
+.text-block {
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.text-small {
+	font-size: $font-size-sm;
+
+	p {
+		margin-bottom: 10px;
+	}
+}
+
+.normal-text {
+	font-size: $font-size-lg;
+}
+
+strong, b {
+	font-weight: 500;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	mark {
+		padding-top: 0;
+		background: linear-gradient(to bottom, rgba($blue-2, 0) 40%, $blue-2 40%);
+		color: inherit;
+
+		.inverted-mark & {
+			background: linear-gradient(to bottom, rgba($white, 0) 40%, rgba($white, 0.45) 40%);
+		}
+	}
+
+	&.title-default {
+		font-family: inherit;
+		font-weight: 500;
+	}
+
+	&.with-clock-icon {
+		img {
+			max-width: 1.59em;
+			margin-right: 0.772em;
+		}
+
+		> * {
+			vertical-align: middle;
+		}
+	}
+
+	strong {
+		font-weight: 700;
+	}
+}
+
+h1, .h1 {
+	margin-bottom: 20px;
+	line-height: 1.3;
+
+	@include min-w(md) {
+		margin-bottom: 30px;
+	}
+
+	mark {
+		padding: 0 0.075em 0.075em;
+	}
+
+	.badge {
+		margin-top: 20px;
+
+		@include min-w(md) {
+			margin-left: 30px;
+			margin-top: 0;
+		}
+
+		@include min-w(xl) {
+			margin-left: 60px;
+		}
+	}
+}
+
+h2, .h2 {
+	margin-bottom: 15px;
+	line-height: 1.3;
+
+	@include min-w(sm) {
+		margin-bottom: 25px;
+	}
+
+	@include min-w(md) {
+		margin-bottom: 30px;
+	}
+
+	mark {
+		padding: 0 0.075em 0.075em;
+	}
+
+	&.enlarged-bottom-indent {
+		margin-bottom: 40px;
+
+		@include min-w(md) {
+			margin-bottom: 60px;
+		}
+	}
+}
+
+h3, .h3 {
+	margin-bottom: 15px;
+
+	mark {
+		padding: 0 0.05em 0;
+	}
+}
+
+h4, .h4 {
+	margin-bottom: 16px;
+
+	mark {
+		padding: 0 0.075em 0;
+	}
+}
+
+h5, .h5 {
+	margin-bottom: 20px;
+
+	&.title-default {
+		font-size: 18px;
+		margin-bottom: 25px;
+	}
+}
+
+h6, .h6 {
+	margin-bottom: 10px;
+
+	&.title-default {
+		margin-bottom: 25px;
+	}
+}
+
+.numbered-list {
+	@include listreset;
+
+	margin-bottom: 50px;
+	counter-reset: numbered-list;
+
+	li {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 35px;
+		}
+
+		&:before {
+			@include sizeElement(40px);
+			@include flexCenter;
+
+			counter-increment: numbered-list;
+			content: counter(numbered-list);
+			border-radius: 50%;
+			background-color: $blue-3;
+			font-size: 14px;
+			font-weight: 600;
+			padding: 5px;
+			color: $white;
+			flex-shrink: 0;
+			margin-right: 20px;
+		}
+	}
+}
+
+.checked-list {
+	@include listreset;
+
+	li {
+		position: relative;
+		padding-left: 38px;
+
+		&:before {
+			content: url("../img/check-icon.svg");
+			position: absolute;
+			top: 2px;
+			left: 0;
+			display: inline-block;
+			width: 22px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+}
+
+.title-with-number-block {
+	@include min-w(sm) {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__title {
+		margin: 0 14px 0 0 !important;
+		padding-bottom: 65px;
+		background-image: url("../img/arrow.svg");
+		background-repeat: no-repeat;
+		background-size: 70px;
+		background-position: left 0 bottom 0;
+
+		@include min-w(sm) {
+			background-position: right 10px bottom 0;
+		}
+	}
+
+	&__number {
+		margin: -35px 0 0 95px;
+
+		@include min-w(sm) {
+			margin: 0;
+		}
+	}
+}
+
+.text-in-brackets {
+	> * {
+		&:first-child {
+			&:before {
+				content: '"';
+				display: inline;
+			}
+		}
+
+		&:last-child {
+			&:after {
+				content: '"';
+				display: inline;
+			}
+		}
+	}
+}

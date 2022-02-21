@@ -1,0 +1,300 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "Blog Single";
+
+block content
+	// SECTION BLOG SINGLE INTRO
+	section.section-blog-single-intro.section.pb-0
+		.container
+			.section-blog-single-intro__title-holder
+				h1.mb-40 SAT / ACT Prep <mark>Online Guides and Tips</mark>
+				h3.section-blog-single-intro__sub-title What Is a Good ACT Score? A Bad ACT Score? An Excellent ACT Score?
+			|
+			|
+			.section-blog-single-intro__img-block
+				img(src="img/section-blog-single-main-img.jpg" alt="Image" class="ofi")
+	// SECTION BLOG SINGLE INTRO END
+	|
+	|
+	// SECTION BLOG SINGLE CONTENT
+	section.section-blog-single-content.section
+		.container
+			.row.justify-content-center
+				.col-lg-10.col-xl-8
+					+postedByBlock({
+						avatar: "img/posted-by-block/1.jpg",
+						text: [
+							'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 18, 2021 3:00:00 PM"',
+							'<a href="#">SAT/ACT SCORE TARGET</a>'
+						]
+					})
+					|
+					|
+					.section-blog-single-content__content
+						|
+						|
+						p If you've taken the ACT and gotten your ACT test scores back, you probably want to know how you did. Or you might be planning for the ACT and want to know what ACT composite score to aim for.<strong> So what is a good ACT score?</strong>
+						p In this article, we'll discuss what makes a good ACT composite score. We also give you a step-by-step guide to figuring out what a good ACT score is for you personally, depending on the colleges you plan to apply to. We'll also provide ACT score ranges for 38 popular schools and discuss what you can do if you fall short of your goal score.
+						p Aside: Are you looking for SAT standards instead? If so check out our <a href="#"><strong>SAT good score guidelines.</strong></a>
+						h3 What Is a Good ACT Score Overall?
+						p The ACT score range is from 1-36. As you might imagine, the higher your score, the better you did. But is there a certain cutoff that delineates a "good" ACT score?
+						p To answer this question, it's important to understand how ACT scores work. Your composite score from 1-36 corresponds to a <strong>percentile that compares how you did to the general population of ACT test-takers.</strong> A higher percentile means you scored higher than that percent of students. (So, a 55th percentile score means your score was higher than 55% of students).
+						.accent-block-with-text.blue-bg.text-block
+							p <strong>Exclusive Free Bonus:</strong> <a href="#"><strong>Click here to download</strong></a> a free step-by-step guide on finding your personal ACT score target. Once you go through these steps, you'll know exactly what ACT score you need to aim for.
+						p ACT test scores are set up to <strong>follow a normal distribution.</strong> This means that student performance tends to cluster around the middle of the scale—most test-takers score somewhere between a little below and a little above the average score. Far fewer test-takers score towards the higher and lower end of the scale.
+						p <strong>The average ACT score is 20.</strong> If you've scored 21, then you've scored higher than 50% of test-takers. That's pretty good, depending on your frame of reference. A 24 places you at the 74th percentile—better than ¾ of test-takers!
+						p Here's an abbreviated chart with <a href="#"><strong>ACT score percentiles for students from the class of 2021</strong></a> to help you figure out how your scores position you among the overall student test-taker population:
+						.table-responsive
+							table.table.table-bordered.text-center
+								thead
+									tr
+										th(scope='col') Score
+										th(scope='col') ACT English Percentile
+										th(scope='col') ACT Math Percentile
+										th(scope='col') ACT Reading Percentile
+										th(scope='col') ACT Science Percentile
+										th(scope='col') Composite Percentile
+								tbody
+									tr
+										th(scope='row') 1
+										td 1
+										td 1
+										td 1
+										td 1
+										td 1
+									tr
+										th(scope='row') 50
+										td 1
+										td 1
+										td 1
+										td 1
+										td 1
+									tr
+										th(scope='row') 10
+										td 7
+										td 1
+										td 3
+										td 3
+										td 1
+									tr
+										th(scope='row') 13
+										td 19
+										td 4
+										td 14
+										td 10
+										td 10
+									tr
+										th(scope='row') 16
+										td 37
+										td 33
+										td 29
+										td 26
+										td 28
+									tr
+										th(scope='row') 18
+										td 45
+										td 49
+										td 39
+										td 39
+										td 41
+									tr
+										th(scope='row') 20
+										td 55
+										td 58
+										td 50
+										td 51
+										td 53
+									tr
+										th(scope='row') 22
+										td 65
+										td 65
+										td 61
+										td 64
+										td 64
+									tr
+										th(scope='row') 24
+										td 75
+										td 74
+										td 71
+										td 77
+										td 74
+									tr
+										th(scope='row') 26
+										td 82
+										td 84
+										td 77
+										td 85
+										td 82
+									tr
+										th(scope='row') 28
+										td 86
+										td 91
+										td 82
+										td 90
+										td 88
+									tr
+										th(scope='row') 30
+										td 89
+										td 94
+										td 86
+										td 93
+										td 93
+									tr
+										th(scope='row') 34
+										td 96
+										td 99
+										td 96
+										td 98
+										td 99
+									tr
+										th(scope='row') 36
+										td 100
+										td 100
+										td 100
+										td 100
+										td 100
+						p In terms of benchmarks for ACT score percentiles, a score of 16 places you at the 28th percentile, meaning you've scored better than about a quarter of test-takers. This isn't a very strong score.
+						p We've already noted that a <strong>20 is an average ACT score, at the 50th percentile.</strong> A score of 24 means you've scored better than about 74% of students. A 28 means you've scored better than 88% of students, and a 30 means you've scored better than 93% of them! <strong>Anything 34 or above is in the 99th percentile</strong>—a truly phenomenal score.
+						p You can also see that <strong>not many people score near the bottom and the top of the scale</strong> because there's so little percentile change between scores here. Composite scores in the 1-8 range are all in the 1st percentile, and composite scores from 35-36 are all in the 99th percentile!
+						p By contrast, around the middle of the scale at 20, where most test-takers are clustered, <strong>a bump of a few points makes a big difference:</strong> going from 18 to 22 moves you from the 41st to the 64th percentile—a whopping 23 percentile points! But a similar 4-point bump from 24 to 28 only takes you from the 74th to the 88th percentile. That's just a 14-percentile bump. And from 30 to 34 is only a 6-percentile increase.
+						p You may notice that section percentiles are a little different than the composite scale. However, the same general score distribution holds.
+						h5.title-default So, to recap, compared to all test-takers:
+						ul.checked-list
+							li ACT score < 16 = bottom 25%
+							li ACT score of 21 = right in the middle! (average score)
+							li ACT score of 24+ = top 25%
+							li ACT score of 29+ = top 10%
+							li ACT of 31+ = top 5%
+							li ACT score of 35+ = top 1% of test-takers
+						img(src="img/section-blog-single-content-img.jpg" alt="Image")
+						p: em If you get a 34 or higher, you've ascended ACT mountain.
+						h3 What's a Good ACT Score for You?
+						p We've discussed how your ACT score compares to all the other test-takers. But what's more important is <strong>what makes a good ACT score for you personally</strong>, based on the schools you are interested in. A 29 places you in the top 10% of test-takers, and it's a strong score for admission to schools like Texas A&M, Penn State, Virginia Tech, and Baylor. But a 29 would actually be <strong>a very low</strong> score for super-selective institutions like the Ivies, Duke, MIT, Stanford, and the University of Chicago.
+						p By contrast, a 29 would be an incredibly high score for less selective schools, like CSU Long Beach (average ACT score 23), CSU Northridge (average ACT score 19) and University of Southern Indiana (average ACT score 22). If those were your goal scores, you wouldn't need a 29; aiming for a score a little above average (in the 21-23 range) would be adequate.
+						p So, <strong>what makes a good ACT score for you is all relative</strong>, and mostly based on where you are trying to get into college.
+						p Of course, it's also worth noting that the higher your standardized test scores, the more likely you are to get offered <a href="#"><strong>merit scholarships.</strong></a> We're going to focus primarily on figuring out the score you need for admission in this guide, but it's something to keep in mind.
+						p Another thing to consider is that <strong>a higher ACT or SAT score can help you if you have a lower GPA than a school is looking for.</strong> (However, this won't help you so much at particularly selective institutions—they'll expect applicants with pretty high marks across the board.)
+						h3 What's Next?
+						p <a href="#"><strong>Got ACT questions? We've got answers! See our ACT FAQ</strong></a>. We can also help you figure out <a href="#"><strong>how hard the ACT will be for you</strong></a> and <a href="#"><strong>why you might need to take the ACT.</strong></a>
+						p We can help you figure out <a href="#"><strong>how important the ACT is for the college admissions process. And what's the</strong></a> minimum ACT score for college?
+						h5.title-default Do you want to improve your ACT score? Check out our top guides:
+						ul.checked-list
+							li: a(href="#"): strong ACT Prep Guide: Practice Test, Critical Info, and Section Info
+							li: a(href="#"): strong How to Get a Perfect ACT score, by a 36 Scorer
+							li: a(href="#"): strong How to Get a 36 in ACT Reading, ACT Math, and ACT English
+						p <a href="#"><strong>Check out our online ACT prep program.</strong></a> We have a 4 point improvement guarantee - if you don't improve your score by 4 points, you get every penny of your money back. Plus, you get a 5-day free trial, so if you don't feel that it's helping you, you can cancel at any time.
+						a(href="#" class="btn btn-primary btn-lg") Get 4 More Points on Your ACT, GUARANTEED
+	// SECTION BLOG SINGLE CONTENT END
+	|
+	|
+	// SECTION
+	section.section.small-indents
+		.container
+			.row.justify-content-center
+				.col-lg-10.col-xl-8
+					h3 Have friends who also need help with test prep?<br> Share this article!
+					|
+					|
+					include ../includes/_share-buttons.pug
+	// SECTION END
+	|
+	|
+	// SECTION
+	section.section.small-indents
+		.container
+			.row.justify-content-center
+				.col-lg-10.col-xl-8
+					+blogAuthorCard({
+						photo: "img/blog-author-card/1.jpg",
+						name: "Dr. Fred Zhang",
+						title: "About the Author",
+						text: ["Fred is co-founder of PrepScholar. He scored a perfect score on the SAT and is passionate about sharing information with aspiring students. Fred graduated from Harvard University with a Bachelor's in Mathematics and a PhD in Economics."]
+					})
+	// SECTION END
+	|
+	|
+	// SECTION BLOG SINGLE GET FREE GUIDES
+	section.section-blog-single-get-free-guides.section.small-indents
+		.container
+			.row.justify-content-center
+				.col-lg-10.col-xl-8
+					.section-blog-single-get-free-guides__content
+						.row
+							.col.text-center.text-md-left
+								h3 Get Free Guides to Boost Your <mark>SAT/ACT Score</mark>
+								.text-block.text-small
+									p Get FREE EXCLUSIVE insider tips on<br> how to ACE THE SAT/ACT.
+							.section-blog-single-get-free-guides__right-col
+								form(action="#")
+									.form-group
+										input(type="email" class="form-control form-control-lg" placeholder="Enter your email addres")
+									.form-group.text-center
+										button.btn.btn-primary.btn-lg.btn-block(type='submit') Submit
+									p.text-small.mb-0 100% Privacy. No spam!
+	// SECTION BLOG SINGLE GET FREE GUIDES END
+	|
+	|
+	// SECTION BANNER WITH TEXT
+	+sectionBannerWithText({
+		title: "Student and Parent Forum",
+		text: ["Our new student and parent forum, at <a href='#'><strong>ExpertHub.PrepScholar.com</strong></a>, allow you to interact with your peers and the PrepScholar staff. See how other students and parents are navigating high school, college, and the college admissions process. Ask questions; get answers."],
+		btn: "Student and Parent Forum",
+		narrowerСontainer: true
+	})(class="blue-bg small-indents")
+	// SECTION BANNER WITH TEXT END
+	|
+	|
+	// SECTION
+	section.section.small-indents
+		.container
+			.row.justify-content-center
+				.col-lg-10.col-xl-8
+					.mb-35
+						h3 Ask a Question Below
+						.text-block
+							p Have any questions about this article or other topics? Ask below and we'll reply!
+					|
+					|
+					ul.comments-list
+						li.comments-list__item
+							+commentItem({
+								name: "Briana Johnson",
+								time: "15.11.2014, 16:28:59",
+								text: ["This website is helping me prepare for my ACT's"]
+							})
+						li.comments-list__item
+							+commentItem({
+								name: "Briana Johnson",
+								time: "15.11.2014, 16:28:59",
+								text: ["This website is helping me prepare for my ACT's"]
+							})(class="with-reply")
+							+commentItem({
+								name: "Allen Cheng",
+								time: "15.11.2014, 16:28:59",
+								text: ["This website is helping me prepare for my ACT's"]
+							})(class="reply")
+					|
+					|
+					form(action="#" class="comment-form")
+						h3 Enter your details
+						|
+						|
+						.form-list
+							.form-group
+								label(for="commentFirstName") First Name
+								input(type="text" class="form-control form-control-lg" id="commentFirstName" placeholder="Enter first name (optional)")
+							.form-group
+								label(for="commentLastName") Last Name
+								input(type="text" class="form-control form-control-lg" id="commentLastName" placeholder="Enter last name (optional)")
+							.form-group
+								label(for="commentEmail") Email
+								input(type="text" class="form-control form-control-lg" id="commentEmail" placeholder="Enter your Email")
+							.form-group
+								label(for="commentText") Comment
+								textarea(class="form-control form-control-lg" id="commentText" placeholder="Enter your Comment")
+						|
+						|
+						button.btn.btn-primary.btn-lg(type='submit') Submit Comment
+	// SECTION END

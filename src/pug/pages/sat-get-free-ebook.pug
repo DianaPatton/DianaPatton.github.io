@@ -1,0 +1,84 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "Get Free eBook";
+
+block content
+	// SECTION FREE EBOOK
+	section.section-free-ebook.section
+		.container
+			.row
+				.col-md-6.col-lg-5.offset-lg-1
+					.section-free-ebook__book-block
+						.section-free-ebook__book-block-bg
+						.section-free-ebook__book-block-inner
+							img(src="img/logo-small.svg" alt="Logo" class="section-free-ebook__book-block-logo")
+							h3.section-free-ebook__book-block-title Choosing the Right Online Prep
+							.section-free-ebook__book-block-text.text-block
+								p and How to Grill  Companies on What They Really Offer
+							span.section-free-ebook__book-block-badge By the PrepShcholar Team
+							.section-free-ebook__book-block-image
+								img(src="img/section-free-ebook-img.svg" alt="Image")
+							|
+							|
+							a(href="#" class="section-free-ebook__book-block-link") www.PrepScholar.com
+				.col-md-6.col-lg-5
+					.section-free-ebook__main-content
+						h1 Free Ebook: Choosing the Right <mark>Online Prep</mark>
+						|
+						|
+						.section-free-ebook__badge
+							span.badge.badge-gray.badge-sm.text-uppercase.d-block How to Find the Best Online Prep
+						|
+						|
+						.section-free-ebook__text.text-block
+							p There are a lot of online SAT prep options available. How do you tell what's actually good?
+							p This free Ebook teaches you <strong>what good online prep programs have</strong> and <strong>what questions to ask of companies offering prep.</strong>
+						|
+						|
+						a(href="#" class="btn btn-primary btn-lg") Download Free Ebook Now
+	// SECTION FREE EBOOK END
+	|
+	|
+	// SECTION SCHEDULE A FREE CONSULTATION
+	section.section-schedule-a-free-consultation.section
+		.container
+			.section-schedule-a-free-consultation__main-wrap
+				.section-schedule-a-free-consultation__inner-content
+					.row
+						.col-md-5.offset-md-1
+							.section-schedule-a-free-consultation__text-content
+								h2 Next: Schedule a <br><mark>Free</mark> Consultation
+								h5.title-default Talk with one of our Academic Advisers to:
+								|
+								|
+								ul.checked-list
+									li Answer your biggest questions about the SAT
+									li Get a custom study plan based on your situation
+									li Discover the most common mistakes students make
+									li Choose the right SAT prep method for you
+									li Learn more about PrepScholar and how we work
+						|
+						|
+						.col-md-5
+							.order-form-block
+								.order-form
+									.order-form__title-holder
+										h3 Set up a <mark>Free</mark> Consultation
+										.text-block.text-small
+											p Have questions about SAT prep? Set up a free consultation with a PrepScholar Academic Advisor today.
+											p We've helped thousands of students and families get on the right track.
+									|
+									|
+									form(action="#")
+										.form-list
+											.form-group
+												label(for='getConsultName') Name (optional)
+												input.form-control.form-control-lg#getConsultName(type='text' placeholder='Enter name (optional)')
+											.form-group
+												label(for='getConsultPhone') Phone number
+												input.form-control.form-control-lg#getConsultPhone(type='number' placeholder='Enter your phone number')
+										.text-center
+											button.btn.btn-primary.btn-lg.btn-block(type='submit') Schedule a Consultation
+	// SECTION SCHEDULE A FREE CONSULTATION END

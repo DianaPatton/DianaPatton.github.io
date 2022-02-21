@@ -1,0 +1,32 @@
+extends ../templates/sat-registration-template.pug
+
+block vars
+	- var pageTitle = "Sign Up";
+	- var pageType = "SAT";
+
+block content
+	a(href="#" class="section-registration__logo")
+		img(src="img/logo-sat.svg" alt="Logo")
+	|
+	|
+	h5.title-default PrepScholar SAT account
+	|
+	|
+	.section-registration__text.text-block.text-small
+		p We`re customized a program for you baswd on your answers. Create a free account now to save this customization and get atarted:
+	|
+	|
+	form(action="#" class="section-registration__form")
+		.form-list
+			.form-group
+				label(for="registrationEmail") Email
+				input.form-control.form-control-lg#registrationEmail(type="email" placeholder="username@gmail.com")
+			.form-group
+				label(for="registrationPassphrase") Passphrase
+				input.form-control.form-control-lg#registrationPassphrase(type="password" placeholder="Passphrase")
+		.text-center
+			button.btn.btn-primary.btn-lg.btn-block(type="submit") Create PrepScholar Account
+	|
+	|
+	.text-small
+		a(href="#" class="text-secondary") By creating an account, I agree to the <br>PrepScholar <a href="#">Terms</a> and <a href="#">Privacy Policy.</a>

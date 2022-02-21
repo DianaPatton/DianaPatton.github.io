@@ -1,0 +1,32 @@
+include ../mixins/_mixins
+
+block vars
+
+doctype html
+html(lang= pageLang || "en")
+	head
+		include ../layout/_head.pug
+	|
+	|
+	body(class= bodyClass)
+		// HEADER
+		if (pageType === "SAT")
+			include ../layout/_header-sat.pug
+			include ../layout/_menu-sat.pug
+		// HEADER END
+		|
+		|
+		// CONTENT
+		main(class="main")
+			block content
+		// CONTENT END
+		|
+		|
+		// FOOTER
+		if (pageType === "SAT")
+			include ../layout/_footer-sat.pug
+		// FOOTER END
+		|
+		|
+		// connection JAVASCRIPT
+		include ../layout/_scripts.pug

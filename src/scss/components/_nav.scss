@@ -1,0 +1,42 @@
+.nav {
+	@include customScrollbar(0, transparent, transparent, 0);
+
+	padding: 0 $grid-gutter-width/2;
+	margin: 0 -$grid-gutter-width/2;
+	overflow: auto;
+	flex-wrap: nowrap;
+
+	@include min-w(sm) {
+		flex-wrap: wrap;
+		padding: 0;
+		margin: 0;
+	}
+
+	&-item {
+		&:not(:last-child) {
+			margin-right: 18px;
+		}
+	}
+
+	&-link {
+		border-radius: $nav-tabs-border-radius;
+		line-height: 1.5;
+		color: $black;
+		transition: color 0.3s, baclground-color 0.3s, border-color 0.3s;
+		white-space: nowrap;
+
+		@include min-w(sm) {
+			white-space: inherit;
+		}
+
+		&:hover {
+			color: $primary;
+		}
+
+		&.active {
+			color: $nav-tabs-link-active-color;
+			background-color: $nav-tabs-link-active-bg;
+			font-weight: 500;
+		}
+	}
+}

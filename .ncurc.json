@@ -1,0 +1,7 @@
+{
+	"reject": [
+		"bootstrap",
+		"gulp-imagemin",
+		"gulp-sass"
+	]
+}

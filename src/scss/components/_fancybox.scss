@@ -1,0 +1,49 @@
+.fancybox-bg {
+	background-color: $gray-950;
+}
+
+.fancybox-is-open {
+	.fancybox-bg {
+		opacity: 0.6;
+	}
+}
+
+.fancybox-content {
+	border: 6px solid $white;
+	border-radius: $border-radius;
+
+	@include min-w(sm) {
+		border-width: 16px;
+	}
+}
+
+.fancybox-button {
+	&.fancybox-button--close {
+		@extend .btn-round-with-icon;
+		@extend .btn-round-with-icon-lg;
+		@extend .btn-light;
+
+		position: absolute;
+		bottom: calc(100% + 30px);
+		right: -6px;
+
+		@include max-w(sm) {
+			width: 30px;
+			height: 30px;
+			font-size: 14px;
+		}
+
+		@include min-w(sm) {
+			bottom: calc(100% + 36px);
+			right: -16px;
+		}
+	}
+}
+
+.fancybox-slide--image {
+	padding: $grid-gutter-width/2;
+
+	@include min-w(sm) {
+		padding: 80px 40px;
+	}
+}

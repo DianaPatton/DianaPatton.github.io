@@ -1,0 +1,44 @@
+.banner-with-image {
+	padding: 60px 0;
+
+	@include min-w(md) {
+		padding: 40px 0;
+	}
+
+	&.bg-1 {
+		background-color: $blue;
+
+		@include min-w(md) {
+			background-image: url("../img/backgrounds/round-bg-yellow.svg");
+			background-repeat: no-repeat;
+			background-size: 55px;
+			background-position: left 42px bottom 50px;
+		}
+	}
+
+	&.bg-2 {
+		background-color: rgba($blue, 0.5);
+		background-image:
+			url("../img/backgrounds/logo-text-bg.svg"),
+			url("../img/backgrounds/logo-text-bg.svg")
+		;
+		background-repeat: no-repeat;
+		background-size: 250px;
+		background-position:
+			left -63px top 26px,
+			right -125px top 75px
+		;
+
+		@include min-w(lg) {
+			background-size: 350px;
+			background-position:
+				left 16px top 60px,
+				right -51px top 182px
+			;
+		}
+
+		@include min-w(xl) {
+			background-size: 500px;
+		}
+	}
+}

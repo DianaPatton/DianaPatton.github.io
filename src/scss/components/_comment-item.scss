@@ -1,0 +1,67 @@
+.comments-list {
+	@include listreset;
+
+	margin-bottom: 45px;
+
+	&__item {
+		box-shadow: $box-shadow;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.comment-item {
+	background-color: $white;
+	border-radius: $border-radius;
+	padding: 24px;
+
+	@include min-w(sm) {
+		padding: 28px 38px 36px;
+	}
+
+	&.with-reply {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	&.reply {
+		padding-left: 50px;
+		border-top: 1px solid $gray-100;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+
+		@include min-w(sm) {
+			padding-left: 70px;
+		}
+	}
+
+	&__top-info {
+		margin-bottom: 15px;
+
+		@include min-w(sm) {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__name {
+		margin-bottom: 10px !important;
+
+		@include min-w(sm) {
+			margin-bottom: 0 !important;
+			padding-right: 20px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 20px;
+
+		@include min-w(sm) {
+			margin-bottom: 30px;
+		}
+	}
+}

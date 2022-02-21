@@ -1,0 +1,339 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "Pricing";
+
+block content
+	// SECTION NAVIGATION
+	section.section-navigation
+		.container
+			h2.sr-only Navigation
+			|
+			|
+			+buttonsNavigationList([
+				{text: "SAT Prep", active: true},
+				{text: "PSAT Prep"},
+				{text: "ACT Prep"},
+				{text: "AP Tutoring"},
+				{text: "College Admissions"},
+				{text: "GRE Prep"},
+				{text: "GMAT Prep"},
+				{text: "TOEFL Prep"},
+			])
+	// SECTION NAVIGATION END
+	|
+	|
+	// SECTION PRICING
+	section.section-pricing.section
+		.container
+			h1 Pricing<span class="badge badge-gray badge-sm text-uppercase">Three great ways to prepare for the SAT. Sign up in just 60 seconds.</span>
+			|
+			|
+			.scroll-notification.d-xl-none
+				p.scroll-notification__text Please scroll left/right
+				i.scroll-notification__icon.icon-swipe
+			|
+			|
+			h5.section-pricing__table-top-title Each package includes 5-day risk-free trial
+			|
+			|
+			.table-responsive-xl
+				table.table-pricing(data-highlighted-column="1")
+					thead
+						tr
+							th(scope='col' rowspan='2' class="table-pricing__first-col")
+								.table-pricing__first-col-content
+									p.h5.table-pricing__main-title.text-sm-center Each package includes New SAT program!
+									|
+									|
+									.table-pricing__first-col-text.text-block
+										p * Buy in monthly payments with Affirm on orders over $50.
+									|
+									|
+									a(href="#" class="link-with-duble-arrow") Learn more
+							th(scope='col' colspan='5' class="table-pricing__top-line-block")
+								p.h5.table-pricing__main-title.mb-0 Each package includes 5-day risk-free trial
+						tr.table-pricing__header-main-colls
+							th(scope='col')
+								.table-pricing__tarif-badge MOST POPULAR
+								|
+								|
+								p.h6.table-pricing__tarif-title Complete SAT <br>Online Prep *
+								p.h3.table-pricing__pricing-title $397
+								a(href="#" class="btn btn-outline-primary-normal") Choose
+								|
+								|
+								.table-pricing__tarif-desc.shorten-text.js-shorten-text(data-chars="44") A study plan customized to your ability with This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text.
+							th(scope='col')
+								.table-pricing__tarif-badge MOST POPULAR
+								|
+								|
+								p.h6.table-pricing__tarif-title Complete <br> Premium *
+								p.h3.table-pricing__pricing-title $577
+								a(href="#" class="btn btn-outline-primary-normal") Choose
+								|
+								|
+								.table-pricing__tarif-desc.shorten-text.js-shorten-text(data-chars="44") Everything in the Complete Prep package, This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text.
+							th(scope='col')
+								.table-pricing__tarif-badge MOST POPULAR
+								|
+								|
+								p.h6.table-pricing__tarif-title Dual SAT+ <br> ACT *
+								p.h3.table-pricing__pricing-title $597
+								a(href="#" class="btn btn-outline-primary-normal") Choose
+								|
+								|
+								.table-pricing__tarif-desc.shorten-text.js-shorten-text(data-chars="44") Complete SAT & Complete ACT
+							th(scope='col')
+								.table-pricing__tarif-badge MOST POPULAR
+								|
+								|
+								p.h6.table-pricing__tarif-title PrepScholar <br> Classes
+								p.h3.table-pricing__pricing-title $895
+								a(href="#" class="btn btn-outline-primary-normal") Choose
+								|
+								|
+								.table-pricing__tarif-desc.shorten-text.js-shorten-text(data-chars="44") Everything in the Complete Prep package, This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text.
+							th(scope='col')
+								.table-pricing__tarif-badge MOST POPULAR
+								|
+								|
+								p.h6.table-pricing__tarif-title Complete + <br> Tutoring
+								p.h3.table-pricing__pricing-title $995+
+								a(href="#" class="btn btn-outline-primary-normal") Choose
+								|
+								|
+								.table-pricing__tarif-desc.shorten-text.js-shorten-text(data-chars="44") Everything in the Complete Prep package, This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text. This is a long comment text.
+					|
+					|
+					tbody
+						tr
+							th(scope='row') Years of access (no hour limitations!)
+							td 1 year
+							td 2 years
+							td 1 year
+							td 1 year
+							td 1 year
+						tr
+							th(scope='row') Hours of content
+							td 210+
+							td 210+
+							td 210+
+							td 210+
+							td 210+
+						tr
+							th(scope='row') Total practice questions
+							td 7100+
+							td 7100+
+							td 7100+
+							td 7100+
+							td 7100+
+						tr
+							th(scope='row') Problem-solving videos
+							td 700+
+							td 700+
+							td 700+
+							td 700+
+							td 700+
+						tr
+							th(scope='row') Skill lessons with strategy videos
+							td 98
+							td 98
+							td 98
+							td 98
+							td 98
+						tr
+							th(scope='row') All sections covered: Math, Reading and Writing, Essays
+							td: i.icon-check-square.text-primary
+							td: i.icon-check-square.text-primary
+							td: i.icon-check-square.text-primary
+							td: i.icon-check-square.text-primary
+							td: i.icon-check-square.text-primary
+						tr
+							th(scope='row') Complete ACT
+							td: i.icon-close-square.text-gray
+							td: i.icon-close-square.text-gray
+							td: i.icon-check-square.text-primary
+							td: i.icon-close-square.text-gray
+							td: i.icon-close-square.text-gray
+			|
+			|
+			.section-pricing__collapse-btn-block
+				button.btn.btn-sm.btn-light.btn-block.btn-collapse(type='button' data-toggle='collapse' data-target='#collapse-table' aria-expanded='false' aria-controls='collapse-table') Hide detailed plan comparison <i class="icon-arrow-down"></i>
+			|
+			|
+			.collapse#collapse-table
+				.section-pricing__collapsed-table
+					.table-responsive-xl
+						table.table.table-pricing(data-highlighted-column="1")
+							tbody
+								tr
+									th(scope='row') Expedited support
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+								tr
+									th(scope='row') Fine-grained skills to master
+									td 49
+									td 49
+									td 49
+									td 49
+									td 49
+								tr
+									th(scope='row') Detailed answer explanations for every question
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Customized diagnostic quiz
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Real Practice Tests
+									td 10
+									td 10
+									td 10
+									td 10
+									td 10
+								tr
+									th(scope='row') Learn with other motivated students
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Attend classes developed and delivered by experts
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Work with top teachers in small groups
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Stay focused and on track
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Get answers to all your questions, and a top score!
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Double your point improvement!
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Drill-down on your exact mistakes.
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Get personalized teaching on tough topics.
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Motivate your student even more.
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+								tr
+									th(scope='row') Invest in the best SAT score possible!
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-close-square.text-gray
+									td: i.icon-check-square.text-primary
+					.scroll-notification.d-xl-none
+						p.scroll-notification__text Please scroll left/right
+						i.scroll-notification__icon.icon-swipe
+	// SECTION PRICING END
+	|
+	|
+	// SECTION INCLUDED
+	section.section-included.section
+		.container
+			.row.justify-content-center.no-gutters
+				.col-lg-10
+					h6.section-included__top-filled-title included in all packages
+					|
+					|
+					.row.justify-content-center
+						.col-md-6.col-lg-4.d-flex
+							+simpleCard({
+								icon: "img/simple-card-icons/1.svg",
+								title: "160+ Point Guarantee",
+								text: ["We’re so confident you’ll improve your score, we’re offering the only 160+ point guarantee. If you don’t improve your score by 160 points or more (on the 1600 scale), you get your money back."],
+								link: "Learn more"
+							})
+						.col-md-6.col-lg-4.d-flex
+							+simpleCard({
+								icon: "img/simple-card-icons/2.svg",
+								title: "5 Day Risk-Free Trial",
+								text: ["Aren’t sure our product will work for you? Cancel anytime in the first 5 days and we’ll give you all your money back. In this 5 day trial period, you’ll have access to all content so you can evaluate for yourself."],
+								link: "Learn more"
+							})(class="highlighted")
+						.col-md-6.col-lg-4.d-flex
+							+simpleCard({
+								icon: "img/simple-card-icons/3.svg",
+								title: "Support Included",
+								text: ["Having a technical issue with our program? All programs include free technical support – just contact us and we'll respond rapidly. We are dedicated to helping you rock the SAT."],
+								link: "Learn more"
+							})
+	// SECTION INCLUDED END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Start the journey to improving your SAT today!",
+		button: {
+			text: "Get eBook: 5 Tips for 160+ Points"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION CUSTOMER REVIEWS
+	include ../includes/_section-customer-reviews.pug
+	// SECTION CUSTOMER REVIEWS END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Do you want to know more? Go to the next page",
+		button: {
+			text: "Customer Stories",
+			withDubleArrow: true
+		},
+		withoutIndents: true,
+	})(class="full-width blue-bg")
+	// SECTION BANNER END

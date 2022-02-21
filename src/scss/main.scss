@@ -1,0 +1,57 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 1. Configuration and helpers
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// 2. Vendors
+@import "vendors/libs";
+
+// 3. Base stuff
+@import "base/reset";
+@import "base/base";
+@import "base/fonts";
+@import "base/typography";
+@import "base/helpers";
+
+// 4. Layout-related sections
+@import "layout/header";
+@import "layout/footer";
+@import "layout/menu";
+
+// 5. Components
+@import "components/buttons";
+@import "components/forms";
+@import "components/logo";
+@import "components/sections";
+@import "components/cards";
+@import "components/nav";
+@import "components/slick-arrows";
+@import "components/slick-dots";
+@import "components/lang-switch";
+@import "components/hamburger-menu";
+@import "components/badge";
+@import "components/sliders";
+@import "components/img-label";
+@import "components/accordion";
+@import "components/logos-list";
+@import "components/people-info-block";
+@import "components/rating";
+@import "components/text-with-icon-item";
+@import "components/table-pricing";
+@import "components/table";
+@import "components/scroll-notification";
+@import "components/modal";
+@import "components/big-number-block";
+@import "components/comparative-chart";
+@import "components/fancybox";
+@import "components/banner-with-image";
+@import "components/posted-by-block";
+@import "components/title-with-blog-cards-small-list";
+@import "components/stay-informed-block";
+@import "components/socials";
+@import "components/blog-nav";
+@import "components/accent-block-with-text";
+@import "components/comment-item";
+@import "components/step-progress";

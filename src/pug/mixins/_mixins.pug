@@ -1,0 +1,811 @@
+//- MENU LIST ============================================================
+
+//- +menuList({
+//- 	items: ["Item 1", "Item 2", "Item 3"]
+//- })
+
+mixin menuList(obj)
+	- var DEFAULT_OPTIONS = { items: ["Item 1", "Item 2", "Item 3"] };
+	- obj = Object.assign({}, DEFAULT_OPTIONS, obj || {});
+
+	ul&attributes(attributes)
+		- for (var i = 0; i < obj.items.length; i++)
+			li(id= obj.items[i].replace(/\s+/g, '-').toLowerCase())
+				a(href="#")= obj.items[i]
+
+//- HEADER MENU ============================================================
+
+//- +headerMenu([
+//- 	"Who We Are",
+//- 	"How It Works",
+//- 	"Results",
+//- 	"Pricing",
+//- 	"Customer Stories",
+//- 	"Instructor-Led Classes"
+//- ])
+
+mixin headerMenu(obj)
+	ul.header-menu&attributes(attributes)
+		- for (var i = 0; i < obj.length; i++)
+			li.header-menu__item
+				a(href="#" class="header-menu__link")= obj[i]
+
+//- SECTION BANNER ============================================================
+
+//- +sectionBanner({
+//- 	title: "Michael improved by <strong>370 POINTS!</strong>",
+//- 	button: {
+//- 		text: "Find Out How",
+//- 		withDubleArrow: true
+//- 	},
+//- })(class="bg-2")
+
+mixin sectionBanner(obj)
+	section(class="section-banner" + (obj.withoutIndents ? "" : " section"))&attributes(attributes)
+		.section-banner__wrap
+			.container
+				.row.justify-content-center
+					.col-lg-10
+						.section-banner__item
+							if (obj.title)
+								h5.section-banner__title!= obj.title
+							if (obj.button)
+								a(href="#" class="section-banner__btn btn btn-light btn-lg btn-rounded" + (obj.button.withDubleArrow ? " btn-with-duble-arrow" : ""))= obj.button.text
+
+//- POINT CARD ============================================================
+
+//- +pointCard({
+//- 	title: "4.95",
+//- 	subTitle: "Out of 5 stars",
+//- 	text: "And yes, we do accept<br> and PSAT"
+//- })(class="blue")
+
+mixin pointCard(obj)
+	.point-card&attributes(attributes)
+		.point-card__main-content
+			.point-card__title-holder
+				if (obj.title)
+					h2.point-card__title.mb-0!= obj.title
+				if (obj.subTitle)
+					h6.point-card__sub-title.font-weight-normal.mb-0!= obj.subTitle
+			.point-card__text.text-block.text-small
+				if (obj.text)
+					p!= obj.text
+
+//- FOOTER NAV LIST ============================================================
+
+//- +footerNavList([
+//- 	"Home — PrepScholar SAT",
+//- 	"Who We Are",
+//- 	"How It Works",
+//- 	"Results",
+//- 	"Pricing",
+//- 	"Tutoring",
+//- 	"Groups",
+//- 	"Sample Lesson"
+//- ])
+
+mixin footerNavList(obj)
+	ul.footer-nav-list&attributes(attributes)
+		- for (var i = 0; i < obj.length; i++)
+			li.footer-nav-list__item
+				a(href="#" class="footer-nav-list__link")= obj[i]
+
+//- BENEFIT CARD ============================================================
+
+//- +benefitCard({
+//- 	icon: "img/benefit-card-icons/watching-a-movie-icon.svg",
+//- 	text: ["Learn content by interacting with an expert lesson or watching a video"]
+//- })
+
+mixin benefitCard(obj)
+	.benefit-card&attributes(attributes)
+		if (obj.icon)
+			.benefit-card__icon
+				img(src= obj.icon alt="Icon")
+		|
+		|
+		if (obj.text)
+			.text-block
+				- for (var i = 0; i < obj.text.length; i++)
+					p!= obj.text[i]
+
+//- WHY CHOOSE US CARD ============================================================
+
+//- +whyChooseUsCard({
+//- 	icon: "img/why-choose-us-card-icons/megaphone-icon.svg",
+//- 	title: "Get Motivated",
+//- 	text: ["PrepScholar breaks down each part of the SAT to help them gain confidence and become better at learning"]
+//- })
+
+mixin whyChooseUsCard(obj)
+	.why-choose-us-card&attributes(attributes)
+		if (obj.icon)
+			.why-choose-us-card__icon
+				img(src= obj.icon alt="Icon")
+		if (obj.title)
+			h6.title-default.text-uppercase.font-weight-bold= obj.title
+		if (obj.text)
+			.why-choose-us-card__text.text-block
+				- for (var i = 0; i < obj.text.length; i++)
+					p!= obj.text[i]
+
+//- RATING ============================================================
+
+//- +rating({
+//- 	value: 5
+//- })
+
+mixin rating(obj)
+	if (obj.value)
+		ul.rating(data-rating= obj.value)&attributes(attributes)
+			li
+				i.icon-star
+			li
+				i.icon-star
+			li
+				i.icon-star
+			li
+				i.icon-star
+			li
+				i.icon-star
+
+//- PEOPLE INFO BLOCK ============================================================
+
+//- +peopleInfoBlock({
+//- 	photo: "img/customer-reviews-card-photo-1.jpg",
+//- 	title: "<strong>Layton,</strong> <em>University</em>",
+//- 	subTitle: {
+//- 		text: "Score",
+//- 		additionalClass: "text-info"
+//- 	},
+//- 	rating: 5
+//- })(class="with-rating")
+
+mixin peopleInfoBlock(obj)
+	.people-info-block&attributes(attributes)
+		if (obj.photo)
+			.people-info-block__photo
+				img(class="ofi" src= obj.photo alt="Photo")
+		.people-info-block__info
+			if (obj.title)
+				p.people-info-block__text!= obj.title
+			if (obj.subTitle)
+				p(class="people-info-block__text" + (obj.subTitle.additionalClass ? " " + obj.subTitle.additionalClass : ""))= obj.subTitle.text
+		|
+		|
+		if (obj.rating)
+			.people-info-block__rating
+				+rating({
+					value: obj.rating
+				})
+
+//- CUSTOMER REVIEWS CARD ============================================================
+
+//- +customerReviewsCard({
+//- 	peopleInfoBlock: {
+//- 		photo: "img/customer-reviews-card-photo-1.jpg",
+//- 		title: "<strong>Layton,</strong> <em>University</em>",
+//- 		subTitle: {
+//- 			text: "Score",
+//- 			additionalClass: "text-info"
+//- 		},
+//- 		rating: 5
+//- 	},
+//- 	text: ["Est, dui malesuada nisl at ullamcorper nisi. Magna velit quis egestas rhoncus purus erat molestie. Dolor integer ultricies tortor vestibulum augue. Lorem leo bibendum eu elementum, sem."]
+//- })
+
+mixin customerReviewsCard(obj)
+	.customer-reviews-card&attributes(attributes)
+		if (obj.peopleInfoBlock)
+			+peopleInfoBlock(obj.peopleInfoBlock)(class="with-rating")
+		if (obj.text)
+			.customer-reviews-card__text.text-block
+				- for (var i = 0; i < obj.text.length; i++)
+					p!= obj.text[i]
+
+//- SIMPLE CARD ============================================================
+
+//- +simpleCard({
+//- 	icon: "img/included-card-icons/1.svg",
+//- 	title: "160+ Point Guarantee",
+//- 	text: ["We’re so confident you’ll improve your score, we’re offering the only 160+ point guarantee. If you don’t improve your score by 160 points or more (on the 1600 scale), you get your money back."],
+//- 	link: "Learn more"
+//- })
+
+mixin simpleCard(obj)
+	.simple-card&attributes(attributes)
+		.simple-card__main-content
+			if (obj.icon)
+				.simple-card__icon-block
+					img(src= obj.icon alt="Icon" class="simple-card__icon")
+			|
+			|
+			if (obj.title)
+				h6.title-default.text-uppercase= obj.title
+			|
+			|
+			if (obj.text)
+				.simple-card__text.text-block
+					- for (var i = 0; i < obj.text.length; i++)
+						p!= obj.text[i]
+		|
+		|
+		if (obj.link)
+			.simple-card__link
+				a(href="#" class="link-with-duble-arrow")= obj.link
+
+//- INSTRUCTORS CARD ============================================================
+
+//- +instructorsCard({
+//- 	photo: "img/instructors-card-photos/1.jpg",
+//- 	name: "Stephanie Hurder",
+//- 	badge: "Perfect Scorer, Harvard",
+//- 	text: ["Stephanie graduated from Harvard with both an AB in Mathematics and a PhD in Business Economics. Stephanie has received multiple awards for her teaching and research at Harvard."]
+//- })
+
+mixin instructorsCard(obj)
+	.instructors-card&attributes(attributes)
+		if (obj.photo)
+			.instructors-card__photo-block
+				img(src= obj.photo alt="Photo" class="instructors-card__photo")
+		|
+		|
+		if (obj.name)
+			h3= obj.name
+		|
+		|
+		if (obj.badge)
+			.instructors-card__badge= obj.badge
+		|
+		|
+		if (obj.text)
+			.text-block
+				- for (var i = 0; i < obj.text.length; i++)
+					p!= obj.text[i]
+
+//- BUTTONS NAVIGATIONS LIST ============================================================
+
+//- +buttonsNavigationList([
+//- 	{text: "SAT Prep", active: true},
+//- 	{text: "PSAT Prep"},
+//- 	{text: "ACT Prep"},
+//- 	{text: "AP Tutoring"},
+//- 	{text: "College Admissions"},
+//- 	{text: "GRE Prep"},
+//- 	{text: "GMAT Prep"},
+//- 	{text: "TOEFL Prep"},
+//- ])
+
+mixin buttonsNavigationList(obj)
+	ul.nav&attributes(attributes)
+		- for (var i = 0; i < obj.length; i++)
+			li.nav-item
+				a(href="#" class="nav-link" + (obj[i].active ? " active" : ""))= obj[i].text
+
+//- ICON AND TEXT CARD ============================================================
+
+//- +iconAndTextCard({
+//- 	icon: "img/clock-icons/1.svg",
+//- 	title: "First 10 Minutes",
+//- 	text: ["Signup and Prepare"]
+//- })
+
+mixin iconAndTextCard(obj)
+	.icon-and-text-card&attributes(attributes)
+		if (obj.icon)
+			.icon-and-text-card__icon-block
+				img(src=obj.icon alt="Icon" class="icon-and-text-card__icon")
+		.icon-and-text-card__body
+			if (obj.title)
+				h6.title-default.text-uppercase.font-weight-bold.mb-12= obj.title
+			if (obj.text)
+				.text-block
+					- for (var i = 0; i < obj.text.length; i++)
+						p!= obj.text[i]
+
+//- REVIEWS CARD ============================================================
+
+//- +reviewsCard({
+//- 	photo: "img/reviews-card-photo-1.jpg",
+//- 	title: "Sabrina S.",
+//- 	text: ["Amet accumsan tincidunt augue sit. Duis cursus lacus ut nam faucibus platea."]
+//- })
+
+mixin reviewsCard(obj)
+	.reviews-card&attributes(attributes)
+		.reviews-card__wrap
+			if (obj.photo)
+				.reviews-card__photo-block
+					img(class="reviews-card__photo ofi" src= obj.photo alt="Photo")
+			if (obj.title)
+				h6.reviews-card__title.title-default!= obj.title
+			if (obj.text)
+				.reviews-card__text.text-block
+					- for (var i = 0; i < obj.text.length; i++)
+						p!= obj.text[i]
+
+//- ACCORDION ============================================================
+
+//- +accordion({
+//- 	id: "faq",
+//- 	elements: [
+//- 		{
+//- 			header: "What are the exact steps to getting started with SAT Complete Prep?",
+//- 			body: [
+//- 				"Our Complete prep program has a baseline time of 40 hours total. This is the minimum recommended amount of time to get the most from our program. For example, if you plan to take the test in two months (60 days) then the student is encouraged to spend about an hour a day on the program.",
+//- 				"Beyond the minimum, we have much more content than 40 hours available - with thousands of practice questions and detailed lessons, you can spend hundreds of hours learning with PrepScholar. Our program has worked well for students in as few as 3 weeks or helped them for as long as 2 years."
+//- 			]
+//- 		}
+//- 	]
+//- })
+
+mixin accordion(obj)
+	div(class="accordion" id= obj.id + "-accordion")&attributes(attributes)
+		- for (var i = 0; i < obj.elements.length; i++)
+			.accordion__item
+				h5.accordion__header.title-default.mb-0
+					button(class="accordion__btn" type="button" data-toggle="collapse" data-target="#" + obj.id + "-collapse-" + i aria-expanded="false" aria-controls= obj.id + "-collapse-" + i)= obj.elements[i].header
+				div(id=obj.id + "-collapse-" + i class="collapse" data-parent="#" + obj.id + "-accordion")
+					.accordion__body.text-block
+						- for (var j = 0; j < obj.elements[i].body.length; j++)
+							p!= obj.elements[i].body[j]
+
+//- IMPROVEMENTS REVIEW CARD ============================================================
+
+//- +improvementsReviewCard({
+//- 	photo: "img/improvements-review-card/1.jpg",
+//- 	name: "Emily S., Philadelphia",
+//- 	text: ["Thank you so much for all of your help. It was a lot of work to stay committed, but I am so glad I did it! I think I still have even more room to improve."]
+//- })
+
+mixin improvementsReviewCard(obj)
+	.improvements-review-card&attributes(attributes)
+		if (obj.photo)
+			.improvements-review-card__photo-block
+				img(src= obj.photo alt="Photo" class="improvements-review-card__photo")
+		|
+		|
+		.improvements-review-card__body
+			if (obj.name)
+				h3= obj.name
+			if (obj.text)
+				.text-in-brackets.text-block.font-italic
+					- for (var i = 0; i < obj.text.length; i++)
+						p!= obj.text[i]
+
+//- REVIEW WITHOUT PHOTO CARD ============================================================
+
+//- +reviewWithoutPhotoCard({
+//- 	name: "Deb C.",
+//- 	rating: {
+//- 		text: "4.95 out of 5 stars",
+//- 		value: 5
+//- 	},
+//- 	text: ["We liked PrepScholar because the lessons focused on the areas with the greatest upside potential. We were impressed with the way the lessons were presented, the personal attention we received, and their enthusiasm for my daughter's success. After following the PrepScholar program exactly as it was presented she increased her SAT score by 330 points!"]
+//- })
+
+mixin reviewWithoutPhotoCard(obj)
+	.review-without-photo-card&attributes(attributes)
+		.review-without-photo-card__top-info
+			if (obj.name)
+				h6.review-without-photo-card__name.title-default= obj.name
+			|
+			|
+			if (obj.rating)
+			.rating-with-text.justify-sm-content-end
+				if (obj.rating.text)
+					p.rating-with-text__text.text-small= obj.rating.text
+				|
+				|
+				.rating-with-text__rating
+					if (obj.rating.value)
+						+rating({
+							value: obj.rating.value
+						})
+		|
+		|
+		if (obj.text)
+		.text-block.font-italic
+			- for (var i = 0; i < obj.text.length; i++)
+				p!= obj.text[i]
+
+//- WEBSITE REVIEW CARD ============================================================
+
+//- +websiteReviewCard({
+//- 	logo: "img/website-review-card-logos/1.svg",
+//- 	rating: 5,
+//- 	link: "Reviews"
+//- })
+
+mixin websiteReviewCard(obj)
+	.website-review-card&attributes(attributes)
+		if (obj.logo)
+			.website-review-card__logo-block
+				img(src= obj.logo alt="Logo" class="website-review-card__logo")
+		|
+		|
+		if (obj.rating)
+			.website-review-card__rating
+				+rating({
+					value: obj.rating
+				})
+		|
+		|
+		if (obj.link)
+			a(href="#" class="link-with-duble-arrow")= obj.link
+
+//- REVIEW WITH PHOTO CARD ============================================================
+
+//- +reviewWithPhotoCard({
+//- 	photo: "img/review-with-photo-card/1.jpg",
+//- 	name: "<strong>Eileen H.</strong> Virginia",
+//- 	rating: 5,
+//- 	text: [
+//- 		"You are the absolute best! My son was so happy when he came out. He did much better on this test than he did on the previous SAT.",
+//- 		"When my son came out of the SAT exam in March, he seemed down in the dumps. We knew right then and there, that the results were probably not going to be what we had hoped for, and that we would be exploring other options. After taking Prepscholar, he came out of the test with a huge smile on his face and told us right away that he did so much better."
+//- 	],
+//- 	link: "Read all"
+//- })
+
+mixin reviewWithPhotoCard(obj)
+	.review-with-photo-card&attributes(attributes)
+		.row
+			.col-12.col-sm.review-with-photo-card__left-col
+				if (obj.photo)
+					.review-with-photo-card__photo-block
+						img(src= obj.photo alt="Photo" class="review-with-photo-card__photo")
+				|
+				|
+				.review-with-photo-card__name-and-rating
+					if (obj.name)
+						p.review-with-photo-card__name!= obj.name
+					|
+					|
+					if (obj.rating)
+						+rating({
+							value: obj.rating
+						})
+			|
+			|
+			.col-12.col-sm
+				if (obj.text)
+					.review-with-photo-card__text.text-block
+						- for (var i = 0; i < obj.text.length; i++)
+							p!= obj.text[i]
+				if (obj.link)
+					a(href="#" class="link-with-duble-arrow")= obj.link
+
+//- CUSTOMER STORIE CARD ============================================================
+
+//- +customersStorieCard({
+//- 	img: "img/customers-storie-card/1.jpg",
+//- 	title: "Busy Students",
+//- 	text: ["You have a busy schedule and barely have time for SAT prep. Busy students use PrepScholar to fit SAT prep into their lives."],
+//- 	link: "Read this customer story"
+//- })
+
+mixin customersStorieCard(obj)
+	.customers-storie-card&attributes(attributes)
+		if (obj.img)
+			a(class="customers-storie-card__img-block" href="#")
+				img(src= obj.img alt="Image" class="customers-storie-card__img")
+		.customers-storie-card__body
+			.customers-storie-card__text-content
+				if (obj.title)
+					h5.title-default.text-uppercase= obj.title
+				if (obj.text)
+					.text-block
+						- for (var i = 0; i < obj.text.length; i++)
+							p!= obj.text[i]
+			|
+			|
+			if (obj.link)
+				.customers-storie-card__bottom-link
+					a(href="#" class="link-with-duble-arrow")= obj.link
+
+//- TESTIMONIAL CARD ============================================================
+
+//- +testimonialCard({
+//- 	photo: "img/testimonial-card/1.jpg",
+//- 	name: "<strong>Joe T.</strong> Texas",
+//- 	rating: 5,
+//- 	text: ["I just wanted to thank you for the program. It really helped me with the test by changing my way of thinking. I went from a 1280 to a 1430, and I think I can still do even better. I just wanted to let you know that your program really worked out for me and helped me succeed. Thanks for everything!"]
+//- })
+
+mixin testimonialCard(obj)
+	.testimonial-card&attributes(attributes)
+		.testimonial-card__top-block
+			if (obj.photo)
+				.testimonial-card__photo-block
+					img(src= obj.photo alt="Photo" class="testimonial-card__photo")
+			|
+			|
+			.testimonial-card__info-block
+				if (obj.name)
+					p.testimonial-card__name.text-small!= obj.name
+				if (obj.rating)
+					+rating({
+						value: obj.rating
+					})
+		|
+		|
+		if (obj.text)
+			.testimonial-card__text.text-block
+				- for (var i = 0; i < obj.text.length; i++)
+					p!= obj.text[i]
+
+//- BANNER WITH IMAGE ============================================================
+
+//- +bannerWithImage({
+//- 	img: "img/banner-with-image-img-1.svg"
+//- })(class="bg-1")
+
+mixin bannerWithImage(obj)
+	if (obj.img)
+		.banner-with-image&attributes(attributes)
+			.container
+				.row.justify-content-center
+					.col-md-6
+						img(src= obj.img alt="Image")
+
+//- SECTION GET CONSULT ============================================================
+
+//- +sectionGetConsult({
+//- 	img: "img/section-get-consult-img.svg",
+//- 	title: "Get a <mark>Free</mark> SAT Consult",
+//- 	text: "Have questions about SAT prep? Set up a free consultation with a PrepScholar Academic Advisor today.",
+//- 	forms: {
+//- 		name: true,
+//- 		phone: true,
+//- 		submit: "Get a free consult"
+//- 	}
+//- })
+
+mixin sectionGetConsult(obj)
+	section.section-get-consult.section&attributes(attributes)
+		.container
+			.row.justify-content-center
+				.col-lg-10
+					.section-get-consult__form-block
+						.row.align-items-center
+							.col-md-6
+								if (obj.img)
+									.section-get-consult__img-block
+										img(class="section-get-consult__img" src= obj.img alt="Image")
+							.col-md-6
+								.order-form
+									.order-form__title-holder.text-center.text-md-left
+										if (obj.title)
+											h4!= obj.title
+										if (obj.text)
+											.text-block.text-small
+												- for (var i = 0; i < obj.text.length; i++)
+													p!= obj.text[i]
+									|
+									|
+									form(action="#")
+										.form-list
+											if (obj.forms.name)
+												.form-group
+													label(for="getConsultName") Name (optional)
+													input.form-control.form-control-lg#getConsultName(type="text" placeholder="Enter name (optional)")
+											if (obj.forms.phone)
+												.form-group
+													label(for="getConsultPhone") Phone number
+													input.form-control.form-control-lg#getConsultPhone(type="number" placeholder="Enter your phone number")
+										if (obj.forms.submit)
+											.text-center
+												button.btn.btn-primary.btn-lg.btn-block(type="submit")= obj.forms.submit
+
+//- POSTED BY BLOCK ============================================================
+
+//- +postedByBlock({
+//- 	avatar: "img/posted-by-block/1.jpg",
+//- 	text: [
+//- 		'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 18, 2021 3:00:00 PM"',
+//- 		'<a href="#">SAT/ACT SCORE TARGET</a>'
+//- 	]
+//- })
+
+mixin postedByBlock(obj)
+	.posted-by-block&attributes(attributes)
+		if (obj.avatar)
+			.posted-by-block__avatar-block
+				img(src= obj.avatar alt="Photo" class="ofi")
+		|
+		|
+		if (obj.info)
+		.posted-by-block__info
+			- for (var i = 0; i < obj.text.length; i++)
+				p!= obj.text[i]
+
+//- BLOG- CARD ============================================================
+
+//- +blogCard({
+//- 	img: "img/blog-card/3.jpg",
+//- 	title: "SAT Test Dates: Full Guide to Choosing (2021, 2022)",
+//- 	postedByBlock: {
+//- 		avatar: "img/posted-by-block/1.jpg",
+//- 		text: [
+//- 			'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 18, 2021 3:00:00 PM"',
+//- 			'<a href="#">SAT/ACT SCORE TARGET</a>'
+//- 		]
+//- 	},
+//- 	text: ["The SAT is offered seven times a year, but which SAT test dates will work best for you and your schedule? What essential factors should you consider before creating an SAT schedule? What are the best SAT dates for juniors?"],
+//- 	link: "Read more"
+//- })
+
+mixin blogCard(obj)
+	.blog-card&attributes(attributes)
+		if (obj.img)
+			.blog-card__img-block
+				img(src= obj.img alt="Image" class="blog-card__img")
+		|
+		|
+		.blog-card__body
+			if (obj.title)
+				h3.blog-card__title= obj.title
+			if (obj.postedByBlock)
+				+postedByBlock(obj.postedByBlock)
+			|
+			|
+			if (obj.text)
+				.blog-card__text.text-block
+					- for (var i = 0; i < obj.text.length; i++)
+						p!= obj.text[i]
+			|
+			|
+			if (obj.link)
+				a(href="#" class="link-with-duble-arrow")= obj.link
+
+//- SEARCH FORM ============================================================
+
+//- +searchForm({
+//- 	placeholder: "For example: how to register?",
+//- 	submit: "Find"
+//- })
+
+mixin searchForm(obj)
+	form(action="#" class="search-form")&attributes(attributes)
+		input(type="text" class="search-form__input form-control form-control-lg" placeholder= (obj.placeholder ? obj.placeholder : false))
+		if (obj.submit)
+			button(type="submit" class="search-form__button btn btn-primary btn-lg")= obj.submit
+
+//- BLOG CARD HORIZONTAL ============================================================
+
+//- +blogCardHorizontal({
+//- 	img: "img/blog-card-horizontal/1.jpg",
+//- 	title: "The 5 Strategies You Must Be Using to Improve 160+ SAT Points",
+//- 	text: ["Because wages seem to be remaining stagnant and college costs continue."],
+//- 	link: "Read more"
+//- })
+
+mixin blogCardHorizontal(obj)
+	.blog-card-horizontal&attributes(attributes)
+		if (obj.img)
+			.blog-card-horizontal__img-block
+				img(src= obj.img alt="Image" class="blog-card-horizontal__img")
+		|
+		|
+		.blog-card-horizontal__body
+			if (obj.title)
+				h4.blog-card-horizontal__title.title-default= obj.title
+			if (obj.text)
+				.blog-card-horizontal__text.text-block
+					- for (var i = 0; i < obj.text.length; i++)
+						p!= obj.text[i]
+			if (obj.link)
+				a(href="#" class="link-with-duble-arrow")= obj.link
+
+//- BLOG CARD SMALL ============================================================
+
+//- +blogCardSmall({
+//- 	img: "img/blog-card-small/1.jpg",
+//- 	title: "Score 800 on SAT Math"
+//- })
+
+mixin blogCardSmall(obj)
+	.blog-card-small&attributes(attributes)
+		if (obj.img)
+			.blog-card-small__img-block
+				img(src= obj.img alt="Image" class="blog-card-small__img")
+		|
+		|
+		.blog-card-small__body
+			if (obj.title)
+				a(href="#" class="blog-card-small__title")= obj.title
+
+//- BLOG AUTHOR CARD ============================================================
+
+//- +blogAuthorCard({
+//- 	photo: "img/blog-author-card/1.jpg",
+//- 	name: "Dr. Fred Zhang",
+//- 	title: "About the Author",
+//- 	text: ["Fred is co-founder of PrepScholar. He scored a perfect score on the SAT and is passionate about sharing information with aspiring students. Fred graduated from Harvard University with a Bachelor's in Mathematics and a PhD in Economics."]
+//- })
+
+mixin blogAuthorCard(obj)
+	.blog-author-card&attributes(attributes)
+		.blog-author-card__photo-block
+			if (obj.photo)
+				.blog-author-card__photo
+					img(src= obj.photo alt="Photo" class="ofi")
+			if (obj.name)
+				h6.title-default.mb-0= obj.name
+		|
+		|
+		.blog-author-card__body
+			if (obj.title)
+				h5= obj.title
+			if (obj.text)
+				.text-block
+					- for (var i = 0; i < obj.text.length; i++)
+						p!= obj.text[i]
+
+//- SECTION BANNER WITH TEXT ============================================================
+
+//- +sectionBannerWithText({
+//- 	title: "Student and Parent Forum",
+//- 	text: ["Our new student and parent forum, at <a href='#'><strong>ExpertHub.PrepScholar.com</strong></a>, allow you to interact with your peers and the PrepScholar staff. See how other students and parents are navigating high school, college, and the college admissions process. Ask questions; get answers."],
+//- 	btn: "Student and Parent Forum",
+//- 	narrowerСontainer: true
+//- })(class="blue-bg bg-1")
+
+mixin sectionBannerWithText(obj)
+	section.section-banner-with-text.section&attributes(attributes)
+		.section-banner-with-text__wrap
+			.container
+				.row.justify-content-center
+					div(class="col-lg-10" + (obj.narrowerСontainer ? " col-xl-8" : ""))
+						.section-banner-with-text__item
+							if (obj.title)
+								h5.title-default= obj.title
+							if (obj.text)
+								.section-banner-with-text__text.text-block
+									- for (var i = 0; i < obj.text.length; i++)
+										p!= obj.text[i]
+							if (obj.btn)
+								a(href="#" class="btn btn-primary")= obj.btn
+
+//- ICON WITH TEXT ============================================================
+
+//- +iconWithText({
+//- 	icon: "icon-calendar",
+//- 	text: "15.11.2014, 16:28:59"
+//- })
+
+mixin iconWithText(obj)
+	.icon-with-text&attributes(attributes)
+		if (obj.icon)
+			i(class="icon-with-text__icon " + obj.icon)
+		if (obj.text)
+			span.icon-with-text__text!= obj.text
+
+//- COMMENT ITEM ============================================================
+
+//- +commentItem({
+//- 	name: "Briana Johnson",
+//- 	time: "15.11.2014, 16:28:59",
+//- 	text: ["This website is helping me prepare for my ACT's"]
+//- })
+
+mixin commentItem(obj)
+	.comment-item&attributes(attributes)
+		.comment-item__top-info
+			if (obj.name)
+				h5.title-default.comment-item__name= obj.name
+			if (obj.time)
+				+iconWithText({
+					icon: "icon-calendar",
+					text: obj.time
+				})(class="text-gray")
+		if (obj.text)
+			.comment-item__text.text-block
+				- for (var i = 0; i < obj.text.length; i++)
+					p!= obj.text[i]
+		.comment-item__reply-block
+			+iconWithText({
+				icon: "icon-reply",
+				text: "Reply to <a href='#'><em>" + obj.name + "</em></a>"
+			})

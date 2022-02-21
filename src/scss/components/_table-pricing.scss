@@ -1,0 +1,373 @@
+.table-pricing {
+	margin-bottom: 0;
+	font-size: 14px;
+	border-collapse: separate;
+	border-spacing: 4px 0;
+	margin: 0 -4px;
+	width: calc(100% + 8px);
+	margin-bottom: 1px;
+
+	thead, tbody {
+		td, th {
+			font-weight: 400;
+		}
+	}
+
+	thead {
+		th, td {
+			vertical-align: top;
+			border-bottom: none;
+		}
+
+		th {
+			border-top: none;
+		}
+
+		+ tbody {
+			tr {
+				&:first-child {
+					td {
+						border-top-left-radius: 0;
+						border-top-right-radius: 0;
+					}
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			th, td {
+				vertical-align: middle;
+			}
+
+			th {
+				position: sticky;
+				left: 0;
+				z-index: 10;
+				height: 55px;
+				padding: 4px 16px 4px 0;
+				background-color: $white;
+				width: 180px;
+				min-width: 180px;
+				border-bottom: 1px solid #F3F2F4;
+				border-top: none;
+
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -1px;
+					right: 0;
+					display: block;
+					width: 16px;
+					background-color: $body-bg;
+					height: 1px;
+
+					@include min-w(sm) {
+						width: 28px;
+					}
+				}
+
+				@include min-w(sm) {
+					width: 220px;
+					min-width: 220px;
+					height: 61px;
+					padding: 8px 28px 8px 12px;
+				}
+
+				@include min-w(lg) {
+					width: 300px;
+					min-width: 300px;
+				}
+
+				@include min-w(xl) {
+					background-color: transparent;
+				}
+			}
+
+			td {
+				width: calc(100vw - (180px + #{$grid-gutter-width}) - 4px);
+				min-width: calc(100vw - (180px + #{$grid-gutter-width}) - 4px);
+				height: 55px;
+				padding: 8px 12px;
+				border-left: 1px solid #F3F2F4;
+				border-right: 1px solid #F3F2F4;
+				border-bottom: 1px solid #F3F2F4;
+				border-top: none;
+				text-align: center;
+
+				@include min-w(sm) {
+					width: 20%;
+					min-width: 150px;
+					height: 61px;
+				}
+
+				[class^="icon"] {
+					font-size: 1.428em;
+				}
+			}
+
+			&:first-child {
+				td {
+					border-top: 1px solid #F3F2F4;
+					border-top-left-radius: $border-radius;
+					border-top-right-radius: $border-radius;
+				}
+			}
+
+			&:last-child {
+				th {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+
+	// highlighted column
+	@for $i from 1 through 5 {
+		&[data-highlighted-column="#{$i}"] {
+			thead {
+				.table-pricing__header-main-colls {
+					th {
+						&:nth-child(#{$i}) {
+							background-color: $red-faded;
+							border-left: none;
+							border-right: none;
+
+							.btn {
+								@extend .btn-primary;
+							}
+
+							.table-pricing__tarif-badge {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						&:nth-of-type(#{$i}) {
+							background-color: $red-faded;
+							border-left: none;
+							border-right: none;
+
+							.icon-check-square {
+								&:before {
+									content: '\e912';
+								}
+							}
+
+							.icon-close-square {
+								color: $gray-1 !important;
+							}
+						}
+					}
+
+					&:last-child {
+						td {
+							&:nth-of-type(#{$i}) {
+								border-bottom-left-radius: $border-radius;
+								border-bottom-right-radius: $border-radius;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	// highlighted column END
+
+	&__main-title {
+		font-family: inherit;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.6;
+		text-transform: uppercase;
+
+		@include min-w(lg) {
+			font-size: 18px;
+		}
+	}
+
+	&__first-col {
+		position: sticky;
+		left: 0;
+		z-index: 10;
+		padding: 0 !important;
+		background-color: $white;
+		width: 180px;
+		min-width: 180px;
+
+		@include min-w(sm) {
+			width: 220px;
+			min-width: 220px;
+		}
+
+		@include min-w(lg) {
+			width: 300px;
+			min-width: 300px;
+		}
+
+		@include min-w(xl) {
+			background-color: transparent;
+		}
+	}
+
+	&__first-col-content {
+		background-color: $white;
+		border-radius: $border-radius;
+		border: 1px solid #F3F2F4;
+		margin: 0 16px 16px 0;
+		padding: 26px 12px;
+
+		@include min-w(sm) {
+			padding: 40px 24px 32px;
+		}
+
+		@include min-w(lg) {
+			margin: 0 28px 24px 0;
+		}
+
+		@include min-w(xl) {
+			box-shadow: $box-shadow;
+			border: none;
+		}
+
+		.table-pricing__main-title {
+			margin-bottom: 65px;
+
+			@include min-w(sm) {
+				margin-bottom: 75px;
+			}
+		}
+	}
+
+	&__first-col-title {
+		margin-bottom: 85px;
+	}
+
+	&__first-col-text {
+		margin-bottom: 25px;
+
+		@include min-w(sm) {
+			padding-right: 35px;
+			font-size: $font-size-base;
+		}
+	}
+
+	&__top-line-block {
+		position: relative;
+		text-align: center;
+		background-color: $gray-200;
+		border-radius: $border-radius;
+		padding: 7px 15px !important;
+		border-bottom: 6px solid $white !important;
+		height: 1px;
+
+		@include min-w(sm) {
+			border-width: 12px !important;
+		}
+
+		@include max-w(xl) {
+			display: none;
+		}
+	}
+
+	&__header-main-colls {
+		text-align: center;
+
+		th {
+			position: relative;
+			width: calc(100vw - (180px + #{$grid-gutter-width}) - 4px);
+			min-width: calc(100vw - (180px + #{$grid-gutter-width}) - 4px);
+			padding: 38px 12px 20px;
+			border-left: 1px solid #F3F2F4;
+			border-right: 1px solid #F3F2F4;
+			border-top: 10px solid transparent !important;
+			border-top-left-radius: $border-radius;
+			border-top-right-radius: $border-radius;
+
+			@include min-w(sm) {
+				width: 20%;
+				min-width: 150px;
+			}
+
+			&:nth-child(1) {
+				border-top-color: $red !important;
+
+				.table-pricing__pricing-title {
+					color: $primary;
+				}
+			}
+
+			&:nth-child(2) {
+				border-top-color: $green !important;
+
+				.table-pricing__pricing-title {
+					color: $green;
+				}
+			}
+
+			&:nth-child(3) {
+				border-top-color: $orange-light !important;
+
+				.table-pricing__pricing-title {
+					color: $orange-light;
+				}
+			}
+
+			&:nth-child(4) {
+				border-top-color: $blue-4 !important;
+
+				.table-pricing__pricing-title {
+					color: $blue-4;
+				}
+			}
+
+			&:nth-child(5) {
+				border-top-color: $orange-faded-2 !important;
+
+				.table-pricing__pricing-title {
+					color: $orange-faded-2;
+				}
+			}
+		}
+	}
+
+	&__tarif-title {
+		margin-bottom: 20px;
+		min-height: 45px;
+	}
+
+	&__pricing-title {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+
+	&__tarif-desc {
+		padding-top: 16px;
+
+		@include min-w(sm) {
+			padding-right: 10px;
+			text-align: left;
+		}
+	}
+
+	&__tarif-badge {
+		position: absolute;
+		top: 10px;
+		left: 0;
+		right: 0;
+		z-index: 5;
+		width: 100%;
+		text-align: center;
+		color: $primary;
+		font-weight: 500;
+		font-size: 12px;
+		text-transform: uppercase;
+		display: none;
+	}
+}

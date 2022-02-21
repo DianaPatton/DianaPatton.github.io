@@ -1,0 +1,455 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "Home";
+
+block content
+	// SECTION WELCOME
+	section.section-welcome.section
+		.section-welcome__wrapper
+			.container
+				.row
+					.col-md-6
+						.section-welcome__main-content.inverted-mark
+							h1 Online New SAT<br> Prep, Done <mark>Right</mark>
+							|
+							|
+							.section-welcome__description.text-block
+								p PrepScholar is an affordable online SAT prep course. It's the only online program scientifically designed to understand student strengths and weaknesses and customize exactly to your abilities.
+							|
+							|
+							span.badge.badge-light.badge-sm.text-uppercase Sign up now and see for yourself that our approach is the most effective!
+							|
+							|
+							.section-welcome__btn-block
+								ul.btn-list
+									li.btn-list__item
+										a(href="#" class="btn btn-primary btn-lg") Start free trial
+									li.btn-list__item
+										a(href="#" class="btn btn-outline-primary btn-lg btn-with-icon")
+											i.icon-phone-filled.btn-with-icon__icon
+											| Get a Free SAT Consult
+					.col-md-6
+						.section-welcome__right-content
+							.section-welcome__main-img-block
+								img(src="img/section-welcome-sat-img.svg" alt="Photo")
+							|
+							|
+							.reviews-slider.slides-gutter-24.with-flex.js-reviews-slider
+								+reviewsCard({
+									photo: "img/reviews-card/1.jpg",
+									title: "Sabrina S.",
+									text: ["Amet accumsan tincidunt augue sit. Duis cursus lacus ut nam faucibus platea."]
+								})
+								+reviewsCard({
+									photo: "img/reviews-card/2.jpg",
+									title: "Sabrina S.",
+									text: ["Amet accumsan tincidunt augue sit. Duis cursus lacus ut nam faucibus platea."]
+								})
+								+reviewsCard({
+									photo: "img/reviews-card/1.jpg",
+									title: "Sabrina S.",
+									text: ["Amet accumsan tincidunt augue sit. Duis cursus lacus ut nam faucibus platea."]
+								})
+								+reviewsCard({
+									photo: "img/reviews-card/2.jpg",
+									title: "Sabrina S.",
+									text: ["Amet accumsan tincidunt augue sit. Duis cursus lacus ut nam faucibus platea."]
+								})
+	// SECTION WELCOME END
+	|
+	|
+	// SECTION POINTS
+	section.section-points.section
+		.container
+			.row
+				.col-sm-6.col-md-7.col-xl-6.order-2.order-sm-1
+					.section-points__cards-content
+						.section-points__cards-row
+							.section-points__cards-col
+								img(class="section-points__letters-img d-none d-md-block" src="img/section-points-letters-img.svg" alt="Image with letters")
+								|
+								|
+								+pointCard({
+									title: "4.95",
+									subTitle: "Out of 5 stars",
+									text: "And yes, we do accept<br> and PSAT"
+								})(class="blue")
+							.section-points__cards-col
+								+pointCard({
+									title: "200+",
+									subTitle: "Avg points",
+									text: "And yes, we do accept<br> and PSAT"
+								})(class="orange")
+								+pointCard({
+									title: "15",
+									subTitle: "Money-back<br> guarantee"
+								})(class="teal")
+				.col-sm-6.col-md-5.col-xl-6.order-1.order-sm-2
+					.section-points__text-content
+						h2 The Only <mark>160+</mark><br> Point Guarantee
+						|
+						|
+						.section-points__description.text-block
+							p If you don`t get at least a 160 point improvement on your next SAT, you get your money back. And yes, we do accept Old SAT and PSAT scores (appropriately scaled) as baselines!
+							p We`re so confident we`ll improve your score, we`re putting our money where our mouth is with the industry`s best score guarantee.
+							p Try us without risk.
+						|
+						|
+						a(href="#" class="link-with-duble-arrow") Learn more
+	// SECTION POINTS END
+	|
+	|
+	// SECTION GET CONSULT
+	+sectionGetConsult({
+		img: "img/section-get-consult-img.svg",
+		title: "Get a <mark>Free</mark> SAT Consult",
+		text: ["Have questions about SAT prep? Set up a free consultation with a PrepScholar Academic Advisor today."],
+		forms: {
+			name: true,
+			phone: true,
+			submit: "Get a free consult"
+		}
+	})(class="bg-1")
+	// SECTION GET CONSULT END
+	|
+	|
+	// SECTION IMAGE AND CONTENT
+	section.section-image-and-content.with-bg-1.section
+		.section-image-and-content__inner-block
+			.container
+				.section-image-and-content__block
+					.row
+						.col-md-6
+							.section-image-and-content__content-block
+								h2 <mark>Extensive</mark> SAT <br> Content
+								.section-image-and-content__text.text-block
+									p Our customized program draws from a collection of more than 100 hours of lessons and 7100+ realistic practice questions. This large collection of high quality content created by our top instructors ensures that you're always getting fresh, extensive practice for the real SAT.
+									p Our SAT product covers all three SAT subsections (Reading, Writing and Language, and Math), plus the essay. We also include ten official SATs to test your skills.
+									p Prepare with the largest lesson bank.
+								a(href="#" class="link-with-duble-arrow") Learn more
+						.col-md-6
+							.section-image-and-content__img-block
+								img(class="rounded ofi" src="img/image-and-content-block-img-2.jpg" alt="Photo")
+								h5.img-label.bottom-left.d-none.d-sm-inline-block >100 hours
+								h5.img-label.top-right.d-none.d-sm-inline-block 7100+ questions
+	// SECTION IMAGE AND CONTENT END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Start the journey to improving your SAT today!",
+		button: {
+			text: "Get eBook: 5 Tips for 160+ Points"
+		}
+	})(class="bg-1")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION PREMIUM VIDEO
+	section.section-premium-video.section
+		.container
+			.row.justify-content-center
+				.col-lg-10
+					.text-sm-center
+						h2 <mark>Premium</mark> SAT Videos
+						.section-premium-video__description.text-block
+							p A number of our SAT prep lessons have videos to clarify concepts you need to ace the SAT. Our high production quality videos carefully explain the hardest ideas so you'll fully understand them. Videos are just one part of our sophisticated program to prepare you the best way possible.
+					|
+					|
+					span.badge.badge-gray.text-uppercase.d-block.mb-16 Play an SAT prep video excerpt
+					|
+					|
+					.section-premium-video__videos-block
+						.row
+							.col-md-6
+								.section-premium-video__video
+									.embed-responsive.embed-responsive-16by9.rounded
+										iframe.embed-responsive-item(src='https://player.vimeo.com/video/393346674?h=4ef696999a' allow='autoplay; fullscreen; picture-in-picture')
+							.col-md-6
+								.section-premium-video__video
+									.embed-responsive.embed-responsive-16by9.rounded
+										iframe.embed-responsive-item(src='https://player.vimeo.com/video/393346674?h=4ef696999a' allow='autoplay; fullscreen; picture-in-picture')
+			|
+			|
+			.text-center
+				a(href="#" class="btn btn-primary") Start free trial
+	// SECTION PREMIUM VIDEO END
+	|
+	|
+	// SECTION IMAGE AND SLIDER
+	section.section-image-and-slider.section
+		.container
+			.row
+				.col-md-5.col-lg-6
+					.section-image-and-slider__img-block
+						img(class="section-image-and-slider__img" src="img/section-image-and-slider-img.svg" alt="Image")
+				|
+				|
+				.col-md-7.col-lg-6
+					.section-image-and-slider__main-content
+						h2 <mark>SAT-Expert</mark> Made
+						.section-image-and-slider__description.text-block
+							p We're a team of SAT experts with perfect scores on the SAT. We're more than just good test-takers, though. We've taken the skills that helped us succeed, thought hard about them, designed a program around them, and thoroughly tested the program. Now this program can help you succeed at the SAT too.
+							p SAT Prep with the best.
+						|
+						|
+						.section-image-and-slider__slider
+							.slider-team-wrap
+								.slider-team-wrap__slider.slider-team.js-slider-team
+									- for (var i = 0; i < 3; i++)
+										div
+											+peopleInfoBlock({
+												photo: "img/slider-team-photo-1.jpg",
+												title: "<strong>Hanna,</strong> <em>99%ile Scorer, Tufts</em>",
+												subTitle: {
+													text: "SAT Instructor"
+												}
+											})
+						|
+						|
+						a(href="#" class="link-with-duble-arrow") Learn more
+	// SECTION IMAGE AND SLIDER END
+	|
+	|
+	// SECTION BENEFITS
+	section.section-benefits.section
+		.section-benefits__main-content.bg-blue
+			.container
+				.row.justify-content-center
+					.col-lg-10
+						.section-benefits__title-holder.text-center.inverted-mark
+							h2 Lessons that Actually <mark>Teach</mark>
+							.section-benefits__description.text-block
+								p We’ve created a tried-and-true lesson style that teaches you each SAT reading, writing, and math skill most effectively.
+							span.badge.badge-light <em>You'll find our method so effective that you'll wonder why you ever prepared any other way.</em>
+						|
+						|
+						.section-benefits__cards-grid
+							.row.justify-content-center.gutter-width-36
+								.col-lg-4.d-flex
+									+benefitCard({
+										icon: "img/benefit-card-icons/watching-a-movie-icon.svg",
+										text: ["Learn content by interacting with an expert lesson or watching a video"]
+									})
+								.col-lg-4.d-flex
+									+benefitCard({
+										icon: "img/benefit-card-icons/woman-icon.svg",
+										text: ["Practice what you learned on realistic SAT test questions"]
+									})
+								.col-lg-4.d-flex
+									+benefitCard({
+										icon: "img/benefit-card-icons/thumbs-up-icon.svg",
+										text: ["Review your practice questions and learn how to improve"]
+									})
+						|
+						|
+						.text-center
+							a(href="#" class="link-with-duble-arrow") Learn more
+	// SECTION BENEFITS END
+	|
+	|
+	// SECTION WITH VIDEO
+	section.section-with-video.centered-bg-text.section
+		.section-with-video__inner-content
+			.container
+				.row.align-items-center
+					.col-md-7
+						.section-with-video__video-block
+							.embed-responsive.embed-responsive-16by9.rounded
+								iframe.embed-responsive-item(src='https://player.vimeo.com/video/393346674?h=4ef696999a' allow='autoplay; fullscreen; picture-in-picture')
+					.col-md-5
+						.section-with-video__main-content-block.mb-0
+							h2 A Word from Our <mark>Founders</mark>
+							.section-with-video__description.text-block
+								p Our founders explain to you how PrepScholar was created to help you on the SAT.
+							|
+							|
+							a(href="#" class="link-with-duble-arrow") Learn more
+							|
+							|
+							.section-with-video__btn-block
+								a(href="#" class="btn btn-primary btn-lg") Start free trial
+	// SECTION WITH VIDEO END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Start the journey to improving your SAT today!",
+		button: {
+			text: "Get eBook: 5 Tips for 160+ Points"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION OUR APPROACH
+	section.section-our-approach.section
+		.container
+			.row
+				.col-md-5
+					.section-our-approach__right-content
+						h2 A Little Bit About Our <mark>Approach</mark>
+						|
+						|
+						img(src="img/section-our-approach-img.svg" alt="Image" class="section-our-approach__img")
+				|
+				|
+				.col-md-7
+					.accordion.accordion-with-icons.js-accordion-with-icons#sectionOurApproachAccordion
+						.accordion-with-icons__item.js-accordion-with-icons-item.active
+							.accordion-with-icons__icon
+								img(src="img/section-our-approach-accordion-icon-1.svg" alt="Icon")
+							|
+							|
+							.accordion-with-icons__header#heading-1
+								h6.title-default.text-uppercase.font-weight-bold.mb-0
+									button(class="accordion-with-icons__btn stretched-link" type='button' data-toggle='collapse' data-target='#sectionOurApproachAccordionCollapse-1' aria-expanded='true' aria-controls='sectionOurApproachAccordionCollapse-1') Geared Towards Motivation
+							|
+							|
+							#sectionOurApproachAccordionCollapse-1.collapse.show(aria-labelledby='heading-1' data-parent='#sectionOurApproachAccordion')
+								.accordion-with-icons__body.text-block
+									p We realize that a big part of the SAT for many students is motivation to study and confidence about their performance. Our program gives students problems geared towards their level, so they never feel like studying is overwhelming. Our program also sends students personalized encouragement on progress. Finally, PrepScholar breaks down each part of the SAT to help them gain confidence.
+						.accordion-with-icons__item.js-accordion-with-icons-item
+							.accordion-with-icons__icon
+								img(src="img/section-our-approach-accordion-icon-2.svg" alt="Icon")
+							|
+							|
+							.accordion-with-icons__header#heading-2
+								h6.title-default.text-uppercase.font-weight-bold.mb-0
+									button(class="accordion-with-icons__btn stretched-link" type='button' data-toggle='collapse' data-target='#sectionOurApproachAccordionCollapse-2' aria-expanded='false' aria-controls='sectionOurApproachAccordionCollapse-2') All in One Package
+							|
+							|
+							#sectionOurApproachAccordionCollapse-2.collapse(aria-labelledby='heading-2' data-parent='#sectionOurApproachAccordion')
+								.accordion-with-icons__body.text-block
+									p We realize that a big part of the SAT for many students is motivation to study and confidence about their performance. Our program gives students problems geared towards their level, so they never feel like studying is overwhelming. Our program also sends students personalized encouragement on progress. Finally, PrepScholar breaks down each part of the SAT to help them gain confidence.
+						.accordion-with-icons__item.js-accordion-with-icons-item
+							.accordion-with-icons__icon
+								img(src="img/section-our-approach-accordion-icon-3.svg" alt="Icon")
+							|
+							|
+							.accordion-with-icons__header#heading-3
+								h6.title-default.text-uppercase.font-weight-bold.mb-0
+									button(class="accordion-with-icons__btn stretched-link" type='button' data-toggle='collapse' data-target='#sectionOurApproachAccordionCollapse-3' aria-expanded='false' aria-controls='sectionOurApproachAccordionCollapse-3') Track Progress, Minute by Minute
+							|
+							|
+							#sectionOurApproachAccordionCollapse-3.collapse(aria-labelledby='heading-3' data-parent='#sectionOurApproachAccordion')
+								.accordion-with-icons__body.text-block
+									p We realize that a big part of the SAT for many students is motivation to study and confidence about their performance. Our program gives students problems geared towards their level, so they never feel like studying is overwhelming. Our program also sends students personalized encouragement on progress. Finally, PrepScholar breaks down each part of the SAT to help them gain confidence.
+	// SECTION OUR APPROACH END
+	|
+	|
+	// SECTION LEARN STRATEGIES
+	section.section-learn-strategies.section
+		.container
+			.row.align-items-center
+				.col-md-6
+					.section-learn-strategies__left-content
+						img(src="img/section-learn-strategies-image.jpg" alt="Photo" class="rounded")
+				|
+				|
+				.col-md-6
+					.section-learn-strategies__right-content
+						h2 Learn <mark>Strategies</mark>
+						.section-learn-strategies__description.text-block
+							p Are you a smart student, but can't figure out why you're scoring low on the SAT?
+							p One of the main reasons is that the SAT requires thinking in specific ways that you're not used to and never learned in school. You can definitely master these methods, but it takes training and an awareness of strategy.
+							p: strong We teach you how to think correctly about the SAT.
+						|
+						|
+						.section-learn-strategies__btn-block
+							a(href="#" class="btn btn-primary btn-lg") Start free trial
+	// SECTION LEARN STRATEGIES END
+	|
+	|
+	// SECTION WHY CHOOSE US
+	section.section-why-choose-us.section
+		.container
+			.section-why-choose-us__main-content
+				.row.justify-content-center
+					.col-lg-10
+						.row
+							.col-lg-4
+								.section-why-choose-us__title-block.text-center.text-lg-left
+									h2 Why <mark>choose us</mark>
+							.col-md-6.col-lg-4
+								+whyChooseUsCard({
+									icon: "img/why-choose-us-card-icons/megaphone-icon.svg",
+									title: "Get Motivated",
+									text: ["PrepScholar breaks down each part of the SAT to help them gain confidence and become better at learning"]
+								})
+							.col-md-6.col-lg-4
+								+whyChooseUsCard({
+									icon: "img/why-choose-us-card-icons/idea-icon.svg",
+									title: "All in One Package",
+									text: ["We take you from beginning to end in the SAT prep process. No need to buy other books, attend other classes etc"]
+								})
+							.col-md-6.col-lg-4
+								+whyChooseUsCard({
+									icon: "img/why-choose-us-card-icons/time-icon.svg",
+									title: "Track Progress",
+									text: ["Every week we email both students parents a progress report with lessons completed and time spent studying"]
+								})
+							.col-md-6.col-lg-4
+								+whyChooseUsCard({
+									icon: "img/why-choose-us-card-icons/puzzle-piece-icon.svg",
+									title: "Learn Strategies",
+									text: ["You can definitely master these methods, but it takes training and an awareness of strategy"]
+								})
+							.col-md-6.col-lg-4
+								+whyChooseUsCard({
+									icon: "img/why-choose-us-card-icons/star-icon.svg",
+									title: "Improve your skills",
+									text: ["The program is aimed at improving the knowledge base, or consolidating the already obtained knowledge base"]
+								})
+						|
+						|
+						.text-center
+							a(href="#" class="btn btn-primary btn-lg") Start free trial
+	// SECTION WHY CHOOSE US END
+	|
+	|
+	// SECTION LOGOS
+	section.section-logos.section
+		.section-logos__main-content
+			.container
+				h2.sr-only Our <mark>partners</mark>
+				|
+				|
+				.logos-list
+					.logos-list__item
+						img(class="logos-list__logo" src="../img/logos/logo-1.png" alt="Logo")
+					.logos-list__item
+						img(class="logos-list__logo" src="../img/logos/logo-2.png" alt="Logo")
+					.logos-list__item
+						img(class="logos-list__logo" src="../img/logos/logo-3.png" alt="Logo")
+					.logos-list__item
+						img(class="logos-list__logo" src="../img/logos/logo-4.png" alt="Logo")
+					.logos-list__item
+						img(class="logos-list__logo" src="../img/logos/logo-5.png" alt="Logo")
+				.logos-list.reversed
+					.logos-list__item
+						img(class="logos-list__logo" src="../img/logos/logo-6.png" alt="Logo")
+					.logos-list__item
+						img(class="logos-list__logo" src="../img/logos/logo-7.png" alt="Logo")
+					.logos-list__item
+						img(class="logos-list__logo" src="../img/logos/logo-8.png" alt="Logo")
+					.logos-list__item
+						img(class="logos-list__logo" src="../img/logos/logo-9.png" alt="Logo")
+	// SECTION LOGOS END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Start the journey to improving your SAT today!",
+		button: {
+			text: "Get eBook: 5 Tips for 160+ Points"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION CUSTOMER REVIEWS
+	include ../includes/_section-customer-reviews.pug
+	// SECTION CUSTOMER REVIEWS END

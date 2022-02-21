@@ -1,0 +1,36 @@
+extends ../templates/sat-registration-template.pug
+
+block vars
+	- var pageTitle = "Registration step with radio buttons";
+	- var pageType = "SAT";
+	- var registrationStepsImage = true;
+
+block content
+	.step-progress
+		.step-progress__line(style="width: 20%")
+	|
+	|
+	a(href="#" class="section-registration__logo")
+		img(src="img/logo-sat.svg" alt="Logo")
+	|
+	|
+	h5.title-default Which service are you interested in?
+	|
+	|
+	.section-registration__text.text-block.text-small
+		p We`re asking you a few questions so we can bring<br> you to the pros
+	|
+	|
+	form(action="#" class="section-registration__form mb-0")
+		.form-list
+			.form-group
+				label.custom-radio
+					input.custom-radio__input.visually-hidden(type="radio" name="Which service are you interested in?" value="SAT" checked)
+					span.custom-radio__checkmark
+					span.custom-radio__text SAT
+			.form-group
+				label.custom-radio
+					input.custom-radio__input.visually-hidden(type="radio" name="Which service are you interested in?" value="ACT")
+					span.custom-radio__checkmark
+					span.custom-radio__text ACT
+		button.btn.btn-primary.btn-lg.btn-block(type="submit") Next

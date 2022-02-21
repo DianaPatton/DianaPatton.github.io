@@ -1,0 +1,52 @@
+.main {
+	overflow: hidden;
+	padding-top: 70px;
+
+	@include min-w(lg) {
+		padding-top: 90px;
+	}
+
+	> section {
+		&:last-child {
+			&:not(.section-banner.full-width):not(.section-customer-reviews):not(.section-registration) {
+				padding-bottom: 80px !important;
+
+				@include min-w(md) {
+					padding-bottom: 120px !important;
+				}
+
+				@include min-w(xl) {
+					padding-bottom: 160px !important;
+				}
+			}
+
+			&.section-banner.full-width {
+				padding-top: 40px !important;
+
+				@include min-w(md) {
+					padding-top: 60px !important;
+				}
+
+				@include min-w(xl) {
+					padding-top: 80px !important;
+				}
+			}
+		}
+
+		&.section-customer-reviews {
+			+ .section-banner.full-width {
+				padding-top: 0 !important;
+			}
+		}
+	}
+}
+
+.container {
+	&.sm {
+		max-width: 972px + $grid-gutter-width;
+	}
+
+	&.lg {
+		max-width: 1332px + $grid-gutter-width;
+	}
+}

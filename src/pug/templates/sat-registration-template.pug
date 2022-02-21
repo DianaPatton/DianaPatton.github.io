@@ -1,0 +1,31 @@
+include ../mixins/_mixins
+
+block vars
+
+doctype html
+html(lang= pageLang || "en")
+	head
+		include ../layout/_head.pug
+	|
+	|
+	body(class= bodyClass)
+		// CONTENT
+		main(class="main pt-0")
+			// SECTION REGISTRATION
+			section.section-registration.section
+				.container
+					.row.align-items-center
+						.col-md-5.d-none.d-md-block
+							if (registrationStepsImage === true)
+								img(src="img/section-registration-img-for-steps.svg" alt="Image")
+							else
+								img(src="img/section-registration-img.svg" alt="Image")
+						.col-md-5.col-xl-4.offset-md-2
+							.section-registration__main-content
+								block content
+			// SECTION REGISTRATION END
+		// CONTENT END
+		|
+		|
+		// connection JAVASCRIPT
+		include ../layout/_scripts.pug

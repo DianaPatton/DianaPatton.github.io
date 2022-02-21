@@ -1,0 +1,155 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "Customer Stories";
+
+block content
+	// SECTION CUSTOMERS STORIES GRID
+	section.section-customers-stories-grid.section
+		.container
+			.section-customers-stories-grid__badge
+				span.badge.badge-gray.badge-sm.text-uppercase.d-block PrepScholar works for students in different situations. Read these stories about real students who got real results in SAT prep.
+			.section-customers-stories-grid__title-holder
+				h1 Customer SAT <mark>Success Stories</mark>
+				|
+				|
+				.section-customers-stories-grid__text.text-block
+					p Each of these stories features a real customer who studied with PrepScholar. Find the stories that best match your situation.
+			|
+			|
+			.row
+				.col-md-6.col-lg-4.d-flex
+					+customersStorieCard({
+						img: "img/customers-storie-card/1.jpg",
+						title: "Busy Students",
+						text: ["You have a busy schedule and barely have time for SAT prep. Busy students use PrepScholar to fit SAT prep into their lives."],
+						link: "Read this customer story"
+					})
+				.col-md-6.col-lg-4.d-flex
+					+customersStorieCard({
+						img: "img/customers-storie-card/2.jpg",
+						title: "Top Scorers",
+						text: ["You're already scoring high and want to get even better. Top scorers use PrepScholar to learn top strategies and get those last points."],
+						link: "Read this customer story"
+					})
+				.col-md-6.col-lg-4.d-flex
+					+customersStorieCard({
+						img: "img/customers-storie-card/3.jpg",
+						title: "Last-Minute Study",
+						text: ["You only have a few weeks before the test. Last-minute students use PrepScholar to guide their study and get the most out of every minute."],
+						link: "Read this customer story"
+					})
+				.col-md-6.col-lg-4.d-flex
+					+customersStorieCard({
+						img: "img/customers-storie-card/4.jpg",
+						title: "Unmotivated Students",
+						text: ["You find it hard to get motivated to study. Unmotivated students use PrepScholar to schedule more study time and get engaged."],
+						link: "Read this customer story"
+					})
+				.col-md-6.col-lg-4.d-flex
+					+customersStorieCard({
+						img: "img/customers-storie-card/5.jpg",
+						title: "Low Scorers",
+						text: ["You're scoring below average on the SAT and need to get your score up. Low scorers use PrepScholar to learn fundamental strategies."],
+						link: "Read this customer story"
+					})
+				.col-md-6.col-lg-4.d-flex
+					+customersStorieCard({
+						img: "img/customers-storie-card/6.jpg",
+						title: "Schools and Groups",
+						text: ["You run a school with students who need SAT prep. Schools use PrepScholar for a no-hassle, highly effective way to prep students at scale."],
+						link: "Read this customer story"
+					})
+	// SECTION CUSTOMERS STORIES GRID END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Try us free for 5 days! The clock doesn't tick till the student uses it!",
+		button: {
+			text: "Get a Free Trial"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION TESTIMONIALS
+	section.section-testimonials.section
+		.container
+			.text-sm-center
+				h2.section-testimonials__title SAT <mark>Testimonials</mark>
+			|
+			|
+			.section-testimonials__slider
+				.testimonials-slider.js-testimonials-slider.slides-gutter-default
+					+testimonialCard({
+						photo: "img/testimonial-card/1.jpg",
+						name: "<strong>Joe T.</strong> Texas",
+						rating: 5,
+						text: ["I just wanted to thank you for the program. It really helped me with the test by changing my way of thinking. I went from a 1280 to a 1430, and I think I can still do even better. I just wanted to let you know that your program really worked out for me and helped me succeed. Thanks for everything!"]
+					})
+					+testimonialCard({
+						photo: "img/testimonial-card/2.jpg",
+						name: "<strong>Bela D.</strong> New York",
+						rating: 5,
+						text: ["I got a 1400 and I am extremely happy with my score! I am very happy with how far I've come! My reading and writing score is now a 690, and math 690. I was the most happy with my writing as it improved greatly and I know that has a lot to do with the lessons I learned in PrepScholar!"]
+					})
+					+testimonialCard({
+						photo: "img/testimonial-card/1.jpg",
+						name: "<strong>Joe T.</strong> Texas",
+						rating: 5,
+						text: ["I just wanted to thank you for the program. It really helped me with the test by changing my way of thinking. I went from a 1280 to a 1430, and I think I can still do even better. I just wanted to let you know that your program really worked out for me and helped me succeed. Thanks for everything!"]
+					})
+					+testimonialCard({
+						photo: "img/testimonial-card/2.jpg",
+						name: "<strong>Bela D.</strong> New York",
+						rating: 5,
+						text: ["I got a 1400 and I am extremely happy with my score! I am very happy with how far I've come! My reading and writing score is now a 690, and math 690. I was the most happy with my writing as it improved greatly and I know that has a lot to do with the lessons I learned in PrepScholar!"]
+					})
+			|
+			|
+			.row.justify-content-center
+				.col-lg-10
+					.review-with-photo-cards-list
+						+reviewWithPhotoCard({
+							photo: "img/review-with-photo-card/1.jpg",
+							name: "<strong>Eileen H.</strong> Virginia",
+							rating: 5,
+							text: [
+								"You are the absolute best! My son was so happy when he came out. He did much better on this test than he did on the previous SAT.",
+								"When my son came out of the SAT exam in March, he seemed down in the dumps. We knew right then and there, that the results were probably not going to be what we had hoped for, and that we would be exploring other options. After taking Prepscholar, he came out of the test with a huge smile on his face and told us right away that he did so much better."
+							],
+							link: "Read all"
+						})
+						+reviewWithPhotoCard({
+							photo: "img/review-with-photo-card/2.jpg",
+							name: "<strong>Petra C.</strong> California",
+							rating: 5,
+							text: [
+								"Alex improved his SAT score so much with PrepScholar! In January, his reading was 550, math was 600, and writing was 580 with an essay score of 6. In May, his reading 660, math was 690, and writing was 620 with an essay score of 6.",
+								"Given that he improved 240 points (wow!) after working with the PrepScholar program, we can truly attest to the success of your service. We couldn't have asked for more from an online service. I know you are making improvements all of the time. In less than 3 years my other son will be signing..."
+							],
+							link: "Read all"
+						})
+						+reviewWithPhotoCard({
+							photo: "img/review-with-photo-card/3.jpg",
+							name: "<strong>Kyle P.</strong> Massachusetts",
+							rating: 5,
+							text: [
+								"I just want to thank you and your team for all the help! I am very happy with all my scores and never have to worry about the SAT's again! When I saw I went up 90 points in reading alone since I started Prepscholar I was shocked. I did not think my improvement would be so big in this section because it is where I have struggled the most.",
+								"I am also happy I hit 700 in verbal. Breaking an overall score of 1450 was a huge accomplishment for me!"
+							],
+							link: "Read all"
+						})
+	// SECTION TESTIMONIALS END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Try us free for 5 days! The clock doesn't tick till the student uses it!",
+		button: {
+			text: "Get a Free Trial"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END

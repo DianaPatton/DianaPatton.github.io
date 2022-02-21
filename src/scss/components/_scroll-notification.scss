@@ -1,0 +1,14 @@
+.scroll-notification {
+	text-align: center;
+	color: $primary;
+	padding: 10px 0;
+
+	&__text {
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	&__icon {
+		font-size: 30px;
+	}
+}

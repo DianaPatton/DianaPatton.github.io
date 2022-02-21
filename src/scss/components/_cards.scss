@@ -1,0 +1,936 @@
+.reviews-card {
+	padding-top: 30px;
+
+	&.long-version {
+		.reviews-card__wrap {
+			padding: 15px 25px 25px 20px;
+		}
+
+		.reviews-card__title {
+			font-size: $font-size-sm;
+			font-weight: 400;
+			margin-bottom: 20px !important;
+		}
+
+		.reviews-card__text {
+			color: $gray-950;
+			text-align: left;
+		}
+	}
+
+	&__wrap {
+		position: relative;
+		border-radius: $border-radius;
+		background-color: $gray-200;
+		padding: 16px 20px;
+		text-align: right;
+		height: 100%;
+	}
+
+	&__photo-block {
+		position: absolute;
+		top: 0;
+		left: 20px;
+		transform: translate(0, -50%);
+		width: 60px;
+		height: 60px;
+		border: 3px solid $white;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+	&__title {
+		padding-left: 70px;
+		margin-bottom: 10px !important;
+	}
+
+	&__text {
+		color: $gray-600;
+	}
+}
+
+.point-card {
+	position: relative;
+	padding-top: 5px;
+	margin: 0 auto 16px;
+	max-width: 280px;
+
+	@include min-w(sm) {
+		margin: 0 0 16px;
+		max-width: 100%;
+	}
+
+	@include min-w(md) {
+		margin-bottom: 28px;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		height: 10px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 1;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+	}
+
+	&.blue {
+		&:after {
+			background-color: $blue-4;
+		}
+	}
+
+	&.orange {
+		&:after {
+			background-color: $orange;
+		}
+	}
+
+	&.teal {
+		&:after {
+			background-color: $teal;
+		}
+	}
+
+	&__main-content {
+		position: relative;
+		z-index: 5;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		border-radius: 4px;
+		box-shadow: 0px 15px 150px rgba(82, 63, 46, 0.08);
+		padding: 16px;
+		min-height: 200px;
+		background-color: $white;
+	}
+
+	&__title {
+		font-size: 44px;
+	}
+
+	&__sub-title {
+		color: $gray-900;
+		font-family: inherit;
+	}
+
+	&__text {
+		color: $gray-1;
+		padding-top: 30px;
+	}
+}
+
+.benefit-card {
+	box-shadow: $box-shadow;
+	background-color: $white;
+	border-radius: $border-radius;
+	padding: 40px 30px;
+	text-align: center;
+	margin-bottom: 16px;
+	width: 100%;
+
+	@include min-w(lg) {
+		margin-bottom: 30px;
+	}
+
+	&__icon {
+		@include flexCenter;
+		@include sizeElement(86px);
+
+		margin: 0 auto 30px;
+
+		img {
+			flex-shrink: 0;
+		}
+	}
+}
+
+.why-choose-us-card {
+	margin-bottom: 45px;
+
+	&__icon {
+		@include sizeElement(60px);
+		@include flexCenter;
+
+		margin-bottom: 35px;
+
+		img {
+			flex-shrink: 0;
+		}
+	}
+
+	&__text {
+		padding-right: 60px;
+	}
+}
+
+.customer-reviews-card {
+	padding: 32px;
+	border: 1px solid $gray-100;
+	background-color: $white;
+	border-radius: $border-radius;
+
+	@include min-w(sm) {
+		padding: 30px 15px;
+		margin-bottom: 16px;
+	}
+
+	@include min-w(xl) {
+		padding: 36px;
+	}
+
+	&__text {
+		padding-top: 20px;
+	}
+}
+
+.simple-card {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border-radius: $border-radius;
+	padding: 40px;
+	width: 100%;
+	margin-bottom: 28px;
+	background-color: $white;
+	box-shadow: $box-shadow;
+
+	@include min-w(md) {
+		padding: 42px 33px 48px;
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	&.highlighted {
+		background-color: $white;
+		box-shadow: $box-shadow;
+	}
+
+	&__main-content {
+		flex-grow: 1
+	}
+
+	&__icon-block {
+		@include sizeElement(86px);
+		@include inlineFlexCenter;
+
+		margin: 0 auto 36px;
+	}
+
+	&__text {
+		margin-bottom: 28px;
+	}
+}
+
+.instructors-card {
+	margin-bottom: 30px;
+
+	&__photo-block {
+		@include responsive-ratio(1, 1, true);
+
+		position: relative;
+		max-width: 180px;
+		border-radius: $border-radius;
+		overflow: hidden;
+		margin-bottom: 20px;
+
+		@include min-w(sm) {
+			max-width: 200px;
+		}
+	}
+
+	&__photo {
+		@include absoluteCover;
+
+		object-fit: cover;
+	}
+
+	&__badge {
+		font-style: italic;
+		background-color: rgba($gray-2, 0.7);
+		border-radius: $border-radius;
+		color: $gray-950;
+		padding: 6px 12px;
+		font-size: 12px;
+		line-height: 1.5;
+		max-width: 180px;
+		margin-bottom: 16px;
+
+		@include min-w(sm) {
+			font-size: 16px;
+			margin-bottom: 24px;
+			padding: 7px 12px;
+			max-width: 260px;
+		}
+	}
+}
+
+.icon-and-text-card {
+	display: flex;
+	max-width: 255px;
+	margin: 0 auto 40px;
+
+	@include min-w(sm) {
+		margin: 0 0 65px 0;
+		max-width: 100%;
+	}
+
+	&__icon-block {
+		@include sizeElement(46px);
+		@include flexCenter;
+
+		flex-shrink: 0;
+
+		@include min-w(md) {
+			@include sizeElement(70px);
+		}
+	}
+
+	&__body {
+		padding: 2px 10px 0 16px;
+
+		@include min-w(md) {
+			padding: 5px 10px 0 28px;
+		}
+	}
+}
+
+.improvements-review-card {
+	margin-bottom: 35px;
+
+	@include min-w(sm) {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__photo-block {
+		@include responsive-ratio(1, 1, true);
+
+		position: relative;
+		flex: 0 0 105px;
+		max-width: 105px;
+		border-radius: $border-radius;
+		overflow: hidden;
+
+		@include min-w(md) {
+			flex: 0 0 172px;
+			max-width: 172px;
+		}
+	}
+
+	&__photo {
+		@include absoluteCover;
+
+		object-fit: cover;
+	}
+
+	&__body {
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 510px;
+		padding: 35px 0 0 0;
+
+		@include min-w(sm) {
+			padding: 0 0 0 20px;
+		}
+
+		@include min-w(md) {
+			padding: 10px 0 10px 28px;
+		}
+	}
+}
+
+.review-without-photo-card {
+	background-color: $white;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+	padding: 28px 28px 28px 33px;
+	margin-bottom: 20px;
+
+	&__top-info {
+		margin-bottom: 18px;
+
+		@include min-w(sm) {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 24px;
+		}
+	}
+
+	&__name {
+		display: flex;
+		align-items: center;
+		font-size: $font-size-sm;
+		margin-bottom: 10px !important;
+
+		@include min-w(sm) {
+			margin-bottom: 0 !important;
+			padding-right: 15px;
+		}
+	}
+}
+
+.website-review-card {
+	text-align: center;
+	padding: 0 30px;
+	margin-bottom: 40px;
+
+	@include min-w(md) {
+		padding: 0 65px;
+	}
+
+	&__logo-block {
+		margin-bottom: 25px;
+
+		@include min-w(sm) {
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			height: 75px;
+		}
+	}
+
+	&__logo {
+		max-height: 100%;
+		flex-shrink: 0;
+	}
+
+	&__rating {
+		margin-bottom: 30px;
+	}
+}
+
+.review-with-photo-card {
+	background-color: $gray-200;
+	padding: 25px;
+	margin-bottom: 30px;
+
+	&__left-col {
+		display: flex;
+		align-items: center;
+		margin-bottom: 25px;
+
+		@include min-w(sm) {
+			display: block;
+			flex: 0 0 175px;
+			max-width: 175px;
+			padding-right: 15px;
+			margin-bottom: 0;
+		}
+	}
+
+	&__photo-block {
+		@include responsive-ratio(1, 1, true);
+
+		position: relative;
+		border-radius: $border-radius-sm;
+		overflow: hidden;
+		max-width: 90px;
+		width: 100%;
+
+		@include min-w(sm) {
+			max-width: 120px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__photo {
+		@include absoluteCover;
+	}
+
+	&__name-and-rating {
+		padding-left: 24px;
+		width: 100%;
+
+		@include min-w(sm) {
+			padding-left: 0;
+		}
+	}
+
+	&__name {
+		@include max-w(sm) {
+			margin-bottom: 10px;
+			font-size: 14px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 35px;
+	}
+}
+
+.review-with-photo-cards-list {
+	> * {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.customers-storie-card {
+	display: flex;
+	flex-direction: column;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+	margin-bottom: 20px;
+	overflow: hidden;
+	width: 100%;
+
+	@include min-w(md) {
+		margin-bottom: 28px;
+	}
+
+	&__img-block {
+		@include responsive-ratio(372, 224, true);
+
+		position: relative;
+		display: block;
+		background-color: rgba($blue, 0.5);
+
+		&:after {
+			@include absoluteCover;
+
+			content: '';
+			display: block;
+			background-color: rgba($black, 0.2);
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.3s, visibility 0.3s;
+		}
+
+		&:hover {
+			&:after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__img {
+		@include absoluteCover;
+
+		object-fit: cover;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		background-color: $white;
+		padding: 36px 20px;
+
+		@include min-w(xl) {
+			padding: 36px 54px 36px 28px;
+		}
+	}
+
+	&__text-content {
+		flex-grow: 1;
+	}
+
+	&__bottom-link {
+		padding-top: 30px;
+	}
+}
+
+.testimonial-card {
+	padding: 20px 20px 30px;
+	background-color: $white;
+	border-radius: $border-radius;
+	border: 1px solid $gray-100;
+
+	@include min-w(sm) {
+		padding: 33px 28px 55px 28px;
+	}
+
+	&__top-block {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__photo-block {
+		@include responsive-ratio(1, 1, true);
+
+		position: relative;
+		width: 90px;
+		border-radius: $border-radius-sm;
+		overflow: hidden;
+		flex-shrink: 0
+	}
+
+	&__photo {
+		@include absoluteCover;
+	}
+
+	&__name {
+		margin-bottom: 10px;
+	}
+
+	&__info-block {
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+		padding-left: 24px;
+	}
+
+	&__text {
+		padding-top: 25px;
+
+		@include min-w(sm) {
+			padding-top: 40px;
+		}
+	}
+}
+
+.blog-card {
+	border-radius: $border-radius;
+	margin-bottom: 40px;
+
+	@include min-w(md) {
+		margin-bottom: 70px;
+		padding: 20px;
+	}
+
+	&.filled-white {
+		@include min-w(md) {
+			background-color: $white;
+			box-shadow: $box-shadow;
+			padding-bottom: 40px;
+		}
+
+		@include min-w(xl) {
+			padding-bottom: 70px;
+		}
+	}
+
+	&.sm {
+		.blog-card__img-block {
+			@include min-w(md) {
+				@include responsive-ratio(332, 220, true);
+
+				margin-bottom: 15px;
+			}
+		}
+
+		.blog-card__title {
+			@extend .h4;
+
+			@include max-w(md) {
+				@each $media, $titles-size in $title-palette {
+					@if $media == sm {
+						@each $title, $size in $titles-size {
+							@if $title == h3 {
+								font-size: $size + px;
+							}
+						}
+					}
+				}
+			}
+
+			@include max-w(sm) {
+				@each $media, $titles-size in $title-palette {
+					@if $media == xs {
+						@each $title, $size in $titles-size {
+							@if $title == h3 {
+								font-size: $size + px;
+							}
+						}
+					}
+				}
+			}
+
+			@include min-w(md) {
+				margin-bottom: 10px;
+			}
+		}
+
+		.posted-by-block {
+			@extend .posted-by-block-sm;
+		}
+
+		.blog-card__text {
+			@include min-w(md) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&.lg {
+		@include min-w(md) {
+			padding: 0;
+		}
+
+		@include min-w(lg) {
+			background-image:
+				url("../img/backgrounds/round-bg-red.svg"),
+				url("../img/backgrounds/round-bg-blue.svg")
+			;
+			background-repeat: no-repeat;
+			background-size: 59px, 44px;
+			background-position:
+				right 50px bottom 71px,
+				right 110px bottom 18px
+			;
+		}
+
+		@include min-w(xl) {
+			background-position:
+				right 200px bottom 71px,
+				right 260px bottom 18px
+			;
+		}
+
+		.blog-card__img-block {
+			@include min-w(md) {
+				@include responsive-ratio(1172, 486, true);
+				margin-bottom: 30px;
+			}
+		}
+
+		.blog-card__title {
+			@extend .h2;
+
+			@include max-w(md) {
+				@each $media, $titles-size in $title-palette {
+					@if $media == sm {
+						@each $title, $size in $titles-size {
+							@if $title == h3 {
+								font-size: $size + px;
+							}
+						}
+					}
+				}
+			}
+
+			@include max-w(sm) {
+				@each $media, $titles-size in $title-palette {
+					@if $media == xs {
+						@each $title, $size in $titles-size {
+							@if $title == h3 {
+								font-size: $size + px;
+							}
+						}
+					}
+				}
+			}
+
+			@include min-w(md) {
+				max-width: 1030px;
+				margin-bottom: 15px;
+			}
+		}
+
+		.blog-card__text {
+			@include min-w(md) {
+				max-width: 700px;
+				padding-right: 0;
+			}
+		}
+	}
+
+	&__img-block {
+		@include responsive-ratio(523, 313, true);
+
+		position: relative;
+		overflow: hidden;
+		border-radius: $border-radius;
+		margin-bottom: 24px;
+	}
+
+	&__img {
+		@include absoluteCover;
+
+		object-fit: cover;
+	}
+
+	&__text {
+		margin-bottom: 30px;
+
+		@include min-w(md) {
+			padding-right: 30px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.blog-card-horizontal {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 28px;
+
+	@include min-w(md) {
+		margin-bottom: 40px;
+	}
+
+	&:not(.sm) {
+		@include max-w(sm) {
+			display: block;
+		}
+	}
+
+	&.sm {
+		.blog-card-horizontal__img-block {
+			flex: 0 0 144px;
+			max-width: 144px;
+
+			@include min-w(md) {
+				flex: 0 0 200px;
+				max-width: 200px;
+			}
+		}
+
+		.blog-card-horizontal__body {
+			@include max-w(md) {
+				padding: 0 0 0 15px;
+			}
+		}
+
+		.blog-card-horizontal__title {
+			@extend .h6;
+		}
+	}
+
+	&__img-block {
+		@include responsive-ratio(339, 227, true);
+
+		position: relative;
+		border-radius: $border-radius;
+		overflow: hidden;
+
+		@include min-w(sm) {
+			flex: 0 0 200px;
+			max-width: 200px;
+		}
+
+		@include min-w(md) {
+			flex: 0 0 250px;
+			max-width: 250px;
+		}
+
+		@include min-w(xl) {
+			flex: 0 0 340px;
+			max-width: 340px;
+		}
+	}
+
+	&__img {
+		@include absoluteCover;
+	}
+
+	&__body {
+		padding-top: 32px;
+
+		@include min-w(sm) {
+			padding-left: 20px;
+			padding-top: 0;
+		}
+
+		@include min-w(md) {
+			padding-top: 15px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 25px;
+	}
+}
+
+.blog-card-small {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+
+	&__img-block {
+		@include responsive-ratio(1, 1, true);
+
+		position: relative;
+		width: 98px;
+		flex-shrink: 0;
+		overflow: hidden;
+		border-radius: $border-radius;
+	}
+
+	&__img {
+		@include absoluteCover;
+
+		object-fit: cover;
+	}
+
+	&__body {
+		padding-left: 24px;
+	}
+
+	&__title {
+		color: $black;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+.blog-author-card {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: $gray-200;
+	border-radius: $border-radius;
+	padding: 24px;
+
+	@include min-w(sm) {
+		padding: 20px 40px 40px 30px;
+	}
+
+	&__photo-block {
+		display: flex;
+		align-items: center;
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 30px;
+
+		@include min-w(sm) {
+			display: block;
+			flex: 0 0 120px;
+			max-width: 120px;
+			text-align: center;
+			margin-bottom: 0;
+		}
+
+		@include min-w(md) {
+			flex: 0 0 160px;
+			max-width: 160px;
+		}
+	}
+
+	&__photo {
+		@include responsive-ratio(1, 1, true);
+
+		position: relative;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 10px;
+		width: 70px;
+		flex-shrink: 0;
+
+		@include min-w(sm) {
+			margin-right: 0;
+			margin-bottom: 15px;
+			width: 100%;
+		}
+	}
+
+	&__body {
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+
+		@include min-w(sm) {
+			padding: 20px 0 0 35px;
+		}
+	}
+}

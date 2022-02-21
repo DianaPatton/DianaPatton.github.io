@@ -1,0 +1,55 @@
+.people-info-block {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	&.with-rating {
+		padding-bottom: 40px;
+
+		@include min-w(sm) {
+			padding-right: 130px;
+			padding-bottom: 0;
+		}
+	}
+
+	&__photo {
+		@include sizeElement(44px);
+
+		@include min-w(md) {
+			@include sizeElement(60px);
+		}
+
+		position: relative;
+		flex-shrink: 0;
+		margin-right: 16px;
+
+		&:after {
+			content: '';
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+
+	&__text {
+		color: $gray-950;
+		margin: 2px 0;
+
+		em {
+			font-weight: 300;
+		}
+	}
+
+	&__rating {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 5;
+
+		@include min-w(sm) {
+			bottom: auto;
+			left: auto;
+			top: 20px;
+			right: 0;
+		}
+	}
+}

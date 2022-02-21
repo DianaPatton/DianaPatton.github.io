@@ -1,0 +1,140 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "Customer Stories - Single";
+
+block content
+	// SECTION CUSTOMER STORIES INTRO
+	section.section-customer-stories-intro.section
+		.container
+			.row.justify-content-center
+				.col-lg-10
+					a(href="#" class="link-with-duble-arrow reverted") Back to stories
+					|
+					|
+					.section-customer-stories-intro__title-holder
+						h1 Busy Students: <mark>Success Story</mark>
+						.section-customer-stories-intro__text.text-block
+							p You have a busy schedule and barely have time for SAT prep. Read about how Tom uses PrepScholar to fit SATprep into his life.
+		|
+		|
+		+bannerWithImage({
+			img: "img/banner-with-image-img-2.svg"
+		})(class="bg-2")
+		|
+		|
+		.container
+			.row.justify-content-center
+				.col-lg-10.col-xl-8
+					.section-customer-stories-intro__bottom-text.text-block
+						p: em Each case study is based on real students who studied with PrepScholar SAT Prep. Names have been changed to protect student privacy.
+	// SECTION CUSTOMER STORIES INTRO END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Download Our Free Guide: 5 Tips to Improve 160+ points",
+		button: {
+			text: "Get Our SAT Guide Free"
+		}
+	})(class="bg-2 pb-0")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION CUSTOMER STORIES TEXT
+	section.section-customer-stories-text
+		.container
+			.row.justify-content-center
+				.col-lg-10.col-xl-8
+					.section-customer-stories-text__text-block
+						h3 Tom Armstrong
+						p High school junior Tom Armstrong has a lot happening in his life. He’s a running back on his high school football team, which means he has practice or a game pretty much every day, and he comes home at 9PM. When he’s not playing sports, he’s working on homework to keep his grades up, or socializing with friends. It seems the only time he has free are some evening nights and select weekends.
+						p He’s a junior in high school, and he’s being recruited. Even though Tom understands that the SAT is important to the schools that are recruiting him, he’s having trouble fitting SAT prep into his busy life. With sports practice, there’s no way Tom can enroll in an afterschool class that requires a 30 minute drive each way. He also can’t find a tutor who’s willing to drive to his house at 10 PM every week to train him for the SAT – besides, his schedule often changes last minute. Self-studying with books was always a possibility, but they were so boring he never found himself able to stick with them for long.
+						p Tom and his family look online for a solution and found PrepScholar. They see that it’s a completely online program that had the rigor of a custom tutor, and they decide to try it out.
+						p The first thing Tom likes about PrepScholar is how convenient it was to use. Because PrepScholar is completely online, it can be accessed from any device, anywhere, anytime, as long as it’s connected to the Internet. This meant Tom could come home from football practice at 10 PM, boot up his computer, and log into PrepScholar to immediately start prepping. He could even fit in prep during a break period at school. This is also possible because PrepScholar divides the giant task of SAT prep into manageable chunks that fit into Tom's schedule. Unlike classes that have 4-hour sessions, PrepScholar trains students in skill lessons that can be done in half an hour. This lets students take command of their SAT prep and fit it into their schedule.
+						p Furthermore, PrepScholar actually helps Tom schedule SAT prep proactively into his busy life. Every week, Tom is prompted to enter his weekly study schedule and specify specific times and days that he’ll spend on SAT prep. This is then emailed to Tom and his parents so that everyone knows he’s on track. Tom finds this very motivating to set aside time specifically for SAT prep, instead of just spending the night watching YouTube videos or chatting with his friends.
+					.section-customer-stories-text__text-block
+						h3 The Importance of Motivation
+						p The best way to improve on the SAT is to spend more time studying. With PrepScholar, you'll put in more study time than with any other program.
+						p We've learned the best ways to motivate students to study more for the SAT. Through a combination of engaging lessons, progress reports, positive feedback, and personal follow-ups, we keep students committed to studying. We're good at this because we actually care about understanding how students learn and what problems they deal with. We’ve worked with thousands of students, and we’ve crafted a solution that solves their problems.
+						img(src="img/customer-stories-text-block-img-1.jpg" alt="Image")
+						p: em We've built key motivational features into PrepScholar. Just one, shown here, is a time tracker that keeps you on track with meeting your weekly study goal.
+					.section-customer-stories-text__text-block
+						p Because Tom doesn’t have a lot of time to study, he also knows that every minute he spent on SAT prep needs to be the most efficient possible. He doesn’t have the luxury of spending time studying things that won’t help him improve his score. That’s why he finds PrepScholar’s customized prep program so powerful for his progress. Every minute that he puts into studying for the SAT is guaranteed to be the most efficient way to improve his SAT score. He is always doing practice questions that are focused on building up from his weaknesses. As a result, he doesn’t waste any time going over material that he already knows, and he sees himself improve with every study session.
+					.section-customer-stories-text__text-block
+						h3 Customize for Best Results
+						p At PrepScholar, we believe that education should be customized to every student based on his or her unique strengths and weaknesses. Studying in any other way is inefficient and wastes precious time.
+						p We’ve created our program so that it customizes the student’s assignments to their strengths and weaknesses. Furthermore, every student makes different progress on different skills. Some students may learn math more easily than writing, for example. PrepScholar adapts to each student’s progress and gives the student different assignments depending on how quickly they're learning. No student has the same learning program on PrepScholar, and that’s a great thing – everyone’s always working in the way that will get them the greatest score improvements.
+						img(src="img/customer-stories-text-block-img-2.jpg" alt="Image")
+						p: em When you start with PrepScholar, we get a detailed view of your strengths and weaknesses and build a custom study program.
+					.section-customer-stories-text__text-block
+						p What Tom loves most about PrepScholar is that he didn’t have to think about what to study at any point. Most students spend a lot of time worrying about whether what they’re studying is actually improve their score. Instead, for Tom, PrepScholar always creates the perfect schedule for him to follow, including balancing work on all four sections of the SAT, and integrating practice tests into a schedule. Therefore Tom doesn’t have to waste any time or energy thinking about what to study, and he can just focus on studying and improving.
+						p As Tom continues using the program, he even finds himself enjoying the time he spends studying for the SAT. Because PrepScholar’s lessons are interactive and he gets immediate feedback on questions he misses, Tom can feel himself improving with every moment he spends on PrepScholar. Furthermore, he receives precise feedback about the time he spends studying, and he’s driven to exceed his time every week. All this means that Tom sets aside more time to study for the SAT despite his busy schedule.
+	// SECTION CUSTOMER STORIES TEXT END
+	|
+	|
+	// SECTION BLUE ACCENT TEXT
+	section.section-blue-accent-text.section
+		.section-blue-accent-text__main-content
+			.container
+				.row.justify-content-center
+					.col-lg-10.col-xl-8
+						h3 Result:
+						.section-blue-accent-text__text.text-block
+							p: strong Tom squeezed in 3 hours per week over three months, racking up nearly 40 hours of prep experience. He was able to fit in two full-length practice tests and dozens of skill lessons until he mastered nearly every skill on the SAT. He took the test, got well above his target score, and was recruited into a top athletic program with scholarships.
+						a(href="#" class="link-with-duble-arrow reverted") Back to stories
+	// SECTION BLUE ACCENT TEXT END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "What next? Get our free Ebook, Comparing Methods of Prep to find the best prep method for you.",
+		button: {
+			text: "Get Our SAT Guide Free"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION READ MORE SUCCESS STORIES
+	section.section-read-more-success-stories.section
+		.container
+			h2.section-read-more-success-stories__title Read more <mark>success stories</mark>
+			|
+			|
+			.row
+				.col-md-6.col-lg-4.d-flex
+					+customersStorieCard({
+						img: "img/customers-storie-card/1.jpg",
+						title: "Busy Students",
+						text: ["You have a busy schedule and barely have time for SAT prep. Busy students use PrepScholar to fit SAT prep into their lives."],
+						link: "Read this customer story"
+					})
+				.col-md-6.col-lg-4.d-flex
+					+customersStorieCard({
+						img: "img/customers-storie-card/2.jpg",
+						title: "Top Scorers",
+						text: ["You're already scoring high and want to get even better. Top scorers use PrepScholar to learn top strategies and get those last points."],
+						link: "Read this customer story"
+					})
+				.col-md-6.col-lg-4.d-flex
+					+customersStorieCard({
+						img: "img/customers-storie-card/3.jpg",
+						title: "Last-Minute Study",
+						text: ["You only have a few weeks before the test. Last-minute students use PrepScholar to guide their study and get the most out of every minute."],
+						link: "Read this customer story"
+					})
+	// SECTION READ MORE SUCCESS STORIES END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Want to read the next story?",
+		button: {
+			text: "Read next story",
+			withDubleArrow: true
+		},
+		withoutIndents: true,
+	})(class="full-width blue-bg")
+	// SECTION BANNER END

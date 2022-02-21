@@ -1,0 +1,160 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: $zindex-fixed;
+	display: flex;
+	align-items: center;
+	padding: 10px 0;
+	min-height: 70px;
+	transition: background-color 0.3s, box-shadow 0.3s;
+
+	@include min-w(lg) {
+		min-height: 90px;
+		padding: 15px 0;
+	}
+
+	@include max-w(lg) {
+		background-color: $white;
+		box-shadow: 0px 14px 150px rgba(82, 63, 46, 0.08);
+	}
+
+	&.active {
+		background-color: $white;
+		box-shadow: 0px 14px 150px rgba(82, 63, 46, 0.08);
+	}
+
+	&__menu {
+		@include max-w(lg) {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			width: 100%;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.3s, visibility 0.3s;
+		}
+
+		&:after {
+			@include max-w(lg) {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 1;
+				height: 100vh;
+				height: calc(var(--vh, 1vh) * 100);
+				background-color: rgba($black, 0.5);
+			}
+		}
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__menu-content {
+		@include max-w(lg) {
+			position: relative;
+			z-index: 5;
+			padding: 60px 40px 50px;
+			background-color: $white;
+			max-height: 100vh;
+			max-height: calc(var(--vh, 1vh) * 100);
+			overflow: auto;
+		}
+	}
+
+	&__middle-col {
+		@include max-w(lg) {
+			padding: 0;
+		}
+	}
+
+	&__lang-switch {
+		margin-right: 15px;
+	}
+
+	&__lang-switch-in-menu {
+		padding-top: 30px;
+		margin-left: -12px;
+	}
+
+	&__logo {
+		display: inline-block;
+		line-height: 1;
+		max-width: 160px;
+
+		@include min-w(lg) {
+			max-width: 170px;
+		}
+	}
+
+	&__btn-round-with-icon-list {
+		margin-right: 20px;
+	}
+
+	&__btn-block {
+		margin-right: 20px;
+
+		@include min-w(lg) {
+			margin-right: 0;
+		}
+	}
+
+	&__btn-block-in-menu {
+		padding-top: 30px;
+	}
+
+	&__hamburger-menu {
+		position: relative;
+		z-index: 2;
+		display: inline-flex;
+	}
+}
+
+.header-menu {
+	@include listreset;
+
+	font-size: 16px;
+
+	@include min-w(lg) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__item {
+		@include min-w(lg) {
+			display: inline-block;
+			padding: 2px 10px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+
+			@include min-w(lg) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__link {
+		color: $gray-950;
+		transition: color 0.3s;
+
+		&:hover {
+			text-decoration: none;
+			color: $primary;
+		}
+
+		&.active {
+			font-weight: 500;
+		}
+	}
+}

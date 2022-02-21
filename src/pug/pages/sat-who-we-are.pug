@@ -1,0 +1,140 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "Who we are";
+
+block content
+	// SECTION INSTRUCTORS
+	section.section-instructors.section
+		.section-instructors__main-content.section
+			.container
+				.row.justify-content-center
+					.col-lg-10
+						.section-instructors__title-holder.inverted-mark
+							h1 The <mark>Best Online</mark> SAT Instructors
+							|
+							|
+							span.badge.badge-light.badge-sm.text-uppercase We’re a group of SAT experts dedicated to helping you ace the SAT
+						|
+						|
+						.row.justify-content-center
+							.col-sm-6.col-md-4
+								+instructorsCard({
+									photo: "img/instructors-card-photos/1.jpg",
+									name: "Stephanie Hurder",
+									badge: "Perfect Scorer, Harvard",
+									text: ["Stephanie graduated from Harvard with both an AB in Mathematics and a PhD in Business Economics. Stephanie has received multiple awards for her teaching and research at Harvard."]
+								})
+							.col-sm-6.col-md-4
+								+instructorsCard({
+									photo: "img/instructors-card-photos/2.jpg",
+									name: "Margaret Kilcoyne",
+									badge: "99%ile Scorer, Northwestern",
+									text: ["As an SAT tutor with hundreds of hours of teaching experience, Margaret has led SAT score gains of hundreds of points in many students. With a Master’s in Education, she’s taught in the Chicago public school system."]
+								})
+							.col-sm-6.col-md-4
+								+instructorsCard({
+									photo: "img/instructors-card-photos/3.jpg",
+									name: "Ellen McCammon",
+									badge: "99%ile Scorer, Harvard",
+									text: ["Ellen scored a 2350 on the SAT and a 35 on the ACT. She graduated from Harvard and is now working with PrepScholar as an expert instructor."]
+								})
+	// SECTION INSTRUCTORS END
+	|
+	|
+	// SECTION
+	section.section
+		.container
+			.row.justify-content-center
+				.col-md-6.col-lg-4.d-flex
+					+simpleCard({
+						icon: "img/simple-card-icons/4.svg",
+						title: "Learn from the Masters",
+						text: ["Our teaching materials were crafted by a team of experts who mastered the SAT themselves when they were students. Every skill and strategy you learn with PrepScholar will actually work on the SAT — they worked for us."]
+					})
+				.col-md-6.col-lg-4.d-flex
+					+simpleCard({
+						icon: "img/simple-card-icons/5.svg",
+						title: "Experienced at Teaching",
+						text: ["We’re not just good at taking tests. PrepScholar employs award winning teachers with extensive classroom and tutoring experience. We’ve made sure that our lessons, honed through thousands of hours of real teaching, teach as effectively as possible."]
+					})(class="highlighted")
+				.col-md-6.col-lg-4.d-flex
+					+simpleCard({
+						icon: "img/simple-card-icons/6.svg",
+						title: "Constantly Updated",
+						text: ["We’re obsessive about our teaching quality. We constantly create new lessons, take in student feedback, and research SAT changes and trends. When you prep with PrepScholar, what you learn is updated for the test you’re going to take."]
+					})
+	// SECTION END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Get our expert guide on choosing the best online prep program:",
+		button: {
+			text: "Get eBook: Online prep guide"
+		}
+	})
+	// SECTION BANNER END
+	|
+	|
+	// SECTION OUR FOUNDERS
+	section.section-our-founders.section
+		.container
+			.row.justify-content-center
+				.col-lg-10
+					.section-our-founders__title-holder
+						h2 Our <mark>Founders</mark>
+						.text-block
+							p We were fed up with expensive SAT prep classes and mediocre teaching. We figured out how to master the SAT, and we created PrepScholar to share our strategies with you.
+			|
+			|
+			.section-our-founders__blocks-list
+				.section-our-founders__block
+					.row.align-items-lg-center
+						.col-sm-5.col-lg-4.offset-lg-1
+							.section-our-founders__photo-block
+								img(src="img/section-our-founders-photo-1.jpg" alt="Photo" class="section-our-founders__photo")
+						.col-sm-7.col-lg-6.offset-lg-1
+							h3 Allen Cheng
+							.text-block
+								p Got perfect scores on both the SAT and ACT and leads product design and teaching at PrepScholar. From his own teaching and educational career, Allen noticed how most education, especially test prep, is too one-size-fits-all to be effective. He co-founded PrepScholar to bring you the same approach that’s worked for him — find your weak points and master them with focused practice.
+								p Allen loves product design and is passionate about creating the best user experience for PrepScholar users. Allen graduated summa cum laude from Harvard University, where he earned multiple teaching awards.
+				.section-our-founders__block
+					.row.align-items-lg-center
+						.col-sm-5.col-lg-4.offset-lg-1
+							.section-our-founders__photo-block
+								img(src="img/section-our-founders-photo-2.jpg" alt="Photo" class="section-our-founders__photo")
+						.col-sm-7.col-lg-6.offset-lg-1
+							h3 Fred Zhang
+							.text-block
+								p Got a perfect score on the SAT and scored in the 99th percentile on the ACT, and leads customer outreach and marketing at PrepScholar. Fred mastered the tests by dissecting the test, focusing on his weak spots, and consuming every training material he could find. Fred is passionate about connecting with the PrepScholar user community and using your feedback to improve our product constantly.
+								p He also designed the advanced algorithms that pinpoint your weaknesses and tailor your educational program for you. Fred graduated from Harvard University with a Bachelor’s in Mathematics and PhD in Economics.
+	// SECTION OUR FOUNDERS END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Start the journey to improving your SAT today!",
+		button: {
+			text: "Get eBook: 5 Tips for 160+ Points"
+		}
+	})
+	// SECTION BANNER END
+	|
+	|
+	// SECTION CUSTOMER REVIEWS
+	include ../includes/_section-customer-reviews.pug
+	// SECTION CUSTOMER REVIEWS END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Do you want to know more? Go to the next page",
+		button: {
+			text: "How it Works",
+			withDubleArrow: true
+		},
+		withoutIndents: true,
+	})(class="full-width blue-bg")
+	// SECTION BANNER END

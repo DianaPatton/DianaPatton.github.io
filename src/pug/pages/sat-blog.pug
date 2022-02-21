@@ -1,0 +1,770 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "Blog";
+
+block content
+	// SECTION BLOG GRID
+	section.section-blog-grid.section.pb-0
+		.container
+			.section-blog-grid__title-holder
+				h1 SAT / ACT Prep <mark>Online Guides and Tips</mark>
+				|
+				|
+				+searchForm({
+					submit: "Send"
+				})
+			|
+			|
+			.row
+				.col-12
+					+blogCard({
+						img: "img/blog-card/1.jpg",
+						title: "What Is a Good ACT Score? A Bad ACT Score? An Excellent ACT Score?",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["If you've taken the ACT and gotten your ACT test scores back, you probably want to know how you did. Or you might be planning for the ACT and want to know what ACT composite score to aim for. So what is a good ACT score?"],
+						link: "Read more"
+					})(class="lg")
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/2.jpg",
+						title: "The 50 Cheapest Colleges in the US",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["Because wages seem to be remaining stagnant and college costs continue to soar, financial concerns are weighing more heavily on families when students make their college decisions. Additionally, student loan debt is increasing and young people are worried about"],
+						link: "Read more"
+					})(class="filled-white")
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/3.jpg",
+						title: "SAT Test Dates: Full Guide to Choosing (2021, 2022)",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["The SAT is offered seven times a year, but which SAT test dates will work best for you and your schedule? What essential factors should you consider before creating an SAT schedule? What are the best SAT dates for juniors?"],
+						link: "Read more"
+					})
+	// SECTION BLOG GRID END
+	|
+	|
+	// SECTION GET CONSULT
+	+sectionGetConsult({
+		img: "img/section-get-consult-img.svg",
+		title: "Get Free Guides to Boost Your <mark>SAT/ACT</mark> Score",
+		text: ["Subscribe to our blog today!", "100% Privacy. No spam!"],
+		forms: {
+			phone: true,
+			submit: "Submit"
+		}
+	})(class="p-0")
+	// SECTION GET CONSULT END
+	|
+	|
+	// SECTION BLOG GRID
+	section.section-blog-grid.section.pb-0
+		.container
+			.row
+				.col-md-6
+					.section-blog-grid__vertical-cards
+						+blogCard({
+							title: "Why You Shouldn't Trust US News College Rankings",
+							postedByBlock: {
+								avatar: "img/posted-by-block/1.jpg",
+								text: [
+									'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+									'<a href="#">SAT/ACT SCORE TARGET</a>'
+								]
+							},
+							text: ["US News is probably the most popular source out there for college rankings. While US News rankings of colleges purport to be highly accurate, they can be misleading in certain important respects."],
+							link: "Read more"
+						})
+						+blogCard({
+							title: "The Expert's Guide to the AP Psychology Exam",
+							postedByBlock: {
+								avatar: "img/posted-by-block/1.jpg",
+								text: [
+									'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+									'<a href="#">SAT/ACT SCORE TARGET</a>'
+								]
+							},
+							text: ["Taking AP Exams can be stressful, but if you know what to expect on test day, you can eliminate a lot of that anxiety. The AP Psychology exam is one of the more popular AP tests, and it has a pretty straightforward format and scoring system."],
+							link: "Read more"
+						})
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/4.jpg",
+						title: "New York State Regents Exams: What Are They? When Do You Take Them?",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["If you're in middle school or high school in New York State, chances are that you've heard of the NYSED Regents exams. In fact, all NY public high school students have to take (and pass) a certain number of these exams to graduate from high school."],
+						link: "Read more"
+					})
+			|
+			|
+			.row
+				.col-md-6.col-lg-4
+					+blogCard({
+						img: "img/blog-card/5.jpg",
+						title: "Best SAT Math Prep Books (2021): Expert Reviews",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+						},
+						text: ["While there are many different SAT prep books, they all have one thing in common: they all claim to be the best. How can you figure out which one will actually help you succeed on the SAT?"],
+						link: "Read more"
+					})(class="sm")
+				.col-md-6.col-lg-4
+					+blogCard({
+						img: "img/blog-card/6.jpg",
+						title: "The SAT Scores You Need for Nursing Programs",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+						},
+						text: ["Are you wondering the kind of SAT scores you need to get into nursing schools? Applying for undergraduate nursing programs is simpler than you might think."],
+						link: "Read more"
+					})(class="sm")
+				.col-md-6.col-lg-4
+					+blogCard({
+						img: "img/blog-card/7.jpg",
+						title: "What Is a Good ACT Writing Score?",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+						},
+						text: ["As you study for the ACT, it's easy enough to calculate your ACT composite target score. But where does your essay score fit into all this? What's a good ACT Writing score?"],
+						link: "Read more"
+					})(class="sm")
+	// SECTION BLOG GRID END
+	|
+	|
+	// SECTION IMPROVE WITH
+	section.section-improve-with.section.pt-0
+		.container
+			.section-improve-with__title-holder
+				h3.section-improve-with__title Improve With Our Famous Guides
+				|
+				|
+				ul.nav.nav-tabs(role='tablist')
+					li.nav-item(role='presentation')
+						a(href="#improve-with-1" class="nav-link active" id="improve-with-tab-1" data-toggle="tab" role="tab" aria-controls="improve-with-1" aria-selected="true") SAT Prep
+					li.nav-item(role='presentation')
+						a(href="#improve-with-2" class="nav-link" id="improve-with-tab-2" data-toggle="tab" role="tab" aria-controls="improve-with-2" aria-selected="false") ACT Prep
+					li.nav-item(role='presentation')
+						a(href="#improve-with-3" class="nav-link" id="improve-with-tab-3" data-toggle="tab" role="tab" aria-controls="improve-with-3" aria-selected="false") For All Students
+			|
+			|
+			.section-improve-with__cards-box
+				.tab-content
+					.tab-pane.fade.show.active(id="improve-with-1" role="tabpanel" aria-labelledby="improve-with-tab-1")
+						.section-improve-with__top-cards-block
+							.row
+								.col-lg-7
+									.section-improve-with__left-cards-col
+										.section-improve-with__vertical-cards
+											+blogCardHorizontal({
+												img: "img/blog-card-horizontal/1.jpg",
+												title: "The 5 Strategies You Must Be Using to Improve 160+ SAT Points",
+												text: ["Because wages seem to be remaining stagnant and college costs continue."],
+												link: "Read more"
+											})
+											+blogCardHorizontal({
+												img: "img/blog-card-horizontal/2.jpg",
+												title: "How to Get a Perfect 1600, by a Perfect Scorer",
+												text: ["Because wages seem to be remaining stagnant and college costs continue."],
+												link: "Read more"
+											})
+								.col-lg-5
+									.section-improve-with__vertical-cards
+										+blogCardHorizontal({
+											img: "img/blog-card-horizontal/3.jpg",
+											title: "Free Complete Official SAT Practice Tests",
+											link: "Read more"
+										})(class="sm")
+										+blogCardHorizontal({
+											img: "img/blog-card-horizontal/4.jpg",
+											title: "What SAT Target Score Should You Be Aiming For?",
+											link: "Read more"
+										})(class="sm")
+										+blogCardHorizontal({
+											img: "img/blog-card-horizontal/5.jpg",
+											title: "15 Strategies to Improve Your SAT Essay",
+											link: "Read more"
+										})(class="sm")
+						|
+						|
+						.section-improve-with__bottom-cards-block
+							ul.title-with-blog-cards-small-list
+								li.title-with-blog-cards-small-list__item
+									h4.title-default.title-with-blog-cards-small-list__title Series: How to Get to 800 on Each SAT Section:
+									.row
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/1.jpg",
+												title: "Score 800 on SAT Math"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/2.jpg",
+												title: "Score 800 on SAT Reading"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/3.jpg",
+												title: "Score 800 on SAT Writing"
+											})
+								li.title-with-blog-cards-small-list__item
+									h4.title-default.title-with-blog-cards-small-list__title Series: How to Get to 600 on Each SAT Section:
+									.row
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/4.jpg",
+												title: "Score 600 on SAT Math"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/5.jpg",
+												title: "Score 600 on SAT Reading"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/6.jpg",
+												title: "Score 600 on SAT Writing"
+											})
+					|
+					|
+					.tab-pane.fade(id="improve-with-2" role="tabpanel" aria-labelledby="improve-with-tab-2")
+						.section-improve-with__top-cards-block
+							.row
+								.col-lg-7
+									.section-improve-with__left-cards-col
+										.section-improve-with__vertical-cards
+											+blogCardHorizontal({
+												img: "img/blog-card-horizontal/2.jpg",
+												title: "How to Get a Perfect 1600, by a Perfect Scorer",
+												text: ["Because wages seem to be remaining stagnant and college costs continue."],
+												link: "Read more"
+											})
+											+blogCardHorizontal({
+												img: "img/blog-card-horizontal/1.jpg",
+												title: "The 5 Strategies You Must Be Using to Improve 160+ SAT Points",
+												text: ["Because wages seem to be remaining stagnant and college costs continue."],
+												link: "Read more"
+											})
+								.col-lg-5
+									.section-improve-with__vertical-cards
+										+blogCardHorizontal({
+											img: "img/blog-card-horizontal/3.jpg",
+											title: "Free Complete Official SAT Practice Tests",
+											link: "Read more"
+										})(class="sm")
+										+blogCardHorizontal({
+											img: "img/blog-card-horizontal/5.jpg",
+											title: "15 Strategies to Improve Your SAT Essay",
+											link: "Read more"
+										})(class="sm")
+										+blogCardHorizontal({
+											img: "img/blog-card-horizontal/4.jpg",
+											title: "What SAT Target Score Should You Be Aiming For?",
+											link: "Read more"
+										})(class="sm")
+						|
+						|
+						.section-improve-with__bottom-cards-block
+							ul.title-with-blog-cards-small-list
+								li.title-with-blog-cards-small-list__item
+									h4.title-default.title-with-blog-cards-small-list__title Series: How to Get to 800 on Each SAT Section:
+									.row
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/1.jpg",
+												title: "Score 800 on SAT Math"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/2.jpg",
+												title: "Score 800 on SAT Reading"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/3.jpg",
+												title: "Score 800 on SAT Writing"
+											})
+								li.title-with-blog-cards-small-list__item
+									h4.title-default.title-with-blog-cards-small-list__title Series: How to Get to 600 on Each SAT Section:
+									.row
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/4.jpg",
+												title: "Score 600 on SAT Math"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/5.jpg",
+												title: "Score 600 on SAT Reading"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/6.jpg",
+												title: "Score 600 on SAT Writing"
+											})
+					.tab-pane.fade(id="improve-with-3" role="tabpanel" aria-labelledby="improve-with-tab-3")
+						.section-improve-with__top-cards-block
+							.row
+								.col-lg-7
+									.section-improve-with__left-cards-col
+										.section-improve-with__vertical-cards
+											+blogCardHorizontal({
+												img: "img/blog-card-horizontal/1.jpg",
+												title: "The 5 Strategies You Must Be Using to Improve 160+ SAT Points",
+												text: ["Because wages seem to be remaining stagnant and college costs continue."],
+												link: "Read more"
+											})
+											+blogCardHorizontal({
+												img: "img/blog-card-horizontal/2.jpg",
+												title: "How to Get a Perfect 1600, by a Perfect Scorer",
+												text: ["Because wages seem to be remaining stagnant and college costs continue."],
+												link: "Read more"
+											})
+								.col-lg-5
+									.section-improve-with__vertical-cards
+										+blogCardHorizontal({
+											img: "img/blog-card-horizontal/3.jpg",
+											title: "Free Complete Official SAT Practice Tests",
+											link: "Read more"
+										})(class="sm")
+										+blogCardHorizontal({
+											img: "img/blog-card-horizontal/4.jpg",
+											title: "What SAT Target Score Should You Be Aiming For?",
+											link: "Read more"
+										})(class="sm")
+										+blogCardHorizontal({
+											img: "img/blog-card-horizontal/5.jpg",
+											title: "15 Strategies to Improve Your SAT Essay",
+											link: "Read more"
+										})(class="sm")
+						|
+						|
+						.section-improve-with__bottom-cards-block
+							ul.title-with-blog-cards-small-list
+								li.title-with-blog-cards-small-list__item
+									h4.title-default.title-with-blog-cards-small-list__title Series: How to Get to 800 on Each SAT Section:
+									.row
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/1.jpg",
+												title: "Score 800 on SAT Math"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/2.jpg",
+												title: "Score 800 on SAT Reading"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/3.jpg",
+												title: "Score 800 on SAT Writing"
+											})
+								li.title-with-blog-cards-small-list__item
+									h4.title-default.title-with-blog-cards-small-list__title Series: How to Get to 600 on Each SAT Section:
+									.row
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/4.jpg",
+												title: "Score 600 on SAT Math"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/5.jpg",
+												title: "Score 600 on SAT Reading"
+											})
+										.col-sm-6.col-lg-4.col-xl-3
+											+blogCardSmall({
+												img: "img/blog-card-small/6.jpg",
+												title: "Score 600 on SAT Writing"
+											})
+	// SECTION IMPROVE WITH END
+	|
+	|
+	// SECTION BLOG GRID
+	section.section-blog-grid.section.p-0
+		.container
+			.row
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/8.jpg",
+						title: "ACT Test Dates: Full Guide to Choosing (2021, 2022)",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["Looking for info on 2021-2022 ACT test dates? Knowing the most accurate ACT test dates is crucial for a solid test-taking plan. Though you might be tempted to go ahead and register for the next possible test date, what you should really be doing is finding a date that works well for you and your schedule."],
+						link: "Read more"
+					})
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/9.jpg",
+						title: "What's an Average ACT Writing Score?",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["It's approximately one month after your ACT test date. You get your ACT score report and see your ACT Writing score. But what does that number actually mean? Did you do better than average? Worse? Exactly average? Learn what an average ACT Writing score is in this article."],
+						link: "Read more"
+					})
+			|
+			|
+			.row
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/10.jpg",
+						title: "The Ultimate Guide to the AP Statistics Exam",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+						},
+						text: ["Are you taking AP Statistics? If so, you're likely wondering what to expect from the AP Statistics exam. Before you sit down to take the final test, it's important to understand how the AP Stats test is formatted, what topics it will cover, and how it'll be scored."],
+						link: "Read more"
+					})
+				.col-md-6
+					.section-blog-grid__vertical-cards
+						+blogCard({
+							title: "SAT Standard Deviation: What Does It Mean for You?",
+							postedByBlock: {
+								avatar: "img/posted-by-block/1.jpg",
+								text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+							},
+							text: ["If you've ever glanced through any of the year-end College Board data reports, you may have seen information about the SAT standard deviation. Unfortunately, the reports just list the numbers and then move on, without explaining at all what these numbers mean."],
+							link: "Read more"
+						})
+						+blogCard({
+							title: "The Expert's Guide to the AP Human Geography Exam",
+							postedByBlock: {
+								avatar: "img/posted-by-block/1.jpg",
+								text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+							},
+							text: ["AP Human Geography is an investigation of how the human species has populated the earth and developed different cultures, political systems, and means of production."],
+							link: "Read more"
+						})
+	// SECTION BLOG GRID END
+	|
+	|
+	+sectionBanner({
+		title: "Michael improved by <strong>370 POINTS!</strong>",
+		button: {
+			text: "Find Out How"
+		},
+	})(class="p-0 bg-2 blue-bg with-line-bg")
+	|
+	|
+	// SECTION BLOG GRID
+	section.section-blog-grid.section.pb-0
+		.container
+			.row
+				.col-md-6.col-lg-4
+					+blogCard({
+						img: "img/blog-card/5.jpg",
+						title: "Best SAT Math Prep Books (2021): Expert Reviews",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+						},
+						text: ["While there are many different SAT prep books, they all have one thing in common: they all claim to be the best. How can you figure out which one will actually help you succeed on the SAT?"],
+						link: "Read more"
+					})(class="sm")
+				.col-md-6.col-lg-4
+					+blogCard({
+						img: "img/blog-card/6.jpg",
+						title: "The SAT Scores You Need for Nursing Programs",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+						},
+						text: ["Are you wondering the kind of SAT scores you need to get into nursing schools? Applying for undergraduate nursing programs is simpler than you might think."],
+						link: "Read more"
+					})(class="sm")
+				.col-md-6.col-lg-4
+					+blogCard({
+						img: "img/blog-card/7.jpg",
+						title: "What Is a Good ACT Writing Score?",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+						},
+						text: ["As you study for the ACT, it's easy enough to calculate your ACT composite target score. But where does your essay score fit into all this? What's a good ACT Writing score?"],
+						link: "Read more"
+					})(class="sm")
+			|
+			|
+			.row
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/8.jpg",
+						title: "ACT Test Dates: Full Guide to Choosing (2021, 2022)",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["Looking for info on 2021-2022 ACT test dates? Knowing the most accurate ACT test dates is crucial for a solid test-taking plan. Though you might be tempted to go ahead and register for the next possible test date, what you should really be doing is finding a date that works well for you and your schedule."],
+						link: "Read more"
+					})
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/9.jpg",
+						title: "What's an Average ACT Writing Score?",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["It's approximately one month after your ACT test date. You get your ACT score report and see your ACT Writing score. But what does that number actually mean? Did you do better than average? Worse? Exactly average? Learn what an average ACT Writing score is in this article."],
+						link: "Read more"
+					})
+	// SECTION BLOG GRID END
+	|
+	|
+	// SECTION GRADUATE SCHOOL TEST
+	section.section-graduate-school-test.section.p-0
+		.container
+			.section-graduate-school-test__main-block
+				.row
+					.col-lg-7
+						.section-graduate-school-test__left-content
+							.section-graduate-school-test__title-holder
+								h3.title-default Looking for Graduate School Test Prep?
+								.text-block.text-small
+									p Check out our top-rated graduate blogs here:
+							|
+							|
+							ul.links-list.text-small
+								li.links-list__item
+									a(href="#" class="font-weight-500") GRE Online Prep Blog
+								li.links-list__item
+									a(href="#" class="font-weight-500") GMAT Online Prep Blog
+								li.links-list__item
+									a(href="#" class="font-weight-500") TOEFL Online Prep Blog
+					|
+					|
+					.col-lg-5.col-xl-4
+						.stay-informed-block
+							h3.title-default Stay Informed
+							|
+							|
+							.stay-informed-block__text-and-socials
+								.stay-informed-block__text.text-block.text-small
+									p Get the latest articles and test prep tips!
+								|
+								|
+								.stay-informed-block__socials
+									ul.socials-big-list.justify-content-center.justify-content-sm-left
+										li.socials-big-list__item
+											a(href="#" class="socials-big-list__link")
+												img(src="img/socials-big-list/facebook.svg" alt="Icon")
+										li.socials-big-list__item
+											a(href="#" class="socials-big-list__link")
+												img(src="img/socials-big-list/twitter.svg" alt="Icon")
+	// SECTION GRADUATE SCHOOL TEST END
+	|
+	|
+	// SECTION BLOG GRID
+	section.section-blog-grid.section.pb-0
+		.container
+			.row
+				.col-md-6
+					.section-blog-grid__vertical-cards
+						+blogCard({
+							title: "Why You Shouldn't Trust US News College Rankings",
+							postedByBlock: {
+								avatar: "img/posted-by-block/1.jpg",
+								text: [
+									'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+									'<a href="#">SAT/ACT SCORE TARGET</a>'
+								]
+							},
+							text: ["US News is probably the most popular source out there for college rankings. While US News rankings of colleges purport to be highly accurate, they can be misleading in certain important respects."],
+							link: "Read more"
+						})
+						+blogCard({
+							title: "The Expert's Guide to the AP Psychology Exam",
+							postedByBlock: {
+								avatar: "img/posted-by-block/1.jpg",
+								text: [
+									'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+									'<a href="#">SAT/ACT SCORE TARGET</a>'
+								]
+							},
+							text: ["Taking AP Exams can be stressful, but if you know what to expect on test day, you can eliminate a lot of that anxiety. The AP Psychology exam is one of the more popular AP tests, and it has a pretty straightforward format and scoring system."],
+							link: "Read more"
+						})
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/4.jpg",
+						title: "New York State Regents Exams: What Are They? When Do You Take Them?",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["If you're in middle school or high school in New York State, chances are that you've heard of the NYSED Regents exams. In fact, all NY public high school students have to take (and pass) a certain number of these exams to graduate from high school."],
+						link: "Read more"
+					})
+			|
+			|
+			.row
+				.col-md-6.col-lg-4
+					+blogCard({
+						img: "img/blog-card/5.jpg",
+						title: "Best SAT Math Prep Books (2021): Expert Reviews",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+						},
+						text: ["While there are many different SAT prep books, they all have one thing in common: they all claim to be the best. How can you figure out which one will actually help you succeed on the SAT?"],
+						link: "Read more"
+					})(class="sm")
+				.col-md-6.col-lg-4
+					+blogCard({
+						img: "img/blog-card/6.jpg",
+						title: "The SAT Scores You Need for Nursing Programs",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+						},
+						text: ["Are you wondering the kind of SAT scores you need to get into nursing schools? Applying for undergraduate nursing programs is simpler than you might think."],
+						link: "Read more"
+					})(class="sm")
+				.col-md-6.col-lg-4
+					+blogCard({
+						img: "img/blog-card/7.jpg",
+						title: "What Is a Good ACT Writing Score?",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: ['Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM" <a href="#">SAT/ACT SCORE TARGET</a>']
+						},
+						text: ["As you study for the ACT, it's easy enough to calculate your ACT composite target score. But where does your essay score fit into all this? What's a good ACT Writing score?"],
+						link: "Read more"
+					})(class="sm")
+	// SECTION BLOG GRID END
+	|
+	|
+	// SECTION GET CONSULT
+	+sectionGetConsult({
+		img: "img/section-get-consult-img.svg",
+		title: "Get Free Guides to Boost Your <mark>SAT/ACT</mark> Score",
+		text: ["Subscribe to our blog today!", "100% Privacy. No spam!"],
+		forms: {
+			phone: true,
+			submit: "Submit"
+		}
+	})(class="p-0")
+	// SECTION GET CONSULT END
+	|
+	|
+	// SECTION BLOG GRID
+	section.section-blog-grid.section.pb-0
+		.container
+			.row
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/2.jpg",
+						title: "The 50 Cheapest Colleges in the US",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["Because wages seem to be remaining stagnant and college costs continue to soar, financial concerns are weighing more heavily on families when students make their college decisions. Additionally, student loan debt is increasing and young people are worried about"],
+						link: "Read more"
+					})
+				.col-md-6
+					+blogCard({
+						img: "img/blog-card/3.jpg",
+						title: "SAT Test Dates: Full Guide to Choosing (2021, 2022)",
+						postedByBlock: {
+							avatar: "img/posted-by-block/1.jpg",
+							text: [
+								'Posted by <a href="#">Dr. Fred Zhang</a> | Nov 19, 2021 3:00:00 PM"',
+								'<a href="#">SAT/ACT SCORE TARGET</a>'
+							]
+						},
+						text: ["The SAT is offered seven times a year, but which SAT test dates will work best for you and your schedule? What essential factors should you consider before creating an SAT schedule? What are the best SAT dates for juniors?"],
+						link: "Read more"
+					})
+	// SECTION BLOG GRID END
+	|
+	|
+	// BLOG NAVIGATION
+	.container
+		ul.blog-nav.pt-0
+			li.blog-nav__item
+				a(href="#" class="btn-round-with-text")
+					span.btn-round-with-icon.btn-gray
+						i.icon-arrow-left
+					span.btn-round-with-text__text All Posts
+			li.blog-nav__item
+				a(href="#" class="btn-round-with-text reverse")
+					span.btn-round-with-icon.btn-gray
+						i.icon-arrow-right
+					span.btn-round-with-text__text Next Page
+	// BLOG NAVIGATION END
+	|
+	|
+	// SECTION BANNER WITH TEXT
+	+sectionBannerWithText({
+		title: "Student and Parent Forum",
+		text: ["Our new student and parent forum, at <a href='#'><strong>ExpertHub.PrepScholar.com</strong></a>, allow you to interact with your peers and the PrepScholar staff. See how other students and parents are navigating high school, college, and the college admissions process. Ask questions; get answers."],
+		btn: "Student and Parent Forum"
+	})(class="blue-bg bg-1 pt-0")
+	// SECTION BANNER WITH TEXT END
+	|
+	|
+	// SECTION BLOG FINAL
+	section.section-blog-final.section.pt-0
+		.container
+			.section-blog-final__share-block
+				h3 Have friends who also need help with test prep?<br> Share this article!
+				|
+				|
+				include ../includes/_share-buttons.pug
+			|
+			|
+			h3 Ask a Question Below
+			.text-block
+				p Have any questions about this article or other topics? Ask below and we'll reply!
+	// SECTION BLOG FINAL END

@@ -1,0 +1,161 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "How it works (Hour-by-Hour)";
+
+block content
+	// SECTION NAVIGATION
+	section.section-navigation
+		.container
+			h2.sr-only Navigation
+			|
+			|
+			+buttonsNavigationList([
+				{text: "Overview"},
+				{text: "Features"},
+				{text: "Hour-by-Hour", active: true},
+				{text: "FAQ"}
+			])
+	// SECTION NAVIGATION END
+	|
+	|
+	// SECTION IMAGE AND CONTENT
+	section.section-image-and-content.with-bg-3.section
+		.section-image-and-content__inner-block
+			.container
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								h2.with-clock-icon
+									img(src="img/clock-icons/1.svg" alt="Icon")
+									span First <mark>10 Minutes</mark>
+								h3 Signup and Prepare
+								.section-image-and-content__text.text-block
+									p Create your account through a simple form. Start your free trial by submitting your payment information. Then, answer a survey so we know how to prep you best, with questions like your target score and preferred style of studying.
+						.col-md-6
+							img(src="img/section-image-and-content/9.jpg" alt="Image")
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								h2.with-clock-icon
+									img(src="img/clock-icons/2.svg" alt="Icon")
+									span First <mark>Hour</mark>
+								h3 Take a Smart Diagnostic
+								.section-image-and-content__text.text-block
+									p Right after signing up, you can get started in the same hour!
+									p Take a 60-question diagnostic, and our CustomPrep technology will pinpoint your strengths and weaknesses across every skill the SAT tests. Our algorithms are developed by Harvard PhDs and use data from thousands of students so that your diagnostic is as accurate as possible.
+						.col-md-6
+							img(src="img/section-image-and-content/10.jpg" alt="Image")
+	// SECTION IMAGE AND CONTENT END
+	|
+	|
+	// SECTION IMAGE AND CONTENT
+	section.section-image-and-content.with-bg-4.with-blue-bg.section
+		.section-image-and-content__inner-block
+			.container
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								h2.with-clock-icon
+									img(src="img/clock-icons/1.svg" alt="Icon")
+									span Hours <mark>2-10</mark>
+								h3 Train Your Skills with Lessons
+								.section-image-and-content__text.text-block
+									p In the next block, you take 8 lessons. All lessons are online and require about 60 minutes each. Each lesson has 3 parts. First is a 20-minute teaching portion, containing text and video teaching you core concepts and SAT strategies. For example, for Writing: Number Agreement, you'll learn the subject-verb agreement grammar rule, all the ways it appears on the SAT, and strategies to solve these questions.
+						.col-md-6
+							img(src="img/section-image-and-content/11.jpg" alt="Image")
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								.section-image-and-content__text.text-block
+									p Part 2 of the lesson is a focused practice quiz. You're given 20 minutes to finish 20 realistic SAT problems. These problems focus on what you just learned, giving you an immediate chance to put your skills into practice.
+									p Part 3 of the lesson is spent reviewing your mistakes. By reading a detailed answer explanation for every question, you'll reflect on the question and avoid mistakes in the future.
+									p Your study plan adapts to your progress on each lesson. If you aced the lesson, we'll advance you to the next level. If you need more work, we'll reschedule the lesson to give you another shot. With this training method, you'll make the fastest progress.
+						.col-md-6
+							img(src="img/section-image-and-content/12.jpg" alt="Image")
+	// SECTION IMAGE AND CONTENT END
+	|
+	|
+	// SECTION IMAGE AND CONTENT
+	section.section-image-and-content.with-bg-5.reverted.section
+		.section-image-and-content__inner-block
+			.container
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								h2.with-clock-icon
+									img(src="img/clock-icons/4.svg" alt="Icon")
+									span Hours <mark>11-14</mark>
+								h3 Take a Smart Diagnostic
+								.section-image-and-content__text.text-block
+									p Next, you put your new skills to work on a full-length official SAT. We provide every customer with the Official SAT Study Guide, containing real practice tests from the College Board. We believe taking the practice test under realistic conditions is critical to improving your score.
+									p The test takes 3 hours. You finish the test on paper and enter your answers online. We immediately grade your test and display your score. You can also upload an essay for a PrepScholar instructor to grade and give you custom feedback on how to improve.
+						.col-md-6
+							img(src="img/section-image-and-content/13.jpg" alt="Image")
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								h2.with-clock-icon
+									img(src="img/clock-icons/5.svg" alt="Icon")
+									span Hours <mark>15+</mark>
+								h3 Continue Your Customized Prep
+								.section-image-and-content__text.text-block
+									p From this point forward, you continue to follow your customized study plan. You develop your skills through lessons, and you take practice tests to bring your skills together. You also learn strategies from specialized Strategy Lessons.
+									p Your program evolves as you improve - you always work at the edge of your ability, challenged to get better and improve your score. Throughout this process, you become completely prepared for the SAT.
+						.col-md-6
+							img(src="img/section-image-and-content/14.jpg" alt="Image")
+	// SECTION IMAGE AND CONTENT END
+	|
+	|
+	// SECTION IMAGE AND CONTENT
+	section.section-image-and-content.with-bg-6.with-gray-bg.reverted.section
+		.section-image-and-content__inner-block
+			.container
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								h2.with-clock-icon
+									img(src="img/clock-icons/6.svg" alt="Icon")
+									span Final <mark>Step</mark>
+								h3 Ace the SAT
+								.section-image-and-content__text.text-block
+									p After PrepScholar, you're completely ready to take on the SAT. You stride confidently into the test center, knowing that you're thoroughly prepared. Each question you see on the test looks like one of the many you've already drilled on.
+									p We're so confident you did well, we have the industry's leading score improvement guarantee: improve your score by 160 points, or get your money back.
+						.col-md-6
+							img(src="img/section-image-and-content/15.jpg" alt="Image")
+	// SECTION IMAGE AND CONTENT END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Start the journey to improving your SAT today!",
+		button: {
+			text: "Get eBook: 5 Tips for 160+ Points"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION CUSTOMER REVIEWS
+	include ../includes/_section-customer-reviews.pug
+	// SECTION CUSTOMER REVIEWS END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Do you want to know more? Go to the next page",
+		button: {
+			text: "FAQ",
+			withDubleArrow: true
+		},
+		withoutIndents: true,
+	})(class="full-width blue-bg")
+	// SECTION BANNER END

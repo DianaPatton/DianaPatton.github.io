@@ -1,0 +1,317 @@
+.slick-vertical {
+	.slick-slide {
+		border: none;
+	}
+}
+
+.slick-slider {
+	&.slides-gutter-default {
+		.slick-slide {
+			margin: 0 $grid-gutter-width/2;
+		}
+
+		.slick-list {
+			margin: 0 -$grid-gutter-width/2;
+		}
+	}
+
+	&.slides-gutter-24 {
+		.slick-slide {
+			margin: 0 12px;
+		}
+
+		.slick-list {
+			margin: 0 -12px;
+		}
+	}
+
+	&.with-flex {
+		.slick-track {
+			display: flex;
+		}
+
+		.slick-slide {
+			display: flex;
+			height: auto;
+
+			> div {
+				display: flex;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.reviews-slider {
+	background-color: $white;
+	box-shadow: 0px 15px 150px rgba(82, 63, 46, 0.08);
+	border-radius: $border-radius;
+	padding: 16px 33px;
+
+	@include min-w(sm) {
+		padding: 24px 25px 24px 156px;
+	}
+
+	@include min-w(md) {
+		width: 780px;
+		padding: 28px 32px 28px 156px;
+	}
+
+	@include min-w(lg) {
+		width: 1068px;
+	}
+
+	&.long {
+		padding: 35px $grid-gutter-width/2;
+		margin-left: -$grid-gutter-width/2;
+		margin-right: -$grid-gutter-width/2;
+		border-radius: 0;
+
+		@include min-w(sm) {
+			padding: 32px 32px 50px 158px;
+			margin-left: 0;
+			margin-right: 0;
+			border-radius: $border-radius;
+		}
+
+		@include min-w(md) {
+			width: 1200px;
+		}
+
+		@include min-w(lg) {
+			width: 1500px;
+		}
+
+		@include min-w(xl) {
+			width: 1788px;
+		}
+
+		.slick-arrow {
+			bottom: 58px;
+		}
+	}
+
+	.slick-arrow {
+		transform: none;
+		top: auto;
+		bottom: 36px;
+
+		&.slick-prev {
+			left: 32px;
+		}
+
+		&.slick-next {
+			left: 84px;
+		}
+	}
+}
+
+.slider-team-wrap {
+	position: relative;
+
+	@include min-w(sm) {
+		padding-right: 110px;
+	}
+
+	@include min-w(xl) {
+		padding-right: 140px;
+	}
+
+	&__slider {
+		position: static;
+	}
+}
+
+.slider-team {
+	background-color: $white;
+	padding: 20px 22px;
+	box-shadow: 0px 15px 150px rgba(82, 63, 46, 0.08);
+	border-radius: $border-radius;
+
+	@include min-w(md) {
+		padding: 24px 10px;
+	}
+
+	@include min-w(lg) {
+		padding: 24px 20px;
+	}
+
+	.slick-slide {
+		margin: 0 12px;
+	}
+
+	.slick-list {
+		margin: 0 -12px;
+	}
+
+	.slick-arrow {
+		left: auto;
+
+		&.slick-prev {
+			right: 52px;
+
+			@include min-w(xl) {
+				right: 62px;
+			}
+		}
+
+		&.slick-next {
+			right: 0;
+
+			@include min-w(xl) {
+				right: 10px;
+			}
+		}
+	}
+}
+
+.customer-reviews-slider {
+	@include min-w(sm) {
+		padding-left: 75px;
+	}
+
+	.slick-arrow {
+		transform: none;
+
+		&.slick-prev {
+			top: 0;
+			left: 0;
+
+			@include min-w(sm) {
+				bottom: 92px;
+				top: auto;
+			}
+		}
+
+		&.slick-next {
+			top: 0;
+			left: 52px;
+
+			@include min-w(sm) {
+				bottom: 40px;
+				left: 0;
+				top: auto;
+			}
+		}
+	}
+
+	.slick-slide {
+		@include max-w(sm) {
+			margin: 0 12px;
+		}
+	}
+
+	.slick-list {
+		@include min-w(sm) {
+			height: 470px !important;
+		}
+
+		@include max-w(sm) {
+			margin: 0 -12px;
+		}
+	}
+}
+
+.images-slider {
+	@include min-w(sm) {
+		padding: 60px 0;
+	}
+
+	@include min-w(lg) {
+		padding-bottom: 105px;
+	}
+
+	&:after {
+		@include min-w(sm) {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 42%;
+			width: 300vw;
+			background-color: $gray-200;
+		}
+	}
+
+	.slick-list {
+		position: relative;
+		z-index: 2;
+		overflow: inherit;
+	}
+
+	.slick-arrow {
+		&.slick-prev,
+		&.slick-next {
+			top: auto;
+			transform: none;
+			bottom: calc(100% + 30px);
+		}
+
+		&.slick-prev {
+			left: auto;
+			right: 61px;
+		}
+
+		&.slick-next {
+			right: 12px;
+		}
+	}
+
+	&__link {
+		@include responsive-ratio(572, 294, true);
+
+		position: relative;
+		display: block;
+		border: 1px solid $gray-3;
+		transition: border-color 0.3s;
+
+		&:hover {
+			@include min-w(sm) {
+				border-color: $primary;
+			}
+		}
+	}
+
+	&__img {
+		@include absoluteCover;
+
+		object-fit: cover;
+	}
+}
+
+.testimonials-slider {
+	@include min-w(sm) {
+		padding-left: 120px;
+	}
+
+	@include min-w(md) {
+		width: 1400px;
+	}
+
+	@include min-w(lg) {
+		width: 1972px;
+		padding-left: 200px;
+	}
+
+ .slick-arrow {
+	 transform: none;
+	 top: auto;
+	 bottom: 20px;
+
+	 &.slick-prev {
+		 left: 0;
+
+		 @include min-w(lg) {
+			left: 80px;
+		 }
+	 }
+
+	 &.slick-next {
+		left: 52px;
+
+		@include min-w(lg) {
+			left: 132px;
+		}
+	 }
+ }
+}

@@ -1,0 +1,62 @@
+.slick-arrow {
+	z-index: 5;
+
+	&.slick-prev, &.slick-next {
+		@extend .btn-round-with-icon;
+		@extend .btn-gray;
+
+		font-size: 0;
+
+		&:before {
+			color: inherit;
+		}
+
+		&.slick-disabled {
+			pointer-events: none;
+			background-color: $gray-200 !important;
+			border-color: $gray-200 !important;
+			color: $primary !important;
+		}
+	}
+
+	&.slick-prev {
+		&:before {
+			transform: translate(-2px, 0);
+		}
+	}
+
+	&.slick-next {
+		&:before {
+			transform: translate(2px, 0);
+		}
+	}
+}
+
+
+.slick-prev {
+	left: -25px;
+}
+
+.slick-next {
+	right: -25px;
+}
+
+.slick-slider {
+	&.slick-vertical {
+		.slick-arrow {
+			&.slick-prev {
+				&:before {
+					content: '\e90c';
+					transform: translate(0, -2px);
+				}
+			}
+
+			&.slick-next {
+				&:before {
+					content: '\e90d';
+					transform: translate(0, 2px);
+				}
+			}
+		}
+	}
+}

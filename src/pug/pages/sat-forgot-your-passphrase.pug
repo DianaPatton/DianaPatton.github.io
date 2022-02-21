@@ -1,0 +1,29 @@
+extends ../templates/sat-registration-template.pug
+
+block vars
+	- var pageTitle = "Forgot your passphrase";
+	- var pageType = "SAT";
+
+block content
+	a(href="#" class="section-registration__logo")
+		img(src="img/logo-sat.svg" alt="Logo")
+	|
+	|
+	h5.title-default Forgot your passphrase?
+	|
+	|
+	.section-registration__text.text-block.text-small
+		p No worries. Enter your email address and we’ll send you instructions on how to reset your passphrase.
+	|
+	|
+	form(action="#" class="section-registration__form")
+		.form-list
+			.form-group
+				label(for="registrationEmail") Email
+				input.form-control.form-control-lg#registrationEmail(type="email" placeholder="username@gmail.com")
+		.text-center
+			button.btn.btn-primary.btn-lg.btn-block(type="submit") Send Instructions
+	|
+	|
+	.section-registration__forgot-link.text-small.mb-0
+		a(href="#"): strong Never mind, I remember

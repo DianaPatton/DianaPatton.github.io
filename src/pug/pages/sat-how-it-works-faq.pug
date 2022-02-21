@@ -1,0 +1,144 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "How it works (FAQ)";
+
+block content
+	// SECTION NAVIGATION
+	section.section-navigation
+		.container
+			h2.sr-only Navigation
+			|
+			|
+			+buttonsNavigationList([
+				{text: "Overview"},
+				{text: "Features"},
+				{text: "Hour-by-Hour"},
+				{text: "FAQ", active: true}
+			])
+	// SECTION NAVIGATION END
+	|
+	|
+	// SECTION FAQ
+	section.section-faq.section
+		+bannerWithImage({
+			img: "img/banner-with-image-img-1.svg"
+		})(class="bg-1")
+		|
+		|
+		.container
+			.section-faq__main-content
+				.section-faq__search-form-content
+					.text-center
+						h1 Hello, How Can We Hellp?
+						|
+						|
+						+searchForm({
+							placeholder: "For example: how to register?",
+							submit: "Find"
+						})
+				|
+				|
+				.text-center
+					h2 Frequently <mark>Asked Questions</mark>
+					.section-faq__text.text-block
+						p Click on each question below to read answers to our most commonly asked questions. Don't see your question here?
+					a(href="#" class="btn btn-primary btn-lg") Contact Us
+			|
+			|
+			.row.justify-content-center
+				.col-md-10.col-lg-8
+					+accordion({
+						id: "faq",
+						elements: [
+							{
+								header: "What are the exact steps to getting started with SAT Complete Prep?",
+								body: [
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								]
+							},
+							{
+								header: "How many hours do you need to finish the program? How many weeks do I need, minimum or maximum?",
+								body: [
+									"Our Complete prep program has a baseline time of 40 hours total. This is the minimum recommended amount of time to get the most from our program. For example, if you plan to take the test in two months (60 days) then the student is encouraged to spend about an hour a day on the program.",
+									"Beyond the minimum, we have much more content than 40 hours available - with thousands of practice questions and detailed lessons, you can spend hundreds of hours learning with PrepScholar. Our program has worked well for students in as few as 3 weeks or helped them for as long as 2 years."
+								]
+							},
+							{
+								header: "Is this all online? Do I need to drive to a prep center? What other equipment do I need?",
+								body: [
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								]
+							},
+							{
+								header: "Do I need to pre-schedule time for the program? Can I work on the program any time I like?",
+								body: [
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								]
+							},
+							{
+								header: "Can I study immediately? Are there any “waiting periods” like grading after a lesson or test that will slow down my study?",
+								body: [
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								]
+							},
+							{
+								header: "Do you teach strategies as well as content?",
+								body: [
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								]
+							},
+							{
+								header: "How can you hold the student accountable to studying? I’m a parent and want to make sure my child uses your program.",
+								body: [
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								]
+							},
+							{
+								header: "How can I see student progress through the program?",
+								body: [
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								]
+							},
+							{
+								header: "What does the Complete study program look like exactly, hour by hour?",
+								body: [
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								]
+							},
+							{
+								header: "How can I make sure my student will work well in your online environment?",
+								body: [
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								]
+							},
+							{
+								header: "Is the price displayed in the pricing page all-inclusive? Do you have any extra fees, charges, or required supplies that I need to buy?",
+								body: [
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								]
+							}
+						]
+					})
+	// SECTION FAQ END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Try us free for 5 days! The clock doesn't tick till the student uses it!",
+		button: {
+			text: "Get a Free Trial"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END

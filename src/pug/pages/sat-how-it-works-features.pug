@@ -1,0 +1,269 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "How it works (Features)";
+
+block content
+	// SECTION NAVIGATION
+	section.section-navigation
+		.container
+			h2.sr-only Navigation
+			|
+			|
+			+buttonsNavigationList([
+				{text: "Overview"},
+				{text: "Features", active: true},
+				{text: "Hour-by-Hour"},
+				{text: "FAQ"}
+			])
+	// SECTION NAVIGATION END
+	|
+	|
+	// SECTION IMAGE AND CONTENT
+	section.section-image-and-content.with-bg-2.section
+		.section-image-and-content__inner-block
+			.container
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								h1 <mark>Customized</mark> to You
+								.section-image-and-content__text.text-block
+									p Our smart diagnostic figures out your true skill level and builds a custom prep program that caters to <strong>your difficulty level.</strong> If you're strong in Math: Circle problems, we give you more difficult problems. If you're weak in Reading: Passage Function problems, we give you easier problems. We challenge you at the tip of your ability, where you'll grow the fastest.
+									p Your program is <strong>continuously updating</strong>. After every lesson, we re-estimate your skill and adapt your study plan.
+						.col-md-6
+							img(src="img/section-image-and-content/1.svg" alt="Image")
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								.section-image-and-content__text.text-block
+									p For example, if you ace a beginner Math: Algebra lesson, you'll be upgraded immediately to the Advanced lesson. Likewise, if you need extra work on Writing: Idioms, we'll reschedule it into your study plan.
+									p The result: the most efficient studying and higher score results for every hour you put in.
+								a(href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#readMoreDetailsModal") Read more details
+								|
+								|
+								// Modal
+								.modal.fade#readMoreDetailsModal(tabindex="-1" aria-labelledby="readMoreDetailsModalLabel" aria-hidden="true")
+									.modal-dialog.modal-lg.modal-dialog-centered
+										.modal-content.border-0
+											.modal-header
+												h3.modal-title#readMoreDetailsModalLabel Customization Details
+											.modal-body
+												.text-block.text-small
+													p Our diagnostic test contains 60 questions and takes about 60-80 minutes to finish. Each question is dynamically chosen in response to each of your answers to gather the maximum amount of information about you and your strengths. Using the technology of computerized adaptive testing, we've studied skill levels of thousands of students, making our diagnostic very precise. After these 60 questions, PrepScholar knows your precise skill level for over 30 SAT skills. For example, we'll know if you're strong in Math: Circle and Reading: Passage Inferences, and weak in Math: Algebra Linear Equations and Writing: Number Agreement.
+													p Next, PrepScholar takes your strengths and weaknesses and constructs a customized study plan unique to you. Your custom study plan is designed so that you're always working on what will get you the biggest score increase. You'll concentrate first on your weaker skills, where you'll see the fastest progress. For each quiz, you'll receive questions that are appropriate for your skill level, so that you won't work on questions that are too easy or too hard for you.
+													p The customization doesn't end there - your study program will continue adapting to your progress as you continue studying. Each time you complete a lesson and submit a quiz, we learn more information about your skill level. If you're not making progress in an area, we'll assign you easier lessons so you can take smaller steps. If you're making fast progress, we'll upgrade your skill level. When you master a skill, we'll focus your attention on other weaknesses so you keep making progress.
+													p Overall, our customization technology makes sure that you're always spending time on the activities that will get you the biggest score improvement. This system has been proven effective with thousands of students in score results and satisfaction.
+											.modal-footer.justify-content-start.justify-content-sm-center
+												button.btn.btn-primary.btn-lg(type="button" data-dismiss="modal") Close
+						.col-md-6
+							img(src="img/section-image-and-content/2.jpg" alt="Image")
+	// SECTION IMAGE AND CONTENT END
+	|
+	|
+	// SECTION WITH VIDEO
+	section.section-with-video.with-blue-bg.section
+		.section-with-video__inner-content
+			.container
+				.row.align-items-center
+					.col-md-5
+						.section-with-video__main-content-block
+							h2 Videos to Clarify <mark>Hard Concepts</mark>
+							.section-with-video__description.text-block
+								p Many lessons have included videos to show you the content and strategies you need to ace the SAT. These high-quality videos supplement our interactive lessons to carefully explain the most difficult concepts.
+								p But unlike many other programs, we're much more than a collection of videos. Check out our other features to find out more!
+								p: strong Click play to see a writing video excerpt.
+					.col-md-7
+						.section-with-video__video-block.mb-0
+							.embed-responsive.embed-responsive-16by9.rounded
+								iframe.embed-responsive-item(src='https://player.vimeo.com/video/393346674?h=4ef696999a' allow='autoplay; fullscreen; picture-in-picture')
+	// SECTION WITH VIDEO END
+	|
+	|
+	// SECTION IMAGE AND CONTENT
+	section.section-image-and-content.reverted.section
+		.section-image-and-content__inner-block
+			.container
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								h2 Full <mark>Guidance</mark>
+								.section-image-and-content__text.text-block
+									p You'll never get lost on how to study. We give you <strong>exact step-by-step instructions</strong> on what to study: which lessons to take and when. We tell you whether you should be reading lessons, drilling questions, or reviewing your mistakes. We assign practice tests to you at the best times.
+									p At the same time, you're free to choose what you'll work on in the short term. Not feeling like a Math lesson right now? Take a Reading lesson you're assigned instead.
+						.col-md-6
+							img(src="img/section-image-and-content/3.svg" alt="Image")
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								.section-image-and-content__text.text-block
+									p Every week on your study Dashboard, you'll see a study plan containing 10-15 assignments. These assignments contain strategy lessons, quizzes, and practice tests. Each assignment is chosen specifically for you based on your strengths and weaknesses. Using this Dashboard, you'll know what's important to work on at any point in time.
+									p For example, when you see a practice test on your Dashboard, you'll know that it's time to exercise your skills on a full-length test. If your test is coming up soon, we'll show you strategy lessons targeted toward what to do in your last week before the test.
+									p Even with this guidance, you still have flexibility on what to work on. At any point in time, you can choose among the assignments given to you. If you're not feeling like working on Math today, you can choose to work on a Reading lesson instead, and come back to Math later.
+						.col-md-6
+							img(src="img/section-image-and-content/4.jpg" alt="Image")
+	// SECTION IMAGE AND CONTENT END
+	|
+	|
+	// SECTION
+	section.section.pb-md-0
+		.container
+			.row
+				.col-md-4
+					.mb-35
+						h2 <mark>Reviews</mark> About The Program
+						|
+						|
+						.text-block
+							p Our students shared their impressions after completing the training
+				.col-md-8
+					.reviews-slider.long.slides-gutter-default.with-flex.js-reviews-slider
+						+reviewsCard({
+							photo: "img/reviews-card/3.jpg",
+							title: "<strong>Jessica N.</strong> San Diego, CA",
+							text: ["I like how it suits my level of test skills after taking the diagnostic test. It has helped me improve in certain areas over time without feeling overwhelmed. I really feel like I am getting more out of this program than I did with private tutoring."]
+						})(class="long-version")
+						+reviewsCard({
+							photo: "img/reviews-card/4.jpg",
+							title: "<strong>Jessica N.</strong> San Diego, CA",
+							text: ["I really like how organized everything is. It makes what I am supposed to do really clear and helps me to plan my study time."]
+						})(class="long-version")
+						+reviewsCard({
+							photo: "img/reviews-card/3.jpg",
+							title: "<strong>Jessica N.</strong> San Diego, CA",
+							text: ["I like how it suits my level of test skills after taking the diagnostic test. It has helped me improve in certain areas over time without feeling overwhelmed. I really feel like I am getting more out of this program than I did with private tutoring."]
+						})(class="long-version")
+						+reviewsCard({
+							photo: "img/reviews-card/4.jpg",
+							title: "<strong>Jessica N.</strong> San Diego, CA",
+							text: ["I really like how organized everything is. It makes what I am supposed to do really clear and helps me to plan my study time."]
+						})(class="long-version")
+	// SECTION END
+	|
+	|
+	// SECTION IMAGE AND CONTENT
+	section.section-image-and-content.reverted.with-gray-bg.section
+		.section-image-and-content__inner-block
+			.container
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								h2 <mark>Motivation</mark>
+								.section-image-and-content__text.text-block
+									p We actively motivate you to study more for the SAT. We send <strong>weekly email reports</strong> to both parent and student discussing lessons completed and hours studied. These emails help parents stay up-to-date on student progress and hold students accountable for studying. You'll get compliments for work well done, and warnings for slacking off.
+						.col-md-6
+							img(src="img/section-image-and-content/5.svg" alt="Image")
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								.section-image-and-content__text.text-block
+									p You'll spend more hours studying with PrepScholar than with other prep programs. This means higher score improvements.
+						.col-md-6
+							img(src="img/section-image-and-content/6.jpg" alt="Image")
+	// SECTION IMAGE AND CONTENT END
+	|
+	|
+	// SECTION IMAGE AND CONTENT
+	section.section-image-and-content.section
+		.section-image-and-content__inner-block
+			.container
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								h2 Progress <mark>Trackers</mark>
+								.section-image-and-content__text.text-block
+									p In your SAT prep, it's important to know where you are and how far you have to go. That's why we give you a variety of tools to keep track of your progress. A <strong>time tracker</strong> shows you how much time you're studying and how you stack up against your goal. <strong>Skill charts</strong> show you how you're making progress over time. A <strong>log of all progress</strong> gives you a complete record of your past work and lets you access every quiz taken on demand.
+						.col-md-6
+							img(src="img/section-image-and-content/7.jpg" alt="Image")
+				.section-image-and-content__block
+					.row.align-items-center
+						.col-md-6
+							.section-image-and-content__content-block
+								.section-image-and-content__text.text-block
+									p By watching your progress over time, you'll see your hard work paying off. Confidence is key in beating the SAT, and by prepping with us, you'll be more confident than ever.
+								a(href="#" class="btn btn-primary btn-lg") Start free trial
+						.col-md-6
+							img(src="img/section-image-and-content/8.svg" alt="Image")
+	// SECTION IMAGE AND CONTENT END
+	|
+	|
+	// SECTION WITH GRAY BOX
+	section.section-with-gray-box.left-side-box.section
+		.container
+			.row
+				.col-md-6
+					.section-with-gray-box__content
+						.section-with-gray-box__content-inner
+							h2 Learn From Your <mark>Mistakes</mark>
+							.text-block
+								p Our prep program has a dedicated section for you to review your mistakes, organized by topic. Problems you answered incorrectly are displayed with the correct answers and detailed answer explanations. As you prepare for the SAT, this will help you ensure that you don't repeat past mistakes on the actual exam.
+				.col-md-6
+					.section-with-gray-box__content
+						.section-with-gray-box__content-inner
+							h2 Create Your Own <br><mark>Quizzes</mark>
+							.text-block
+								p If you decide you would like to drill particular topics, you can create your own quizzes with questions selected from those topics. After answering the questions, you can see the correct answers, with detailed explanations of why those answers are correct.
+	// SECTION WITH GRAY BOX END
+	|
+	|
+	// SECTION INCLUDED
+	section.section-included.section
+		.container
+			.text-center
+				h2.enlarged-bottom-indent Plus <mark>More:</mark>
+			|
+			|
+			.row
+				.col-md-6.col-lg-4.d-flex
+					+simpleCard({
+						icon: "img/simple-card-icons/10.svg",
+						title: "No Wait Period",
+						text: ["Get started with studying immediately. No need to wait for a class to start."]
+					})
+				.col-md-6.col-lg-4.d-flex
+					+simpleCard({
+						icon: "img/simple-card-icons/11.svg",
+						title: "Anytime Access",
+						text: ["8AM, 2PM, 6PM, 11PM - access PrepScholar whenever you want. We're always online."]
+					})(class="highlighted")
+				.col-md-6.col-lg-4.d-flex
+					+simpleCard({
+						icon: "img/simple-card-icons/12.svg",
+						title: "Anywhere Access",
+						text: ["Save the time you'd spend driving to a class or tutor, and study with that time instead."]
+					})
+	// SECTION INCLUDED END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Start the journey to improving your SAT today!",
+		button: {
+			text: "Get eBook: 5 Tips for 160+ Points"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION CUSTOMER REVIEWS
+	include ../includes/_section-customer-reviews.pug
+	// SECTION CUSTOMER REVIEWS END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Do you want to know more? Go to the next page",
+		button: {
+			text: "Hour-by-Hour",
+			withDubleArrow: true
+		},
+		withoutIndents: true,
+	})(class="full-width blue-bg")
+	// SECTION BANNER END

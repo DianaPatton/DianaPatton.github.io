@@ -1,0 +1,30 @@
+.badge {
+	color: $gray-950;
+	line-height: 1.375;
+	white-space: initial;
+	font-family: $font-family-base;
+	vertical-align: middle;
+	text-align: left;
+
+	@include min-w(md) {
+		text-align: center;
+	}
+
+	&-light {
+		background-color: rgba($white, 0.7);
+	}
+
+	&-gray {
+		background-color: $gray-200;
+	}
+
+	&-sm {
+		font-size: 12px;
+		padding: 12px 16px;
+		line-height: 1.834;
+
+		@include min-w(sm) {
+			padding: 16px;
+		}
+	}
+}

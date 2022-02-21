@@ -1,0 +1,42 @@
+section.section-customer-reviews.section
+	.container
+		.row
+			.col-lg-6
+				.section-customer-reviews__main-content
+					h2 Hear What Our <mark>Customers</mark> Have to Say
+					.section-customer-reviews__description.text-block
+						p Thousands have already successfully passed the SAT exam after training in our program. Make sure of this by reading the reviews of our customers.
+					.section-customer-reviews__btn-block
+						a(href="#" class="btn btn-primary") Start free trial
+			|
+			|
+			.col-lg-6
+				.section-customer-reviews__slider
+					.customer-reviews-slider.js-customer-reviews-slider
+						- for (var i = 0; i < 2; i++)
+							div
+								+customerReviewsCard({
+									peopleInfoBlock: {
+										photo: "img/customer-reviews-card-photo-1.jpg",
+										title: "<strong>Layton,</strong> <em>University</em>",
+										subTitle: {
+											text: "Score",
+											additionalClass: "text-info"
+										},
+										rating: 5
+									},
+									text: ["Est, dui malesuada nisl at ullamcorper nisi. Magna velit quis egestas rhoncus purus erat molestie. Dolor integer ultricies tortor vestibulum augue. Lorem leo bibendum eu elementum, sem."]
+								})
+							div
+								+customerReviewsCard({
+									peopleInfoBlock: {
+										photo: "img/customer-reviews-card-photo-2.jpg",
+										title: "<strong>Hannah,</strong> <em>University</em>",
+										subTitle: {
+											text: "Score",
+											additionalClass: "text-info"
+										},
+										rating: 5
+									},
+									text: ["Est, dui malesuada nisl at ullamcorper nisi. Magna velit quis egestas rhoncus purus erat molestie. Dolor integer ultricies."]
+								})

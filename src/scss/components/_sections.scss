@@ -1,0 +1,2533 @@
+.section {
+	padding: 40px 0;
+
+	@include min-w(md) {
+		padding: 60px 0;
+	}
+
+	@include min-w(xl) {
+		padding: 80px 0;
+	}
+
+	&.small-indents {
+		padding: 30px 0;
+	}
+
+	&-welcome {
+		position: relative;
+		background-color: $blue;
+
+		@include max-w(md) {
+			padding-top: 60px;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			display: block;
+			height: 145px;
+			pointer-events: none;
+			background-color: $body-bg;
+			background-image: url('../img/backgrounds/top-bg-1.svg');
+			background-repeat: no-repeat;
+			background-position: top 0 left -30px;
+			background-size: 280px;
+
+			@include min-w(md) {
+				height: 155px;
+				background-position: top 0 left 160px;
+				background-size: 422px;
+			}
+
+			@include min-w(xl) {
+				height: 175px;
+			}
+		}
+
+		&__wrapper {
+			position: relative;
+			z-index: 5;
+		}
+
+		&__main-content {
+			margin-bottom: 40px;
+
+			@include min-w(md) {
+				margin-bottom: 0;
+				padding-top: 45px;
+			}
+		}
+
+		&__right-content {
+			position: relative;
+		}
+
+		&__description {
+			max-width: 550px;
+			margin-bottom: 20px;
+
+			@include min-w(md) {
+				margin-bottom: 24px;
+			}
+		}
+
+		&__btn-block {
+			padding-top: 25px;
+
+			@include min-w(md) {
+				padding-top: 40px;
+			}
+		}
+
+		&__main-img-block {
+			width: 340px;
+			margin: 0 auto -8px;
+
+			@include min-w(md) {
+				width: 760px;
+				margin: 0 auto -17px;
+			}
+		}
+	}
+
+	&-points {
+		background-image: url('../img/backgrounds/round-bg-yellow.svg');
+		background-repeat: no-repeat;
+		background-size: 45px;
+		background-position: top 15px right 15%;
+
+		@include min-w(sm) {
+			background-image:
+				url('../img/backgrounds/round-bg-yellow.svg'),
+				url('../img/backgrounds/round-bg-red.svg');
+			background-size: 71px, 53px;
+			background-position:
+				top 15px right 5%,
+				bottom 15px left 5%
+			;
+		}
+
+		@include min-w(md) {
+			background-position:
+				top 15px right 10%,
+				bottom 15px left 23%
+			;
+		}
+
+		@include min-w(xl) {
+			background-position:
+				top 15px right 20%,
+				bottom 15px left 23%
+			;
+		}
+
+		&__description {
+			margin-bottom: 35px;
+
+			@include min-w(sm) {
+				margin-bottom: 50px;
+			}
+		}
+
+		&__cards-row {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -14px;
+		}
+
+		&__cards-col {
+			padding: 0 14px;
+			flex: 0 0 100%;
+			max-width: 100%;
+
+			@include min-w(md) {
+				flex: 0 0 50%;
+				max-width: 50%;
+			}
+
+			@include min-w(lg) {
+				flex: 0 0 265px;
+				max-width: 265px;
+			}
+		}
+
+		&__letters-img {
+			margin-bottom: 35px;
+		}
+
+		&__text-content {
+			margin-bottom: 45px;
+
+			@include min-w(sm) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&-get-consult {
+		&.bg-1 {
+			background-image:
+				url('../img/backgrounds/round-bg-blue.svg'),
+				url('../img/backgrounds/right-bg-1.svg'),
+			;
+			background-repeat: no-repeat;
+			background-size: 50px, 100px;
+			background-position: top 130px right 24%, bottom 50% right;
+
+			@include min-w(md) {
+				background-size: 50px, 200px;
+				background-position: top 130px right 24%, bottom right;
+			}
+		}
+
+		&__form-block {
+			border-radius: $border-radius;
+			background-color: $white;
+			padding: 28px 24px;
+			box-shadow: 0px 15px 150px rgba(82, 63, 46, 0.08);
+
+			@include min-w(md) {
+				padding: 55px 65px;
+			}
+		}
+
+		&__img-block {
+			@include min-w(lg) {
+				padding: 0 30px;
+			}
+		}
+
+		&__img {
+			display: block;
+			max-width: 200px;
+			width: 100%;
+			margin: 0 auto 30px;
+
+			@include min-w(md) {
+				max-width: 100%;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&-image-and-content {
+		&.with-bg-1 {
+			background-image: url('../img/backgrounds/round-bg-red.svg');
+			background-repeat: no-repeat;
+			background-position: left 43% top 60px;
+			background-size: 65px;
+		}
+
+		&.with-bg-2 {
+			background-image:
+				url('../img/backgrounds/round-bg-yellow.svg'),
+				url('../img/backgrounds/round-bg-blue.svg')
+			;
+			background-repeat: no-repeat;
+			background-position:
+				right 20px bottom 80px,
+				right 70px bottom 70px
+			;
+			background-size: 37px, 28px;
+
+			@include min-w(lg) {
+				background-position:
+					right 240px bottom 110px,
+					right 335px bottom 80px
+				;
+				background-size: 49px, 65px;
+			}
+		}
+
+		&.with-bg-3 {
+			background-image:
+				url('../img/backgrounds/round-bg-blue.svg'),
+				url('../img/backgrounds/round-bg-red.svg')
+			;
+			background-repeat: no-repeat;
+			background-position:
+				right 46px top 46%,
+				right 75px top 48%,
+			;
+			background-size: 26px, 34px;
+
+			@include min-w(md) {
+				background-image:
+					url('../img/backgrounds/round-bg-red.svg'),
+					url('../img/backgrounds/round-bg-blue.svg'),
+					url('../img/backgrounds/round-bg-red.svg'),
+				;
+				background-position:
+					right 151px top 0,
+					left 38% top 40%,
+					left 33% top 44%,
+				;
+				background-size: 65px, 49px, 65px;
+			}
+		}
+
+		&.with-bg-4 {
+			.section-image-and-content__inner-block {
+				background-image: url('../img/backgrounds/round-bg-red.svg');
+				background-repeat: no-repeat;
+				background-size: 65px;
+				background-position: right -18px bottom 40%;
+
+				@include min-w(md) {
+					background-image:
+						url('../img/backgrounds/round-bg-red.svg'),
+						url('../img/backgrounds/round-bg-red.svg'),
+						url('../img/backgrounds/round-bg-red.svg')
+					;
+					background-position:
+						left 46% top 18px,
+						right 30px bottom 35%,
+						left 17px bottom 152px,
+					;
+				}
+			}
+		}
+
+		&.with-bg-5 {
+			background-image: url('../img/backgrounds/round-bg-blue.svg');
+			background-repeat: no-repeat;
+			background-size: 24px;
+			background-position: left 75px top 0;
+
+			@include min-w(md) {
+				background-image:
+					url('../img/backgrounds/round-bg-blue.svg'),
+					url('../img/backgrounds/round-bg-yellow.svg'),
+					url('../img/backgrounds/round-bg-yellow.svg'),
+				;
+				background-size: 49px, 65px, 65px;
+				background-position:
+					left 91px top 66px,
+					left 20px top 106px,
+					right 241px bottom 45px
+				;
+			}
+		}
+
+		&.with-bg-6 {
+			.section-image-and-content__inner-block {
+				@include min-w(md) {
+					background-image: url('../img/backgrounds/round-bg-red.svg');
+					background-repeat: no-repeat;
+					background-size: 65px;
+					background-position: left 36px top 67px;
+				}
+			}
+		}
+
+		&.reverted {
+			.section-image-and-content__block {
+				&:nth-child(2n + 1) {
+					.row {
+						@include min-w(md) {
+							flex-direction: row-reverse;
+						}
+					}
+				}
+
+				&:nth-child(2n) {
+					.row {
+						@include min-w(md) {
+							flex-direction: row;
+						}
+					}
+				}
+			}
+		}
+
+		&.with-gray-bg {
+			.section-image-and-content__inner-block {
+				background-color: $gray-200;
+				padding: 60px 0;
+			}
+		}
+
+		&.with-blue-bg {
+			.section-image-and-content__inner-block {
+				@extend .inverted-mark;
+
+				background-color: $blue;
+				padding: 40px 0;
+
+				@include min-w(md) {
+					padding: 60px 0;
+				}
+			}
+
+			.section-image-and-content__content-block {
+				@extend .inverted-mark;
+			}
+		}
+
+		&__text {
+			margin-bottom: 30px;
+
+			@include min-w(md) {
+				margin-bottom: 50px;
+			}
+		}
+
+		&__content-block {
+			padding: 0 0 40px 0;
+
+			@include min-w(md) {
+				padding: 0;
+			}
+
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__img-block {
+			@include responsive-ratio(540, 440, true);
+
+			position: relative;
+
+			@include min-w(md) {
+				margin: 0 0 0 30px;
+			}
+		}
+
+		&__block {
+			&:not(:last-child) {
+				margin-bottom: 40px;
+
+				@include min-w(md) {
+					margin-bottom: 60px;
+				}
+
+				@include min-w(lg) {
+					margin-bottom: 90px;
+				}
+			}
+
+			&:nth-child(2n) {
+				.row {
+					@include min-w(md) {
+						flex-direction: row-reverse;
+					}
+				}
+			}
+		}
+	}
+
+	&-banner {
+		position: relative;
+		z-index: 5;
+
+		&.bg-1 {
+			background-image: url("../img/backgrounds/left-bg-3.svg");
+			background-position: left center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		&.bg-2 {
+			.section-banner__wrap {
+				@include min-w(lg) {
+					background-image:
+						url("../img/backgrounds/round-bg-blue.svg"),
+						url("../img/backgrounds/round-bg-red.svg"),
+						url("../img/backgrounds/round-bg-yellow.svg"),
+					;
+					background-size: 49px, 65px, 65px;
+					background-position:
+						top 7px left 122px,
+						top 82px left 49px,
+						top 13px right 134px
+					;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+
+		&.blue-bg {
+			.section-banner__item {
+				background-color: $blue-5;
+			}
+		}
+
+		&.with-line-bg {
+			.section-banner__item {
+				background-image: url("../img/backgrounds/line-2.svg");
+				background-repeat: no-repeat;
+				background-position: right bottom;
+				background-size: 55%;
+			}
+		}
+
+		&.full-width {
+			.section-banner__item {
+				padding-top: 35px;
+				padding-bottom: 35px;
+
+				@include min-w(md) {
+					padding-top: 20px;
+					padding-bottom: 20px;
+				}
+			}
+
+			.section-banner__wrap {
+				background-color: $orange-faded;
+			}
+
+			&.blue-bg {
+				.section-banner__wrap {
+					background-color: $blue-5;
+				}
+			}
+		}
+
+		&__item {
+			background-color: $orange-faded;
+			padding: 30px 15px;
+			text-align: center;
+			border-radius: $border-radius;
+
+			@include min-w(sm) {
+				padding: 30px 30px 40px;
+			}
+
+			@include min-w(md) {
+				text-align: left;
+			}
+
+			@include min-w(md) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			@include min-w(lg) {
+				padding: 60px 90px;
+			}
+		}
+
+		&__title {
+			font-family: $font-family-base;
+			font-weight: 500;
+			margin-bottom: 30px;
+
+			@include min-w(md) {
+				padding-right: 24px;
+				margin-bottom: 0;
+			}
+		}
+
+		&__btn {
+			@include min-w(md) {
+				flex-shrink: 0;
+			}
+		}
+	}
+
+	&-premium-video {
+		@include min-w(sm) {
+			background-image:
+				url("../img/backgrounds/round-bg-blue.svg"),
+				url("../img/backgrounds/round-bg-yellow.svg"),
+				url("../img/backgrounds/round-bg-blue.svg");
+			background-repeat: no-repeat;
+			background-position:
+				top 22% right 5%,
+				top 32% right 8%,
+				bottom 20% left 5%
+			;
+			background-size: 49px, 65px, 69px;
+		}
+
+		@include min-w(xl) {
+			background-position:
+				top 22% right 15%,
+				top 32% right 18%,
+				bottom 20% left 15%
+			;
+		}
+
+		&__description {
+			max-width: 725px;
+			margin: 0 auto 20px;
+
+			@include min-w(sm) {
+				margin-bottom: 30px;
+			}
+		}
+
+		&__title-with-bg {
+			font-family: inherit;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.429;
+			background-color: $gray-2;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 9px 15px;
+			margin-bottom: 24px;
+			border-radius: $border-radius;
+
+			@include min-w(sm) {
+				margin-bottom: 16px;
+			}
+		}
+
+		&__video {
+			margin-bottom: 20px;
+		}
+
+		&__videos-block {
+			margin-bottom: 16px;
+
+			@include min-w(sm) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&-image-and-slider {
+		background-image: url("../img/backgrounds/right-bg-2.svg");
+		background-repeat: no-repeat;
+		background-position: right top 200px;
+		background-size: 110px;
+
+		@include min-w(md) {
+			background-size: 300px;
+			background-position: right top;
+		}
+
+		&__img-block {
+			margin-bottom: 40px;
+
+			@include min-w(lg) {
+				padding-right: 50px;
+				margin-bottom: 0;
+			}
+		}
+
+		&__img {
+			border-radius: $border-radius;
+		}
+
+		&__description {
+			margin-bottom: 30px;
+		}
+
+		&__slider {
+			padding-bottom: 50px;
+		}
+	}
+
+	&-benefits {
+		&__main-content {
+			padding: 70px 0;
+			background-image:
+				url('../img/backgrounds/bottom-bg-1.svg'),
+				url('../img/backgrounds/line-4.svg')
+			;
+			background-repeat: no-repeat;
+			background-size: 175px, 100%;
+			background-position:
+				bottom right,
+				center
+			;
+
+			@include min-w(lg) {
+				padding: 100px 0;
+				background-image:
+					url('../img/backgrounds/round-bg-red.svg'),
+					url('../img/backgrounds/round-bg-yellow.svg'),
+					url('../img/backgrounds/bottom-bg-1.svg'),
+					url('../img/backgrounds/line-4.svg')
+				;
+				background-size: 65px, 57px, 400px, 100%;
+				background-position:
+					top 56px left 210px,
+					top 183px right 40px,
+					bottom 0 right 20px,
+					center
+				;
+			}
+		}
+
+		&__description {
+			max-width: 510px;
+			margin: 0 auto 20px;
+
+			@include min-w(lg) {
+				margin-bottom: 30px;
+			}
+		}
+
+		&__title-holder {
+			margin-bottom: 45px;
+
+			@include min-w(lg) {
+				margin-bottom: 55px;
+			}
+		}
+
+		&__cards-grid {
+			margin-bottom: 20px;
+			padding: 0 30px;
+
+			@include min-w(lg) {
+				padding: 0;
+			}
+		}
+	}
+
+	&-with-video {
+		&.centered-bg-text {
+			@include min-w(md) {
+				background-image: url("../img/backgrounds/logo-text-bg.svg");
+				background-size: 95%;
+				background-position: bottom center;
+				background-repeat: no-repeat;
+			}
+
+			@include min-w(lg) {
+				background-size: 75%;
+			}
+		}
+
+		&.left-side-bg-text {
+			background-image: url("../img/backgrounds/round-bg-yellow.svg");
+			background-repeat: no-repeat;
+			background-size: 34px;
+			background-position: right 75px top 305px;
+
+			@include min-w(md) {
+				background-image: url("../img/backgrounds/logo-text-bg.svg");
+				background-size: 820px;
+				background-position: bottom 60px left -30px;
+				background-repeat: no-repeat;
+			}
+		}
+
+		&.with-blue-bg {
+			.section-with-video__inner-content {
+				@extend .inverted-mark;
+
+				background-color: $blue;
+				background-image: url("../img/backgrounds/round-bg-red.svg"),;
+				background-repeat: no-repeat;
+				background-size: 33px;
+				background-position: left 17px top 5px;
+				padding: 60px 0;
+
+				@include min-w(md) {
+					background-image:
+						url("../img/backgrounds/round-bg-red.svg"),
+						url("../img/backgrounds/round-bg-yellow.svg"),
+					;
+					background-size: 65px, 57px;
+					background-position:
+						left 30px top 30px,
+						right 56px top 40px
+					;
+					padding: 60px 0 85px;
+				}
+			}
+		}
+
+		&__video-block {
+			margin-bottom: 35px;
+
+			@include min-w(lg) {
+				padding-right: 40px;
+				margin-bottom: 0;
+			}
+		}
+
+		&__main-content-block {
+			margin-bottom: 35px;
+
+			@include min-w(md) {
+				margin-bottom: 0;
+			}
+
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__description {
+			margin-bottom: 35px;
+
+			@include min-w(lg) {
+				margin-bottom: 40px;
+			}
+		}
+
+		&__btn-block {
+			padding-top: 45px;
+
+			@include min-w(lg) {
+				padding-top: 60px;
+			}
+		}
+	}
+
+	&-our-approach {
+		@include min-w(md) {
+			background-image:
+				url("../img/backgrounds/round-bg-blue.svg"),
+				url("../img/backgrounds/round-bg-red.svg"),
+				url("../img/backgrounds/round-bg-blue.svg"),
+			;
+			background-repeat: no-repeat;
+			background-size: 71px, 46px, 71px;
+			background-position:
+				left 55px bottom 25%,
+				right 27px top 20%,
+				right 50px top 29%
+			;
+		}
+
+		&__right-content {
+			margin-bottom: 45px;
+
+			@include min-w(lg) {
+				padding-right: 55px;
+				margin-bottom: 0;
+			}
+		}
+
+		&__img {
+			max-width: 305px;
+			width: 100%;
+
+			@include min-w(md) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&-learn-strategies {
+		background-image:
+			url("../img/backgrounds/round-bg-red.svg"),
+			url("../img/backgrounds/right-bg-3.svg"),
+		;
+		background-repeat: no-repeat;
+		background-position:
+			right 20% top 42%,
+			bottom 50px right 0
+		;
+		background-size: 26px, 150px;
+
+		@include min-w(md) {
+			background-position:
+				right 28% top 2%,
+				bottom 0 right 0
+			;
+			background-size: 46px, 400px;
+		}
+
+		&__left-content {
+			margin-bottom: 20px;
+
+			@include min-w(md) {
+				margin-bottom: 0;
+			}
+
+			@include min-w(lg) {
+				padding-right: 45px;
+			}
+		}
+
+		&__description {
+			margin-bottom: 35px;
+
+			@include min-w(md) {
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	&-why-choose-us {
+		&__main-content {
+			background-color: $gray-200;
+			padding: 60px 30px;
+			margin: 0 -$grid-gutter-width/2;
+
+			@include min-w(sm) {
+				margin: 0;
+			}
+
+			@include min-w(lg) {
+				padding: 60px 0;
+			}
+		}
+
+		&__title-block {
+			margin-bottom: 55px;
+
+			@include min-w(lg) {
+				max-width: 210px;
+				margin-bottom: 0;
+			}
+
+			@include min-w(xl) {
+				max-width: 225px;
+			}
+		}
+	}
+
+	&-logos {
+		&__main-content {
+			border-top: 2px solid #E4E8ED;
+			border-bottom: 2px solid #E4E8ED;
+			padding: 30px 0;
+		}
+	}
+
+	&-customer-reviews {
+		background-image: url("../img/backgrounds/bottom-bg-3.svg");
+		background-repeat: no-repeat;
+		background-position: bottom 0 left -75px;
+		background-size: 170px;
+
+		@include min-w(sm) {
+			padding-bottom: 0;
+		}
+
+		@include min-w(md) {
+			background-size: 400px;
+			background-position: bottom 0 left -250px;
+		}
+
+		@include min-w(lg) {
+			background-position: bottom 0 left 25%;
+		}
+
+		@include min-w(xl) {
+			background-size: 500px;
+		}
+
+		&__main-content {
+			padding-bottom: 45px;
+
+			@include min-w(lg) {
+				padding-bottom: 100px;
+			}
+		}
+
+		&__description {
+			max-width: 400px;
+			margin-bottom: 35px;
+
+			@include min-w(sm) {
+				margin-bottom: 50px;
+			}
+		}
+
+		&__slider {
+			@include min-w(xl) {
+				margin-left: -50px;
+			}
+		}
+	}
+
+	&-pricing {
+		&__collapse-btn-block {
+			margin-top: 25px;
+		}
+
+		&__collapsed-table {
+			padding-top: 25px;
+		}
+
+		&__table-top-title {
+			font-size: 18px;
+			font-weight: 500;
+			background-color: $gray-200;
+			padding: 16px;
+			margin-bottom: 30px;
+			text-transform: uppercase;
+			line-height: 1.6;
+			font-family: inherit;
+
+			@include min-w(md) {
+				text-align: center;
+			}
+
+			@include min-w(xl) {
+				display: none;
+			}
+		}
+	}
+
+	&-navigation {
+		padding: 30px 0;
+
+		+ .section {
+			padding-top: 30px;
+		}
+	}
+
+	&-included {
+		&__top-filled-title {
+			font-family: inherit;
+			font-weight: 500;
+			color: $primary;
+			text-align: center;
+			text-transform: uppercase;
+			background-color: rgba($primary, 0.2);
+			border-radius: $border-radius;
+			padding: 10px 15px;
+			margin-bottom: 40px;
+			line-height: 1.5;
+
+			@include min-w(md) {
+				margin-bottom: 45px;
+			}
+		}
+	}
+
+	&-instructors {
+		padding-top: 0;
+
+		&__main-content {
+			padding-top: 60px;
+			background-color: $blue;
+			background-image:
+				url("../img/backgrounds/round-bg-red.svg"),
+				url("../img/backgrounds/round-bg-yellow.svg"),
+				url("../img/backgrounds/round-bg-red.svg"),
+				url('../img/backgrounds/bottom-bg-1.svg'),
+				url('../img/backgrounds/left-bg-1.svg'),
+			;
+			background-repeat: no-repeat;
+			background-size: 34px, 47px, 34px, 220px, 75px;
+			background-position:
+				right 67px top 43px,
+				right 2px top 400px,
+				right 60px top 318px,
+				right -30px bottom 0,
+				left 0 top 318px,
+			;
+
+			@include min-w(sm) {
+				background-image:
+					url("../img/backgrounds/round-bg-red.svg"),
+					url("../img/backgrounds/round-bg-yellow.svg"),
+					url("../img/backgrounds/round-bg-yellow.svg"),
+					url("../img/backgrounds/round-bg-red.svg"),
+					url('../img/backgrounds/bottom-bg-1.svg'),
+					url('../img/backgrounds/left-bg-1.svg'),
+				;
+				background-size: 65px, 57px, 71px, 52px, 400px, 290px;
+				background-position:
+					left 25% top 56px,
+					right 15% top 183px,
+					right 22% top 201px,
+					right 43% top 253px,
+					right 20px bottom 0,
+					left 0 bottom 244px,
+				;
+			}
+		}
+
+		&__title-holder {
+			margin-bottom: 40px;
+
+			@include min-w(sm) {
+				text-align: center;
+			}
+		}
+	}
+
+	&-our-founders {
+		background-image:
+			url("../img/backgrounds/round-bg-blue.svg"),
+			url("../img/backgrounds/round-bg-yellow.svg"),
+			url("../img/backgrounds/round-bg-blue.svg"),
+			url("../img/backgrounds/bottom-bg-2.svg"),
+		;
+		background-repeat: no-repeat;
+		background-size: 31px, 42px, 47px, 120px;
+		background-position:
+			right 28px top 360px,
+			right 60px top 390px,
+			right 36px top 60%,
+			left 0 top 50%,
+		;
+
+		@include min-w(lg) {
+			background-image:
+				url("../img/backgrounds/round-bg-blue.svg"),
+				url("../img/backgrounds/round-bg-blue.svg"),
+				url("../img/backgrounds/round-bg-yellow.svg"),
+				url("../img/backgrounds/round-bg-blue.svg"),
+				url("../img/backgrounds/bottom-bg-2.svg"),
+			;
+			background-size: 69px, 49px, 65px, 69px, 420px;
+			background-position:
+				left 80px top 350px,
+				right 67px top 300px,
+				right 116px top 350px,
+				right 116px bottom 185px,
+				left 0 top 400px,
+			;
+
+		}
+
+		&__title-holder {
+			max-width: 680px;
+			margin: 0 auto 35px;
+
+			@include min-w(sm) {
+				text-align: center;
+				margin-bottom: 55px;
+			}
+		}
+
+		&__photo-block {
+			@include responsive-ratio(1, 1, true);
+
+			position: relative;
+			max-width: 225px;
+			border-radius: $border-radius;
+			overflow: hidden;
+			margin-bottom: 32px;
+
+			@include min-w(sm) {
+				max-width: 360px;
+				margin-bottom: 0;
+			}
+		}
+
+		&__photo {
+			@include absoluteCover;
+
+			object-fit: cover;
+		}
+
+		&__block {
+			margin-bottom: 40px;
+
+			@include min-w(sm) {
+				margin-bottom: 60px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&:nth-child(2n + 1) {
+				[class^="col"] {
+					&:last-child {
+						margin-left: 0;
+					}
+				}
+			}
+
+			&:nth-child(2n) {
+				.row {
+					flex-direction: row-reverse;
+					justify-content: flex-end;
+				}
+
+				[class^="col"] {
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&-free-ebook {
+		padding-top: 60px;
+
+		@include min-w(md) {
+			padding-top: 40px;
+			background-image:
+				url("../img/backgrounds/round-bg-yellow.svg"),
+				url("../img/backgrounds/round-bg-red.svg"),
+			;
+			background-repeat: no-repeat;
+			background-size: 71px, 53px;
+			background-position:
+				right 167px top 30px,
+				left 42px bottom 160px
+			;
+		}
+
+		&__badge {
+			margin-bottom: 30px;
+		}
+
+		&__text {
+			margin-bottom: 35px;
+
+			@include min-w(sm) {
+				margin-bottom: 50px;
+			}
+		}
+
+		&__book-block {
+			position: relative;
+			padding-top: 20px;
+			margin-bottom: 40px;
+
+			@include min-w(md) {
+				max-width: 400px;
+				padding-top: 23px;
+				margin-bottom: 0;
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 20px;
+				height: 20px;
+				background-image: url("../img/ebook-bg.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: bottom 0 left 0;
+
+				@include min-w(md) {
+					height: 23px;
+				}
+			}
+		}
+
+		&__book-block-inner {
+			position: relative;
+			z-index: 5;
+			background-color: $white;
+			border-radius: $border-radius;
+			box-shadow: $box-shadow;
+			padding: 30px 55px;
+			text-align: center;
+		}
+
+		&__book-block-logo {
+			position: absolute;
+			top: 16px;
+			left: 18px;
+			z-index: 5;
+			display: inline-block;
+			width: 36px;
+		}
+
+		&__book-block-title {
+			color: $cyan-dark;
+		}
+
+		&__book-block-text {
+			margin-bottom: 20px;
+		}
+
+		&__book-block-badge {
+			display: inline-block;
+			color: $primary;
+			background-color: rgba($primary, 0.2);
+			font-style: italic;
+			font-weight: 500;
+			font-size: 12px;
+			padding: 5px 12px;
+			border-radius: $border-radius;
+			margin-bottom: 28px;
+		}
+
+		&__book-block-image {
+			margin-bottom: 30px;
+		}
+
+		&__book-block-link {
+			font-size: 12px;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&-schedule-a-free-consultation {
+		overflow: hidden;
+		background-image:
+			url("../img/backgrounds/round-bg-blue.svg"),
+			url("../img/backgrounds/round-bg-yellow.svg"),
+		;
+		background-repeat: no-repeat;
+		background-size: 22px, 31px;
+		background-position:
+			bottom 45px left 16px,
+			bottom 12px left -15px
+		;
+
+		@include min-w(md) {
+			background-image: none;
+		}
+
+		&__main-wrap {
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100vw;
+				height: 80%;
+				width: 300vw;
+				display: block;
+				background-color: $gray-200;
+
+				@include min-w(md) {
+					content: none;
+				}
+			}
+		}
+
+		&__inner-content {
+			position: relative;
+			z-index: 5;
+			padding-top: 60px;
+
+			@include min-w(md) {
+				background-color: $gray-200;
+			}
+		}
+
+		&__text-content {
+			position: relative;
+			padding-bottom: 40px;
+
+			@include min-w(md) {
+				padding-bottom: 60px;
+			}
+
+			&:before {
+				@include min-w(md) {
+					content: '';
+					display: block;
+					position: absolute;
+					left: -100vw;
+					top: 100%;
+					height: 2000px;
+					width: 300vw;
+					background-color: $body-bg;
+					pointer-events: none;
+				}
+			}
+
+			&:after {
+				@include min-w(md) {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					right: 0;
+					z-index: 5;
+					height: 150px;
+					width: 100%;
+					background-image:
+						url("../img/backgrounds/round-bg-blue.svg"),
+						url("../img/backgrounds/round-bg-yellow.svg"),
+					;
+					background-repeat: no-repeat;
+					background-size: 40px, 53px;
+					background-position:
+						top 47px right 81px,
+						top 94px right 150px
+					;
+					pointer-events: none;
+				}
+
+				@include min-w(lg) {
+					background-position:
+						top 47px right 161px,
+						top 94px right 230px
+					;
+				}
+			}
+		}
+	}
+
+	&-features-that-improve {
+		background-image:
+			url("../img/backgrounds/round-bg-blue.svg"),
+			url("../img/backgrounds/round-bg-red.svg")
+		;
+		background-repeat: no-repeat;
+		background-size: 49px, 65px;
+		background-position:
+			bottom 200px left 104px,
+			bottom 110px left 46px
+		;
+
+		&__title-holder {
+			text-align: center;
+			max-width: 800px;
+			margin: 0 auto 60px;
+		}
+
+		&__title {
+			margin-bottom: 5px;
+		}
+	}
+
+	&-your-study-plan {
+		background-image: url("../img/backgrounds/round-bg-yellow.svg");
+		background-repeat: no-repeat;
+		background-size: 34px;
+		background-position: left 15px bottom 0;
+		overflow: hidden;
+
+		@include min-w(md) {
+			background-image:
+				url("../img/backgrounds/round-bg-yellow.svg"),
+				url("../img/backgrounds/round-bg-yellow.svg")
+			;
+			background-size: 57px;
+			background-position:
+				left 138px bottom 0,
+				right 42% bottom 0
+			;
+		}
+
+		&__title-holder {
+			text-align: center;
+			margin-bottom: 30px;
+			padding: 0 $grid-gutter-width/2;
+
+			@include min-w(sm) {
+				margin-bottom: 45px;
+			}
+		}
+
+		&__main-content {
+			position: relative;
+			background-color: $gray-200;
+			padding: 40px 0;
+
+			@include min-w(md) {
+				padding: 70px 0;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				background-color: $gray-200;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: -100vw;
+				width: 300vw;
+				pointer-events: none;
+
+				@include min-w(md) {
+					content: none;
+				}
+			}
+		}
+
+		&__main-inner-content {
+			position: relative;
+			z-index: 5;
+		}
+
+		&__text {
+			max-width: 540px;
+			margin: 0 auto;
+		}
+
+		&__btn-block {
+			position: relative;
+			z-index: 5;
+			text-align: center;
+
+			@include min-w(sm) {
+				margin-top: -15px;
+			}
+		}
+	}
+
+	&-add-tutoring {
+		background-image: url("../img/backgrounds/center-bg-1.svg");
+		background-repeat: no-repeat;
+		background-size: 210px;
+		background-position: left 30% top 50px;
+
+		@include min-w(md) {
+			background-size: 360px;
+			background-position: right 18% top 0;
+		}
+
+		&__text {
+			margin-bottom: 35px;
+
+			@include min-w(md) {
+				margin-bottom: 50px;
+			}
+		}
+
+		&__img-block {
+			max-width: 164px;
+			margin-bottom: 32px;
+
+			@include min-w(md) {
+				max-width: 100%;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&-questions-banner {
+		&__main-content {
+			background-color: $blue-5;
+			padding: 60px 0;
+			background-image: url("../img/backgrounds/section-questions-banner-bg-mobile.svg");
+			background-repeat: no-repeat;
+			background-size: 330px;
+			background-position: center;
+
+			@include min-w(sm) {
+				padding: 35px 0 45px;
+				background-image: url("../img/backgrounds/section-questions-banner-bg.svg");
+				background-repeat: no-repeat;
+				background-size: 90%;
+				background-position: center;
+			}
+
+			@include min-w(lg) {
+				background-size: 60%;
+			}
+		}
+
+		&__title-holder {
+			text-align: center;
+			max-width: 285px;
+			margin: 0 auto 35px;
+
+			@include min-w(sm) {
+				margin: 0 0 50px 0;
+				max-width: 100%;
+			}
+		}
+
+		&__text {
+			max-width: 560px;
+			margin: 0 auto;
+		}
+	}
+
+	&-with-gray-box {
+		overflow: hidden;
+
+		&.left-side-box {
+			.row {
+				[class^="col"] {
+					&:first-child {
+						.section-with-gray-box__content {
+							padding-bottom: 60px;
+
+							@include min-w(sm) {
+								padding-bottom: 50px;
+							}
+
+							&:after {
+								content: '';
+								right: -$grid-gutter-width/2;
+
+								@include min-w(sm) {
+									right: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.right-side-box {
+			.row {
+				[class^="col"] {
+					&:last-child {
+						.section-with-gray-box__content {
+							padding-bottom: 60px;
+
+							@include min-w(sm) {
+								padding-bottom: 50px;
+							}
+
+							&:after {
+								content: '';
+								left: -$grid-gutter-width/2;
+
+								@include min-w(sm) {
+									left: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&__content {
+			position: relative;
+			padding: 60px 60px 0 0;
+
+			@include min-w(sm) {
+				padding: 50px 45px 0 0;
+			}
+
+			&:after {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				background-color: $gray-200;
+				width: 100vw;
+				display: block;
+				pointer-events: none;
+			}
+		}
+
+		&__content-inner {
+			position: relative;
+			z-index: 5;
+		}
+	}
+
+	&-faq {
+		@include min-w(sm) {
+			background-image: url("../img/backgrounds/left-bg-2.svg");
+			background-repeat: no-repeat;
+			background-size: 150px;
+			background-position: left 0 bottom 35%;
+		}
+
+		@include min-w(md) {
+			background-size: 300px;
+		}
+
+		&__main-content {
+			padding: 40px 0;
+
+			@include min-w(md) {
+				padding: 60px 0 70px;
+			}
+		}
+
+		&__search-form-content {
+			margin-bottom: 60px;
+
+			@include min-w(md) {
+				margin-bottom: 95px;
+			}
+		}
+
+		&__text {
+			max-width: 550px;
+			margin: 0 auto 30px;
+
+			@include min-w(md) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&-real-results {
+		@include min-w(md) {
+			background-image:
+				url("../img/backgrounds/round-bg-red.svg"),
+				url("../img/backgrounds/round-bg-blue.svg")
+			;
+			background-repeat: no-repeat;
+			background-size: 65px, 49px;
+			background-position:
+				left 100px bottom 27px,
+				left 185px bottom 10px
+			;
+		}
+
+		@include min-w(lg) {
+			background-position:
+				left 184px bottom 27px,
+				left 270px bottom 10px
+			;
+		}
+
+		&__main-content {
+			padding-top: 35px;
+
+			@include min-w(md) {
+				padding-top: 0;
+			}
+		}
+
+		&__badge-block {
+			text-align: center;
+			margin-bottom: 35px;
+
+			@include min-w(md) {
+				margin-bottom: 65px;
+			}
+		}
+
+		&__text {
+			margin-bottom: 30px;
+		}
+
+		&__list {
+			margin-bottom: 45px;
+		}
+
+		&__img-block {
+			@include min-w(md) {
+				padding-top: 35px;
+			}
+		}
+	}
+
+	&-with-chart {
+		&__inner-content {
+			padding: 60px 0;
+			background-color: $gray-200;
+		}
+
+		&__text-content {
+			margin-bottom: 40px;
+
+			@include min-w(md) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&-recent-improvements {
+		&__block {
+			padding: 40px 0;
+
+			@include min-w(sm) {
+				padding: 60px 0;
+			}
+
+			&:first-child {
+				&:not(.with-gray-bg) {
+					padding-top: 0;
+				}
+			}
+
+			&:last-child {
+				&:not(.with-gray-bg) {
+					padding-bottom: 0;
+				}
+			}
+
+			&.with-bg-decorations {
+				background-image:
+					url("../img/backgrounds/logo-text-bg.svg"),
+					url("../img/backgrounds/center-bg-1.svg")
+				;
+				background-repeat: no-repeat;
+				background-size: 320px, 190px;
+				background-position:
+					right -85px top 120px,
+					right -80px top 220px
+				;
+
+				@include min-w(sm) {
+					background-size: 320px, 250px;
+					background-position:
+						right -85px top 60px,
+						right -120px top 15%
+					;
+				}
+
+				@include min-w(md) {
+					background-position:
+						right -85px top 100px,
+						right 20% bottom 35%
+					;
+				}
+
+				@include min-w(lg) {
+					background-size: 500px, 420px;
+					background-position:
+						right -100px top 120px,
+						right 20% bottom 35%
+					;
+				}
+
+				@include min-w(xl) {
+					background-size: 820px, 420px;
+				}
+			}
+
+			&.with-gray-bg {
+				background-color: $gray-200;
+			}
+		}
+
+		&__block-content {
+			> * {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__title {
+			margin-bottom: 40px;
+
+			@include min-w(sm) {
+				margin-bottom: 60px;
+			}
+		}
+
+		&__table-title {
+			margin-bottom: 40px;
+		}
+	}
+
+	&-reviews {
+		&__title-holder {
+			max-width: 800px;
+			margin: 0 auto 25px;
+
+			@include min-w(md) {
+				text-align: center;
+				margin-bottom: 65px;
+			}
+		}
+
+		&__website-reviews-title {
+			margin-bottom: 40px !important;
+
+			@include min-w(md) {
+				margin-bottom: 60px !important;
+			}
+		}
+
+		&__review-without-photo-cards {
+			margin-bottom: 10px;
+
+			@include min-w(md) {
+				margin-bottom: 30px;
+			}
+		}
+
+		&__website-review-cards {
+			margin-bottom: 40px;
+
+			@include min-w(sm) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&-free-sample-lesson {
+		background-image:
+			url("../img/backgrounds/round-bg-yellow.svg"),
+			url("../img/backgrounds/round-bg-blue.svg"),
+			url("../img/backgrounds/round-bg-yellow.svg")
+		;
+		background-repeat: no-repeat;
+		background-size: 53px, 19px, 25px;
+		background-position:
+			right 10% top 40px,
+			right 46px bottom 20px,
+			right 69px bottom 0,
+		;
+
+		@include min-w(sm) {
+			background-image: url("../img/backgrounds/round-bg-yellow.svg");
+			background-size: 53px;
+			background-position: right 44px top 40px;
+		}
+
+		@include min-w(md) {
+			background-image:
+				url("../img/backgrounds/round-bg-yellow.svg"),
+				url("../img/backgrounds/round-bg-red.svg")
+			;
+			background-size: 71px, 53px;
+			background-position:
+				right 50px top 30px,
+				left 42px bottom 50%
+			;
+		}
+
+		@include min-w(xl) {
+			background-position:
+				right 167px top 30px,
+				left 42px bottom 50%
+			;
+		}
+
+		&__title-holder {
+			margin-bottom: 40px;
+			padding-right: 80px;
+
+			@include min-w(md) {
+				text-align: center;
+				margin-bottom: 60px;
+				padding-right: 0;
+			}
+		}
+
+		&__text {
+			margin-bottom: 35px;
+		}
+
+		&__main-wrap {
+			position: relative;
+
+			@include min-w(md) {
+				padding-top: 75px;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100vw;
+				height: 72%;
+				width: 300vw;
+				display: block;
+				background-color: $gray-200;
+				pointer-events: none;
+
+				@include min-w(md) {
+					content: none;
+				}
+			}
+		}
+
+		&__inner-wrap {
+			position: relative;
+			z-index: 5;
+
+			@include min-w(md) {
+				background-color: $gray-200;
+			}
+		}
+
+		&__text-content {
+			position: relative;
+			padding: 30px 0 60px;
+
+			@include min-w(sm) {
+				padding: 50px 0;
+			}
+
+			&:before {
+				@include min-w(md) {
+					content: '';
+					display: block;
+					position: absolute;
+					left: -100vw;
+					top: 100%;
+					height: 2000px;
+					width: 300vw;
+					background-color: $white;
+					pointer-events: none;
+				}
+			}
+
+			&:after {
+				display: block;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				z-index: 5;
+				height: 150px;
+				width: 100%;
+				background-image:
+					url("../img/backgrounds/round-bg-blue.svg"),
+					url("../img/backgrounds/round-bg-yellow.svg")
+				;
+				background-repeat: no-repeat;
+				background-size: 40px, 53px;
+				background-position: top 47px left 75px, top 94px left 0;
+				pointer-events: none;
+
+				@include min-w(md) {
+					content: '';
+				}
+			}
+		}
+
+		&__order-form {
+			@include min-w(md) {
+				margin-top: -75px;
+			}
+		}
+	}
+
+	&-images-slider {
+		position: relative;
+		z-index: 5;
+		overflow: hidden;
+		background-image: url("../img/backgrounds/round-bg-red.svg");
+		background-repeat: no-repeat;
+		background-size: 31px;
+		background-position: right 42px bottom 20px;
+
+		@include min-w(sm) {
+			background-image: none;
+		}
+
+		&__title {
+			margin-bottom: 36px;
+
+			@include min-w(sm) {
+				padding-right: 150px;
+				margin-bottom: 32px;
+			}
+		}
+	}
+
+	&-customers-stories-grid {
+		@include min-w(md) {
+			background-image:
+				url("../img/backgrounds/round-bg-blue.svg"),
+				url("../img/backgrounds/round-bg-red.svg")
+			;
+			background-repeat: no-repeat;
+			background-size: 49px, 65px;
+			background-position:
+				left 50px top 190px,
+				right 70px top 250px
+			;
+		}
+
+		@include min-w(lg) {
+			background-position:
+				left 125px top 190px,
+				right 161px top 250px
+			;
+		}
+
+		&__badge {
+			margin-bottom: 30px;
+
+			@include min-w(md) {
+				margin-bottom: 50px;
+			}
+		}
+
+		&__title-holder {
+			margin-bottom: 40px;
+
+			@include min-w(md) {
+				text-align: center;
+				margin-bottom: 55px;
+			}
+		}
+
+		&__text {
+			max-width: 550px;
+			margin: 0 auto;
+		}
+	}
+
+	&-testimonials {
+		&__title {
+			margin-bottom: 40px;
+
+			@include min-w(md) {
+				margin-bottom: 65px;
+			}
+		}
+
+		&__slider {
+			padding-bottom: 60px;
+		}
+	}
+
+	&-read-more-success-stories {
+		&__title {
+			margin-bottom: 40px;
+
+			@include min-w(md) {
+				margin-bottom: 75px;
+			}
+		}
+	}
+
+	&-blue-accent-text {
+		&__main-content {
+			background-color: rgba($blue, 0.7);
+			padding: 30px 0;
+
+			@include min-w(md) {
+				background-image: url("../img/backgrounds/line-1.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: right -200px center;
+				padding: 40px 0;
+			}
+
+			@include min-w(lg) {
+				background-position: right 20% center;
+			}
+		}
+
+		&__text {
+			margin-bottom: 25px;
+
+			@include min-w(md) {
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	&-customer-stories-text {
+		&__text-block {
+			padding: 60px 0;
+
+			img {
+				display: block;
+				margin: 40px 0;
+			}
+
+			> * {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&:nth-child(2n) {
+				position: relative;
+
+				&:after {
+					content: '';
+					display: block;
+					width: 300vw;
+					height: 100%;
+					position: absolute;
+					left: -100vw;
+					top: 0;
+					bottom: 0;
+					background-color: $gray-200;
+					pointer-events: none;
+				}
+
+				> * {
+					position: relative;
+					z-index: 5;
+				}
+			}
+		}
+
+		+ .section {
+			padding-top: 0;
+		}
+	}
+
+	&-customer-stories-intro {
+		padding-bottom: 45px;
+		background-image:
+			url("../img/backgrounds/round-bg-red.svg"),
+			url("../img/backgrounds/round-bg-yellow.svg")
+		;
+		background-repeat: no-repeat;
+		background-size: 23px, 36px;
+		background-position:
+			right 39px top 30px,
+			right 57px top 55px,
+		;
+
+		@include min-w(sm) {
+			padding-bottom: 60px;
+		}
+
+		@include min-w(md) {
+			background-position:
+				right 15px top 51px,
+				right 50px top 101px,
+			;
+			background-size: 47px, 74px;
+		}
+
+		@include min-w(xl) {
+			background-position:
+				right 181px top 51px,
+				right 217px top 101px,
+			;
+		}
+
+		&__title-holder {
+			padding: 40px 0;
+
+			@include min-w(sm) {
+				text-align: center;
+				padding-top: 24px;
+			}
+		}
+
+		&__text {
+			max-width: 715px;
+			margin: 0 auto;
+		}
+
+		&__bottom-text {
+			padding-top: 30px;
+
+			@include min-w(sm) {
+				padding-top: 45px;
+			}
+		}
+
+		+ .section {
+			padding-top: 0;
+		}
+	}
+
+	&-blog-grid {
+		&__title-holder {
+			text-align: center;
+			margin-bottom: 40px;
+
+			@include min-w(md) {
+				margin-bottom: 50px;
+			}
+		}
+
+		&__vertical-cards {
+			> * {
+				&:not(:last-child) {
+					@include min-w(md) {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&-improve-with {
+		@include min-w(md) {
+			background-image:
+				url("../img/backgrounds/round-bg-yellow.svg"),
+				url("../img/backgrounds/round-bg-blue.svg")
+			;
+			background-repeat: no-repeat;
+			background-size: 65px, 44px;
+			background-position:
+				right 10% top 5px,
+				right 5% top 55px,
+			;
+		}
+
+		@include min-w(lg) {
+			background-position:
+				right 40% top 5px,
+				right 36% top 55px,
+			;
+		}
+
+		&__title-holder {
+			margin-bottom: 28px;
+
+			@include min-w(md) {
+				margin-bottom: 40px;
+			}
+		}
+
+		&__title {
+			margin-bottom: 30px;
+		}
+
+		&__vertical-cards {
+			> * {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__cards-box {
+			background-color: $white;
+			box-shadow: $box-shadow;
+			padding: 35px;
+			margin: 0 -$grid-gutter-width/2;
+
+			@include min-w(sm) {
+				margin: 0;
+				padding: 30px 20px;
+				border-radius: $border-radius;
+			}
+		}
+
+		&__left-cards-col {
+			margin-bottom: 40px;
+
+			@include min-w(lg) {
+				margin-bottom: 0;
+			}
+		}
+
+		&__bottom-cards-block {
+			padding-top: 50px;
+		}
+	}
+
+	&-graduate-school-test {
+		&__main-block {
+			background-color: $gray-200;
+			padding: 36px 24px;
+			border-radius: $border-radius;
+
+			@include min-w(sm) {
+				padding: 30px 20px;
+			}
+		}
+
+		&__title-holder {
+			margin-bottom: 40px;
+
+			@include min-w(lg) {
+				margin-bottom: 55px;
+			}
+		}
+
+		&__left-content {
+			margin-bottom: 10px;
+
+			@include min-w(sm) {
+				margin-bottom: 35px;
+			}
+
+			@include min-w(lg) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&-banner-with-text {
+		&.blue-bg {
+			.section-banner-with-text__item {
+				background-color: $blue-5;
+			}
+		}
+
+		&.bg-1 {
+			.section-banner-with-text__wrap {
+				@include min-w(lg) {
+					background-image:
+						url("../img/backgrounds/round-bg-blue.svg"),
+						url("../img/backgrounds/round-bg-red.svg"),
+						url("../img/backgrounds/round-bg-yellow.svg"),
+					;
+					background-repeat: no-repeat;
+					background-size: 37px, 56px, 56px;
+					background-position:
+						left 127px top 5px,
+						left 60px top 35px,
+						right 150px bottom 100px
+					;
+				}
+			}
+		}
+
+		&__item {
+			border-radius: $border-radius;
+			padding: 28px;
+
+			@include min-w(sm) {
+				padding: 36px;
+				background-image: url("../img/backgrounds/line-3.svg");
+				background-repeat: no-repeat;
+				background-position: right bottom;
+				background-size: 50%;
+			}
+		}
+
+		&__text {
+			max-width: 600px;
+			margin-bottom: 35px;
+		}
+	}
+
+	&-blog-final {
+		&__share-block {
+			margin-bottom: 45px;
+		}
+	}
+
+	&-blog-single-intro {
+		&__title-holder {
+			text-align: center;
+			margin-bottom: 40px;
+
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__title {
+			margin-bottom: 40px;
+		}
+
+		&__sub-title {
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&__img-block {
+			@include responsive-ratio(345, 220, true);
+
+			position: relative;
+			border-radius: $border-radius;
+			overflow: hidden;
+
+			@include min-w(sm) {
+				@include responsive-ratio(1172, 486, true);
+			}
+		}
+	}
+
+	&-blog-single-content {
+		padding: 45px 0 30px;
+
+		&__content {
+			> *:last-child {
+				margin-bottom: 0 !important;
+			}
+
+			h3 {
+				margin-top: 40px;
+
+				@include min-w(sm) {
+					margin-top: 60px;
+				}
+			}
+
+			h5 {
+				margin-top: 40px;
+			}
+
+			ul {
+				margin-bottom: 40px;
+			}
+
+			img {
+				display: block;
+				margin: 35px 0;
+				width: 100%;
+				border-radius: $border-radius;
+
+				@include min-w(sm) {
+					margin: 40px 0;
+				}
+			}
+
+			.btn {
+				margin: 35px 0;
+			}
+
+			.table-responsive {
+				margin: 35px 0;
+
+				@include min-w(sm) {
+					margin: 50px 0;
+				}
+
+				.table {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&-blog-single-get-free-guides {
+		&__content {
+			background-color: $gray-200;
+			border-radius: $border-radius;
+			padding: 36px 24px 60px;
+
+			@include min-w(md) {
+				padding: 48px 48px 35px 30px;
+			}
+		}
+
+		&__right-col {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding: 30px $grid-gutter-width/2 0;
+
+			@include min-w(md) {
+				padding-top: 0;
+				flex: 0 0 (320px + $grid-gutter-width);
+				max-width: (320px + $grid-gutter-width);
+			}
+		}
+	}
+
+	&-registration {
+		@include max-w(md) {
+			padding: 80px 0 120px;
+		}
+
+		background:
+			no-repeat right 59px top 19px/33px  url("../img/backgrounds/round-bg-yellow.svg"),
+			no-repeat right 0 bottom 5px/150px  url("../img/backgrounds/right-bg-4.svg")
+		;
+
+		@include min-w(md) {
+			display: flex;
+			align-items: center;
+			min-height: 100vh;
+			background:
+				no-repeat left 37% top 43px/43px  url("../img/backgrounds/round-bg-red.svg"),
+				no-repeat left 29% top 80px/41px  url("../img/backgrounds/round-bg-blue.svg"),
+				no-repeat left 42px bottom 243px/53px  url("../img/backgrounds/round-bg-green.svg"),
+				no-repeat left 40% bottom 50px/41px  url("../img/backgrounds/round-bg-yellow.svg"),
+				no-repeat right 69px top 30px/53px  url("../img/backgrounds/round-bg-yellow.svg"),
+				no-repeat right 0 bottom 50px/150px  url("../img/backgrounds/right-bg-4.svg"),
+				linear-gradient(to right, $green-faded 50%, rgba($green-faded, 0) 50%)
+			;
+		}
+
+		@include min-w(xl) {
+			background:
+				no-repeat left 37% top 43px/43px  url("../img/backgrounds/round-bg-red.svg"),
+				no-repeat left 29% top 137px/41px  url("../img/backgrounds/round-bg-blue.svg"),
+				no-repeat left 42px bottom 243px/53px  url("../img/backgrounds/round-bg-green.svg"),
+				no-repeat left 40% bottom 185px/41px  url("../img/backgrounds/round-bg-yellow.svg"),
+				no-repeat right 69px top 118px/53px  url("../img/backgrounds/round-bg-yellow.svg"),
+				no-repeat right 0 bottom 100px/230px  url("../img/backgrounds/right-bg-4.svg"),
+				linear-gradient(to right, $green-faded 50%, rgba($green-faded, 0) 50%)
+			;
+		}
+
+		&__logo {
+			display: inline-block;
+			max-width: 170px;
+			margin-bottom: 30px;
+		}
+
+		&__text {
+			margin-bottom: 25px;
+		}
+
+		&__form {
+			margin-bottom: 30px;
+		}
+
+		&__forgot-link {
+			margin-bottom: 30px;
+		}
+	}
+}

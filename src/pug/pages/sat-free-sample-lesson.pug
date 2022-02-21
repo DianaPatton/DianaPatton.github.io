@@ -1,0 +1,83 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "Free Sample Lesson";
+
+block content
+	// SECTION FREE SAMPLE LESSON
+	section.section-free-sample-lesson.section
+		.section-free-sample-lesson__content
+			.container
+				.section-free-sample-lesson__title-holder
+					h1 View Our <mark>Free Sample Lesson</mark>
+					a(href="#" class="link-with-duble-arrow sm text-uppercase"): strong See how you can prep for the SAT in the most effective way possible.
+				|
+				|
+				.section-free-sample-lesson__main-wrap
+					.section-free-sample-lesson__inner-wrap
+						.row.justify-content-center
+							.col-md-5
+								.section-free-sample-lesson__text-content
+									.section-free-sample-lesson__text.text-block
+										p PrepScholar's online SAT prep program raises your score through customized instruction that teaches you the skills you need to know.
+										p By viewing our free sample lesson, you will see how you'll benefit from:
+									|
+									|
+									ul.checked-list
+										li <strong>Comprehensive lessons</strong> teaching successful strategies
+										li <strong>Focused practice</strong> questions to master SAT skills
+										li Detailed answer explanations to learn from your mistakes.
+							.col-md-5
+								.section-free-sample-lesson__order-form
+									.order-form-block
+										.order-form
+											.order-form__title-holder
+												h3 Get Your <mark>Free</mark> Sample Lesson Now
+												.text-block.text-small
+													p Have questions about SAT prep? Set up a free consultation with a PrepScholar Academic Advisor today.
+											|
+											|
+											form(action="#")
+												.form-list
+													.form-group
+														label(for="getConsultName") Name (optional)
+														input.form-control.form-control-lg#getConsultName(type="text" placeholder="Enter name (optional)")
+													.form-group
+														label(for="getConsultEmail") Email Addres
+														input.form-control.form-control-lg#getConsultEmail(type="email" placeholder="Enter your email addres")
+													.form-group
+														label(for="getConsultPhone") Phone number
+														input.form-control.form-control-lg#getConsultPhone(type="number" placeholder="Enter your phone number")
+												.text-center
+													button.btn.btn-primary.btn-lg.btn-block(type="submit") Schedule a Consultation
+	// SECTION FREE SAMPLE LESSON END
+	|
+	|
+	// SECTION IMAGES SLIDER
+	section.section-images-slider.section
+		.container
+			h3.section-images-slider__title You can see, how real tests look like
+			|
+			|
+			.images-slider.slides-gutter-default.js-images-slider
+				a(href="img/images-slider/1.jpg" class="images-slider__link" data-fancybox)
+					img(src="img/images-slider/1.jpg" alt="Image" class="images-slider__img")
+				a(href="img/images-slider/2.jpg" class="images-slider__link" data-fancybox)
+					img(src="img/images-slider/2.jpg" alt="Image" class="images-slider__img")
+				a(href="img/images-slider/1.jpg" class="images-slider__link" data-fancybox)
+					img(src="img/images-slider/1.jpg" alt="Image" class="images-slider__img")
+				a(href="img/images-slider/2.jpg" class="images-slider__link" data-fancybox)
+					img(src="img/images-slider/2.jpg" alt="Image" class="images-slider__img")
+	// SECTION IMAGES SLIDER END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		button: {
+			text: "Come back",
+			withDubleArrow: true
+		},
+		withoutIndents: true,
+	})(class="full-width blue-bg")
+	// SECTION BANNER END

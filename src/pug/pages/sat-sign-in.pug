@@ -1,0 +1,32 @@
+extends ../templates/sat-registration-template.pug
+
+block vars
+	- var pageTitle = "Sign In";
+	- var pageType = "SAT";
+
+block content
+	a(href="#" class="section-registration__logo")
+		img(src="img/logo-sat.svg" alt="Logo")
+	|
+	|
+	h5.title-default Don’t have a PrepScholar SAT account?
+	|
+	|
+	form(action="#" class="section-registration__form")
+		.form-list
+			.form-group
+				label(for="registrationEmail") Email
+				input.form-control.form-control-lg#registrationEmail(type="email" placeholder="username@gmail.com")
+			.form-group
+				label(for="registrationPassphrase") Passphrase
+				input.form-control.form-control-lg#registrationPassphrase(type="password" placeholder="Passphrase")
+		.text-center
+			button.btn.btn-primary.btn-lg.btn-block(type="submit") Sign in
+	|
+	|
+	.section-registration__forgot-link.text-small
+		a(href="#"): strong Forgot your passphrase?
+	|
+	|
+	.text-small
+		a(href="#" class="text-secondary") Switch to PrepScholar ACT

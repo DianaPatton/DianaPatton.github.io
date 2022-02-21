@@ -1,0 +1,48 @@
+header.header.compensate-for-scrollbar.js-header
+	.container.lg
+		.row.align-items-center.flex-nowrap
+			.col-auto.flex-shrink-1
+				a(href="#" class="header__logo")
+					img(src="img/logo-sat.svg" alt="Logo")
+			.col.header__middle-col
+				.header__menu.js-menu
+					.header__menu-content
+						+headerMenu([
+							"Who We Are",
+							"How It Works",
+							"Results",
+							"Pricing",
+							"Customer Stories",
+							"Instructor-Led Classes"
+						])
+						|
+						|
+						.header__lang-switch-in-menu.d-md-none
+							include ../includes/_lang-switch.pug
+						|
+						|
+						.header__btn-block-in-menu.d-md-none
+							a(href="#" class="btn btn-primary btn-rounded") Start free trial
+			.col-auto.d-flex.align-items-center.justify-content-end
+				.header__lang-switch.d-none.d-md-block
+					include ../includes/_lang-switch.pug
+				|
+				|
+				.header__btn-round-with-icon-list
+					ul.btn-round-with-icon-list
+						li.btn-round-with-icon-list__item
+							a(href="#" class="btn-round-with-icon btn-outline-primary-normal")
+								i.icon-phone
+						li.btn-round-with-icon-list__item
+							a(href="#" class="btn-round-with-icon btn-outline-primary-normal")
+								i.icon-user
+				|
+				|
+				.header__btn-block.d-none.d-md-block
+					a(href="#" class="btn btn-primary btn-rounded") Start free trial
+				|
+				|
+				.header__hamburger-menu.d-inline-flex.d-lg-none
+					a.hamburger-menu.js-hamburger-menu(href='#' aria-label='Toggle menu')
+						.hamburger-menu__wrap
+							.hamburger-menu__bars

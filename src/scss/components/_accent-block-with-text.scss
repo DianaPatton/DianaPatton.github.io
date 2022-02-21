@@ -1,0 +1,13 @@
+.accent-block-with-text {
+	border-radius: $border-radius;
+	padding: 20px;
+	margin: 40px 0;
+
+	@include min-w(sm) {
+		padding: 20px 75px 20px 20px;
+	}
+
+	&.blue-bg {
+		background-color: $blue-5;
+	}
+}

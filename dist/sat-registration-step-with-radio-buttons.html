@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Registration step with radio buttons - PrepSchoolar (SAT)</title>
+		<meta name="description" content="Description of the site">
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- connection FAVICONS -->
+		<link rel="icon" href="img/favicon/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+		<!-- THE BACKGROUND OF THE STATUS-BAR (ON MOBILE) -->
+		<meta name="theme-color" content="#000000">
+
+		<!-- connection GOOGLE FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Arvo&amp;display=swap" rel="stylesheet">
+
+		<!-- connection CSS -->
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+
+	<body>
+		<!-- CONTENT -->
+		<main class="main pt-0">
+			<!-- SECTION REGISTRATION -->
+			<section class="section-registration section">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-md-5 d-none d-md-block"><img src="img/section-registration-img-for-steps.svg" alt="Image">
+						</div>
+						<div class="col-md-5 col-xl-4 offset-md-2">
+							<div class="section-registration__main-content">
+								<div class="step-progress">
+									<div class="step-progress__line" style="width: 20%"></div>
+								</div>
+								<a class="section-registration__logo" href="#"><img src="img/logo-sat.svg" alt="Logo"></a>
+
+								<h5 class="title-default">Which service are you interested in?</h5>
+
+								<div class="section-registration__text text-block text-small">
+									<p>We`re asking you a few questions so we can bring<br> you to the pros</p>
+								</div>
+
+								<form class="section-registration__form mb-0" action="#">
+									<div class="form-list">
+										<div class="form-group">
+											<label class="custom-radio">
+												<input class="custom-radio__input visually-hidden" type="radio" name="Which service are you interested in?" value="SAT" checked><span class="custom-radio__checkmark"></span><span class="custom-radio__text">SAT</span>
+											</label>
+										</div>
+										<div class="form-group">
+											<label class="custom-radio">
+												<input class="custom-radio__input visually-hidden" type="radio" name="Which service are you interested in?" value="ACT"><span class="custom-radio__checkmark"></span><span class="custom-radio__text">ACT</span>
+											</label>
+										</div>
+									</div>
+									<button class="btn btn-primary btn-lg btn-block" type="submit">Next</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- SECTION REGISTRATION END -->
+		</main>
+		<!-- CONTENT END -->
+
+		<!-- connection JAVASCRIPT -->
+		<script src="js/libs.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

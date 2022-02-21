@@ -1,0 +1,25 @@
+.socials-big-list {
+	@include listreset;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		max-width: 50px;
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(0.8);
+		}
+	}
+}

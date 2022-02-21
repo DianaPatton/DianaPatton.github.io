@@ -1,0 +1,161 @@
+.accordion-with-icons {
+	&__item {
+		position: relative;
+		background-color: $white;
+		border-radius: $border-radius;
+		box-shadow: $box-shadow;
+		padding: 30px 20px;
+		border: 2px solid transparent;
+		transition: background-color 0.3s, padding 0.3s;
+
+		@include min-w(md) {
+			padding: 40px 30px 40px 120px;
+		}
+
+		@include min-w(lg) {
+			padding: 75px 70px 75px 120px;
+		}
+
+		@include min-w(xl) {
+			padding-left: 200px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+
+			@include min-w(md) {
+				margin-bottom: 12px;
+			}
+		}
+
+		&.active {
+			border-color: $primary;
+
+			@include min-w(lg) {
+				padding-top: 48px;
+				padding-bottom: 48px;
+			}
+		}
+	}
+
+	&__icon {
+		width: 70px;
+		margin-bottom: 30px;
+
+		@include min-w(md) {
+			position: absolute;
+			top: 50%;
+			left: 35px;
+			width: 50px;
+			transform: translate(0, -50%);
+			text-align: center;
+			margin-bottom: 0;
+		}
+
+		@include min-w(xl) {
+			left: 70px;
+			width: 80px;
+		}
+	}
+
+	&__btn {
+		text-transform: inherit;
+		padding: 0;
+		border: none;
+		margin: 0;
+		background-color: transparent;
+		font-weight: inherit;
+		font-family: inherit;
+		color: $gray-800;
+		letter-spacing: inherit;
+		text-align: left;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	&__body {
+		padding-top: 16px;
+	}
+}
+
+.accordion {
+	&__item {
+		box-shadow: $box-shadow;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+
+			@include min-w(sm) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__header {
+		@include max-w(sm) {
+			font-size: 16px !important;
+		}
+	}
+
+	&__btn {
+		position: relative;
+		display: block;
+		width: 100%;
+		text-align: left;
+		background-color: $white;
+		border: none;
+		border-radius: $border-radius;
+		padding: 22px 60px 22px 20px;
+		font-weight: inherit;
+		transition: color 0.3s;
+
+		@include min-w(sm) {
+			padding: 24px 100px 24px 26px;
+		}
+
+		&:after {
+			content: '\e90d';
+			font-family: icomoon!important;
+			display: inline-block;
+			position: absolute;
+			top: 25px;
+			right: 25px;
+			color: $primary;
+			font-size: 13px;
+			transition: transform 0.3s, color 0.3s;
+
+			@include min-w(sm) {
+				font-size: 18px;
+			}
+		}
+
+		&[aria-expanded="true"] {
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+
+			&:after {
+				transform: rotate(180deg);
+				color: $gray-800;
+			}
+		}
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	&__body {
+		padding: 13px 60px 22px 20px;
+		border-top: 1px solid $gray-4;
+		border-bottom-left-radius: $border-radius;
+		border-bottom-right-radius: $border-radius;
+		background-color: $white;
+
+		@include min-w(sm) {
+			padding: 28px 100px 20px 26px;
+		}
+	}
+}

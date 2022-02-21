@@ -1,0 +1,187 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "How it works (Overview)";
+
+block content
+	// SECTION NAVIGATION
+	section.section-navigation
+		.container
+			h2.sr-only Navigation
+			|
+			|
+			+buttonsNavigationList([
+				{text: "Overview", active: true},
+				{text: "Features"},
+				{text: "Hour-by-Hour"},
+				{text: "FAQ"}
+			])
+	// SECTION NAVIGATION END
+	|
+	|
+	// SECTION FEATURES THAT IMPROVE
+	section.section-features-that-improve.section
+		.container
+			.section-features-that-improve__title-holder
+				h1.section-features-that-improve__title Features that Improve Your Score
+				.text-block
+					p PrepScholar is way more than just a set of questions and video lessons. Our program customizes your learning to your strengths and weaknesses. With PrepScholar, you'll make more progress in less time than with any other program
+			|
+			|
+			.row.justify-content-center
+				.col-md-6.col-lg-4.d-flex
+					+simpleCard({
+						icon: "img/simple-card-icons/7.svg",
+						title: "Customization",
+						text: ["Our smart diagnostic figures out your true skill level and builds a custom prep program that caters to your difficulty level. You'll make the fastest progress"],
+						link: "Read more"
+					})(class="highlighted")
+				.col-md-6.col-lg-4.d-flex
+					+simpleCard({
+						icon: "img/simple-card-icons/8.svg",
+						title: "Clear Guidance",
+						text: ["We give you exact step-by-step instructions on what to study: which lessons to take, when to take practice tests, and how to review your mistakes"],
+						link: "Read more"
+					})(class="highlighted")
+				.col-md-6.col-lg-4.d-flex
+					+simpleCard({
+						icon: "img/simple-card-icons/9.svg",
+						title: "Motivation",
+						text: ["With weekly reports, progress trackers, and customized feedback, we motivate you to make more progress. You'll study more with PrepScholar"],
+						link: "Read more"
+					})(class="highlighted")
+	// SECTION FEATURES THAT IMPROVE END
+	|
+	|
+	// SECTION YOUR STUDY PLAN
+	section.section-your-study-plan.section
+		.container
+			.section-your-study-plan__main-content
+				.section-your-study-plan__main-inner-content
+					.section-your-study-plan__inner-block
+						.section-your-study-plan__title-holder
+							h2 Your <mark>Study Plan</mark>, Hour by Hour
+							.section-your-study-plan__text.text-block
+								p PrepScholar guides you step by step through your prep program. Never get overwhelmed by SAT prep again
+					|
+					|
+					.row
+						.col-sm-6.col-lg-4
+							+iconAndTextCard({
+								icon: "img/clock-icons/1.svg",
+								title: "First 10 Minutes",
+								text: ["Signup and Prepare"]
+							})
+						.col-sm-6.col-lg-4
+							+iconAndTextCard({
+								icon: "img/clock-icons/2.svg",
+								title: "First Hour",
+								text: ["Take a Smart Diagnostic"]
+							})
+						.col-sm-6.col-lg-4
+							+iconAndTextCard({
+								icon: "img/clock-icons/3.svg",
+								title: "Hours 2-10",
+								text: ["Train Your Skills with Lessons"]
+							})
+						.col-sm-6.col-lg-4
+							+iconAndTextCard({
+								icon: "img/clock-icons/4.svg",
+								title: "Hours 11-14",
+								text: ["Take a Full-Length Practice Test"]
+							})
+						.col-sm-6.col-lg-4
+							+iconAndTextCard({
+								icon: "img/clock-icons/5.svg",
+								title: "Hours 15+",
+								text: ["Continue Your Customized Prep"]
+							})
+						.col-sm-6.col-lg-4
+							+iconAndTextCard({
+								icon: "img/clock-icons/6.svg",
+								title: "Final Step",
+								text: ["Ace the SAT"]
+							})
+					|
+					|
+					.section-your-study-plan__btn-block
+						a(href="#" class="btn btn-primary btn-lg") Read more
+	// SECTION YOUR STUDY PLAN END
+	|
+	|
+	// SECTION WITH VIDEO
+	section.section-with-video.left-side-bg-text.section
+		.section-with-video__inner-content
+			.container
+				.row.align-items-center
+					.col-md-7
+						.section-with-video__video-block
+							.embed-responsive.embed-responsive-16by9.rounded
+								iframe.embed-responsive-item(src='https://player.vimeo.com/video/393346674?h=4ef696999a' allow='autoplay; fullscreen; picture-in-picture')
+					.col-md-5
+						.section-with-video__main-content-block.mb-0
+							h2 Top <mark>Quality Videos</mark> in Select Lessons
+							.section-with-video__description.text-block
+								p Many lessons have included videos to show you the content and strategies you need to ace the SAT. These high-quality videos supplement our interactive lessons to carefully explain the most difficult concepts.
+								p But unlike many other programs, we're much more than a collection of videos. Check out our other features to find out more!
+								p: strong Click play to see a math video excerpt.
+	// SECTION WITH VIDEO END
+	|
+	|
+	// SECTION ADD TUTORING
+	section.section-add-tutoring.section
+		.container
+			.row
+				.col-md-6.order-2.order-md-1
+					h2 <mark>Add 1-on-1</mark> tutoring<br> to your prep
+					.section-add-tutoring__text.text-block
+						p Is getting the highest possible SAT score your top goal? Then you should add on 1-on-1 tutoring with our Complete + Tutoring package. You'll get 12 hours of premium tutoring integrated into your Complete Prep experience.
+						p This provides you with the best of both worlds: unlimited practice on our online platform, and a 1-on-1 human expert to ensure every last concept and question is understood.
+					a(href="#" class="btn btn-primary btn-lg") Learn more about tuturing
+				.col-md-5.order-1.order-md-2
+					.section-add-tutoring__img-block
+						img(src="img/section-add-tutoring-img.jpg" alt="Photo" class="rounded")
+	// SECTION ADD TUTORING END
+	|
+	|
+	// SECTION QUESTIONS BANNER
+	section.section-questions-banner.section
+		.section-questions-banner__main-content
+			.container
+				.section-questions-banner__title-holder.inverted-mark
+					h2 Have any <mark>questions</mark> about our program?
+					.section-questions-banner__text.text-block
+						p Consult our FAQ, where we tell you how to get started and more details about how PrepScholar works.
+				|
+				|
+				.text-center
+					a(href="#" class="btn btn-primary btn-lg") Read our FAQ
+	// SECTION QUESTIONS BANNER END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Start the journey to improving your SAT today!",
+		button: {
+			text: "Get eBook: 5 Tips for 160+ Points"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION CUSTOMER REVIEWS
+	include ../includes/_section-customer-reviews.pug
+	// SECTION CUSTOMER REVIEWS END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Do you want to know more? Go to the next page",
+		button: {
+			text: "Features",
+			withDubleArrow: true
+		},
+		withoutIndents: true,
+	})(class="full-width blue-bg")
+	// SECTION BANNER END

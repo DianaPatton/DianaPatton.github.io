@@ -1,0 +1,19 @@
+.modal-header {
+	@include max-w(sm) {
+		padding: 30px 25px;
+	}
+}
+
+.modal-body {
+	@include max-w(sm) {
+		padding: 22px 25px;
+	}
+}
+
+.modal-footer {
+	padding: 10px 25px 48px;
+
+	@include min-w(sm) {
+		padding: 1.875rem 1.875rem 2.5rem;
+	}
+}

@@ -1,0 +1,545 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	&[disabled] {
+		pointer-events: none;
+	}
+
+	&[href] {
+		&[disabled] {
+			opacity: $btn-disabled-opacity;
+		}
+	}
+
+	&-sm {
+		min-height: 44px;
+	}
+
+	&:not(.btn-sm):not(.btn-lg) {
+		min-height: 48px;
+	}
+
+	&-lg {
+		min-height: 54px;
+		min-width: 165px;
+		border-width: 2px;
+
+		@include min-w(md) {
+			min-width: 172px;
+		}
+	}
+
+	&-rounded {
+		border-radius: 34px;
+
+		&:not(.btn-sm):not(.btn-lg) {
+			padding: 0.5rem 1.875rem;
+			min-height: 40px;
+		}
+
+		&.btn-lg {
+			padding: 0.5rem 1.4375rem;
+			min-height: 44px;
+			min-width: 264px;
+
+			@include max-w(sm) {
+				font-size: 14px;
+			}
+
+			@include min-w(lg) {
+				padding: 0.5rem 1.875rem;
+			}
+		}
+	}
+
+	&-outline-primary {
+		@include button-variant(transparent, rgba($primary, 0.5), $primary, $primary, darken($primary, 10%), darken($primary, 10%));
+
+		font-weight: 400;
+		color: $gray-800;
+
+		&.btn-with-icon {
+			.btn-with-icon__icon {
+				color: $primary;
+			}
+
+			&:hover {
+				.btn-with-icon__icon {
+					color: $white;
+				}
+			}
+		}
+
+		&:focus {
+			color: $white !important;
+		}
+
+		&:active {
+			color: $white !important;
+		}
+	}
+
+	&-outline-primary-normal {
+		@include button-variant(transparent, $primary, $primary, $primary, darken($primary, 10%), darken($primary, 10%));
+
+		color: $primary;
+	}
+
+	&-primary {
+		@include button-variant($primary, $primary, lighten($primary, 8%), lighten($primary, 8%), darken($primary, 10%), darken($primary, 10%));
+
+		color: $white;
+		box-shadow: 0px 4px 22px rgba($primary, 0.35);
+
+		&:hover {
+			color: $white;
+		}
+
+		&:focus {
+			color: $white !important;
+			box-shadow: 0px 4px 22px rgba($primary, 0.35);
+		}
+
+		&:active {
+			color: $white !important;
+			box-shadow: none !important;
+		}
+	}
+
+	&-light {
+		@include button-variant($white, $white, $white, $white, $white, $white);
+
+		color: $primary;
+		box-shadow: 0px 4px 22px rgba($primary, 0.07);
+
+		&:hover {
+			color: lighten($primary, 8%);
+		}
+
+		&:focus {
+			color: darken($primary, 10%) !important;
+			box-shadow: 0px 4px 22px rgba($primary, 0.07);
+		}
+
+		&:active {
+			color: darken($primary, 10%) !important;
+			box-shadow: none !important;
+		}
+	}
+
+	&-gray {
+		@include button-variant($gray-200, $gray-200, $primary, $primary, darken($primary, 10%), darken($primary, 10%));
+
+		color: $primary;
+
+		&:hover {
+			color: $white;
+		}
+
+		&:focus {
+			color: $white !important;
+		}
+
+		&:active {
+			color: $white !important;
+		}
+	}
+
+	&-collapse {
+		box-shadow: $box-shadow !important;
+		font-weight: 400;
+
+		i {
+			display: inline-block;
+			font-size: 0.4em;
+			vertical-align: middle;
+			margin-left: 12px;
+			transition: transform 0.3s;
+		}
+
+		&[aria-expanded="true"] {
+			i {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&-with-icon {
+		&__icon {
+			font-size: 20px;
+			margin-right: 8px;
+			transition: color 0.15s;
+		}
+
+		&:focus {
+			.btn-with-icon__icon {
+				color: $white !important;
+			}
+		}
+
+		&.btn-lg {
+			padding-left: 22px;
+			padding-right: 15px;
+		}
+	}
+
+	&-with-duble-arrow {
+		&:after {
+			content: '\e905';
+			font-family: icomoon!important;
+			margin-left: 10px;
+			transform: translate(0, 2px);
+		}
+	}
+
+	&-round-with-icon {
+		@include inlineFlexCenter;
+		@include sizeElement(40px);
+
+		border-style: solid;
+		border-radius: 50%;
+		border-width: 2px;
+		font-size: 20px;
+		transition: $btn-transition;
+		padding: 0;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		.icon-arrow-left {
+			transform: translate(-2px, 0);
+		}
+
+		.icon-arrow-right {
+			transform: translate(2px, 0);
+		}
+
+		.icon-arrow-top {
+			transform: translate(0, -2px);
+		}
+
+		.icon-arrow-bottom {
+			transform: translate(0, 2px);
+		}
+
+		&.btn-round-with-icon-lg {
+			@include sizeElement(52px);
+
+			font-size: 24px;
+		}
+	}
+
+	&-round-with-icon-list {
+		@include listreset;
+
+		display: flex;
+		flex-wrap: wrap;
+
+		&__item {
+			padding-top: 5px;
+			padding-bottom: 5px;
+
+			&:not(:last-child) {
+				padding-right: 15px;
+			}
+		}
+	}
+
+	&-list {
+		@include listreset;
+
+		display: flex;
+		flex-wrap: wrap;
+
+		&__item {
+			margin-top: 10px;
+			margin-bottom: 10px;
+
+			&:not(:last-child) {
+				margin-right: 24px;
+			}
+		}
+	}
+
+	&-share {
+		@include sizeElement(52px);
+		@include inlineFlexCenter;
+
+		border-radius: $border-radius-sm;
+		color: $white;
+		font-size: 24px;
+
+		&.facebook {
+			background-color: $facebook;
+		}
+
+		&.twitter {
+			background-color: $twitter;
+		}
+
+		&.pinterest {
+			background-color: $pinterest;
+		}
+
+		&.email {
+			background-color: $gray-450;
+		}
+
+		&.plus {
+			background-color: $red;
+		}
+
+		i {
+			transition: transform 0.15s;
+			display: inline-block;
+		}
+
+		&:hover {
+			color: $white;
+			text-decoration: none;
+
+			i {
+				transform: scale(1.3);
+			}
+		}
+	}
+
+	&-share-with-count {
+		display: flex;
+
+		&__btn {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+
+			&.facebook {
+				+ .btn-share-with-count__count {
+					background-color: rgba($facebook, 0.14);
+				}
+			}
+
+			&.twitter {
+				+ .btn-share-with-count__count {
+					background-color: rgba($twitter, 0.14);
+				}
+			}
+
+			&.pinterest {
+				+ .btn-share-with-count__count {
+					background-color: rgba($pinterest, 0.14);
+				}
+			}
+
+			&.email {
+				+ .btn-share-with-count__count {
+					background-color: rgba($gray-450, 0.14);
+				}
+			}
+
+			&.plus {
+				+ .btn-share-with-count__count {
+					background-color: rgba($red, 0.14);
+				}
+			}
+		}
+
+		&__count {
+			display: inline-flex;
+			align-items: center;
+			padding: 5px 12px;
+			color: #CA2128;
+			font-size: 21px;
+			border-top-right-radius: $border-radius-sm;
+			border-bottom-right-radius: $border-radius-sm;
+		}
+	}
+}
+
+.link-with-icon {
+	position: relative;
+	display: inline-block;
+	padding-left: 35px;
+	color: $gray-800;
+	font-size: 16px;
+	line-height: 1.25;
+
+	&__icon {
+		color: $primary;
+		font-size: 20px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: color 0.3s;
+	}
+
+	&__text {
+		display: inline-block;
+		line-height: inherit;
+	}
+
+	&:hover {
+		text-decoration: none;
+		color: $gray-800;
+
+		.link-with-icon__icon {
+			color: $gray-800;
+		}
+	}
+}
+
+.icon-link {
+	display: inline-flex;
+	line-height: 1;
+	transition: color 0.3s;
+	color: $primary;
+	font-size: 20px;
+
+	&:hover {
+		text-decoration: none;
+		color: $gray-800;
+	}
+}
+
+.link-with-duble-arrow {
+	display: inline-block;
+	font-size: 16px;
+	transition: color 0.3s;
+
+	&.sm {
+		font-size: 12px;
+
+		&:after {
+			transform: translate(0, -1px);
+		}
+	}
+
+	&.reverted {
+		&:after {
+			content: none;
+		}
+
+		&:before {
+			content: '\e914';
+			font-family: icomoon!important;
+			display: inline-block;
+			font-size: 16px;
+			vertical-align: middle;
+			padding-right: 10px;
+
+			@include min-w(sm) {
+				padding-right: 13px;
+			}
+		}
+	}
+
+	&:after {
+		content: '\e905';
+		font-family: icomoon!important;
+		display: inline-block;
+		font-size: 16px;
+		vertical-align: middle;
+		padding-left: 10px;
+
+		@include min-w(sm) {
+			padding-left: 13px;
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+		color: lighten($primary, 8%);
+	}
+
+	&:active {
+		color: darken($primary, 10%);
+	}
+
+	&[disabled] {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
+
+.links-list {
+	@include listreset;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		margin-bottom: 25px;
+
+		@include min-w(sm) {
+			margin-bottom: 10px;
+		}
+
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+}
+
+.btn-round-with-text {
+	display: inline-flex;
+	align-items: center;
+	color: $gray-950;
+
+	&.reverse {
+		flex-direction: row-reverse;
+
+		.btn-round-with-text__text {
+			padding-left: 0;
+			padding-right: 13px;
+			text-align: right;
+
+			@include min-w(350) {
+				padding-right: 25px;
+			}
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+		color: $primary;
+	}
+
+	&__text {
+		color: inherit;
+		padding-left: 13px;
+
+		@include min-w(350) {
+			padding-left: 25px;
+		}
+	}
+}
+
+.share-buttons-list {
+	@include listreset;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		margin-top: 15px;
+		margin-bottom: 15px;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+}
+
+.icon-with-text {
+	position: relative;
+	padding-left: 30px;
+	font-size: 14px;
+
+	&__icon {
+		position: absolute;
+		top: 1px;
+		left: 0;
+		font-size: 1.2857em;
+	}
+}

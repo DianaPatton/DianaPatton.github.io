@@ -1,0 +1,29 @@
+.text-with-icon-item {
+	position: relative;
+	padding: 0 0 0 75px;
+	margin-bottom: 45px;
+
+	@include min-w(lg) {
+		padding-right: 55px;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		width: 52px;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-family: $font-family-base;
+		margin-bottom: 8px;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	&__description {
+		margin-bottom: 16px;
+	}
+}

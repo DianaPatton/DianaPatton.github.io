@@ -1,0 +1,83 @@
+footer.footer
+	.container
+		.footer__wrapper
+			button(type="button" class="footer__scroll-top-btn btn-round-with-icon btn-primary js-scroll-top-btn")
+				i.icon-arrow-top
+			|
+			|
+			.footer__main-content
+				.row
+					.col-md-5.col-xl-4
+						.footer__left-col
+							a(href="#" class="footer__logo")
+								img(src="img/logo-sat.svg", alt="Logo")
+							|
+							|
+							.footer__description.text-block
+								p SAT® is a registered trademark of the College Entrance Examination Board™. The College Entrance Examination Board™ does not endorse, nor is it affiliated in any way with the owner or any content of this web site.
+							|
+							|
+							h5.text-info.mb-12 Questions?
+							|
+							|
+							.footer__text.text-block.text-small
+								p Email us or call us at <strong>1 (866) 811-5546</strong>
+							|
+							|
+							form.subscribe-form
+								input.subscribe-form__input.form-control(type='email' placeholder='Enter email')
+								button.subscribe-form__submit-btn(type='submit')
+									i.icon-send
+					|
+					|
+					.col-md-6.offset-md-1.offset-xl-2
+						.row.footer__row-with-mobile-accordions(id="footer-mobile-accordion")
+							.col-sm-6
+								.footer-mobile-accordion
+									h5.text-info.footer-mobile-accordion__title.collapsed(data-toggle="collapse" data-target="#footer-mobile-accordion-1" aria-expanded="false" aria-controls="footer-mobile-accordion-1" id="footer-heading-1") Menu
+									|
+									|
+									.collapse.d-sm-block.h-sm-auto(id="footer-mobile-accordion-1" aria-labelledby="footer-heading-1" data-parent="#footer-mobile-accordion")
+										.footer-mobile-accordion__content
+											+footerNavList([
+												"Home — PrepScholar SAT",
+												"Who We Are",
+												"How It Works",
+												"Results",
+												"Pricing",
+												"Tutoring",
+												"Groups",
+												"Sample Lesson"
+											])(class="mb-0")
+							.col-sm-6
+								.footer-mobile-accordion
+									h5.text-info.footer-mobile-accordion__title.collapsed(data-toggle="collapse" data-target="#footer-mobile-accordion-2" aria-expanded="false" aria-controls="footer-mobile-accordion-2" id="footer-heading-2") Information
+									|
+									|
+									.collapse.d-sm-block.h-sm-auto(id="footer-mobile-accordion-2" aria-labelledby="footer-heading-2" data-parent="#footer-mobile-accordion")
+										.footer-mobile-accordion__content
+											+footerNavList([
+												"Help",
+												"Become an Instructor",
+												"SAT / ACT Online Prep Blog",
+												"Become an Affiliate Partner"
+											])(class="mb-0")
+											|
+											|
+											+footerNavList([
+												"Go to PrepScholar ACT Prep"
+											])
+			|
+			|
+			.footer__bottom-line
+				.row.align-items-center
+					.col-md-6
+						+footerNavList([
+							"Privacy Policy",
+							"Term of Service",
+							"Language"
+						])(class="horizontal footer__bottom-line-nav-list")
+					|
+					|
+					.col-md-6.text-md-right
+						p.footer__copyright © PrepScholar 2013–2021. All Rights Reserved.

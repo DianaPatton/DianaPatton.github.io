@@ -1,0 +1,81 @@
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.overflow-hidden,
+.disable-scroll {
+	overflow: hidden;
+}
+
+.text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.ofi {
+	@include absoluteCover;
+
+	object-fit: cover;
+}
+
+.shorten-text {
+	a {
+		text-decoration: underline;
+		margin-left: 5px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.mb-12 {
+	margin-bottom: 12px !important;
+}
+
+.mb-16 {
+	margin-bottom: 16px !important;
+}
+
+.mb-35 {
+	margin-bottom: 35px !important;
+}
+
+.mb-40 {
+	margin-bottom: 40px !important;
+}
+
+.resize-animation-stopper * {
+	animation: none !important;
+	transition: none !important;
+}
+
+.bg-blue {
+	background-color: $blue !important;
+}
+
+.font-weight-500 {
+	font-weight: 500 !important;
+}
+
+.text-gray {
+	color: rgba($secondary, 0.5) !important;
+}
+
+.text-gray-dark {
+	color: $gray-800 !important;
+}
+
+.h-sm-auto {
+	@include min-w(sm) {
+		height: auto !important;
+	}
+}

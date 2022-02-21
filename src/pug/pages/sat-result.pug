@@ -1,0 +1,309 @@
+extends ../templates/main-template.pug
+
+block vars
+	- var pageType = "SAT";
+	- var pageTitle = "Result";
+
+block content
+	// SECTION REAL RESULTS
+	section.section-real-results.section
+		.container
+			.section-real-results__badge-block
+				span.badge.badge-gray.badge-sm.text-uppercase PrepScholar will increase your SAT score, period. We’re backing that up with the industry’s best money-back guarantee.
+			|
+			|
+			.row
+				.col-md-6.order-2.order-md-1
+					.section-real-results__main-content
+						h1 Real <mark>Results</mark>
+						.section-real-results__text.text-block
+							p We calculate these metrics using a sample of self-reported before and after scores from students enrolled in our SAT prep program. The statistics on this page are from a sample of students who took an "after" exam in 2020.
+						.section-real-results__list
+							ul.checked-list
+								li <strong>50%</strong> of students improved <strong>100 points or more</strong>
+								li <strong>25%</strong> of students improved <strong>370 points or more</strong>
+						|
+						|
+						.title-with-number-block
+							h6.title-with-number-block__title.title-default.text-uppercase Average score improvement
+							p.title-with-number-block__number.big-number-block 168
+				.col-md-6.order-1.order-md-2
+					.section-real-results__img-block
+						img(src="img/section-real-results-img.svg" alt="Image")
+	// SECTION REAL RESULTS END
+	|
+	|
+	// SECTION WITH CHART
+	section.section-with-chart.section
+		.section-with-chart__inner-content
+			.container
+				.row
+					.col-md-7.col-lg-6.order-2.order-md-1
+						.comparative-chart-wrap
+							.text-center
+								h3.comparative-chart-wrap__title Hours Studied
+							|
+							|
+							.comparative-chart
+								.comparative-chart__line: strong.comparative-chart__line-number 25
+								.comparative-chart__line: strong.comparative-chart__line-number 20
+								.comparative-chart__line: strong.comparative-chart__line-number 15
+								.comparative-chart__line: strong.comparative-chart__line-number 10
+								.comparative-chart__line: strong.comparative-chart__line-number 5
+								.comparative-chart__line: strong.comparative-chart__line-number 0
+								|
+								|
+								.comparative-chart__bar.lower
+									h6.comparative-chart__label Most Courses
+								.comparative-chart__bar.upper
+									h6.comparative-chart__label PrepScholar <br><strong>20+ Hours</strong>
+					.col-md-5.col-lg-6.order-1.order-md-2
+						.section-with-chart__text-content
+							h2 More <mark>Motivation to Study</mark>
+							.text-block
+								p: strong Students who use PrepScholar study more than students who use other courses.
+								p According to published research studies, the average student spends fewer than 10 hours studying for the test. PrepScholar students in our 2020 sample studied an average of 27 hours. More study time means higher score improvements - it"s simple math.
+	// SECTION WITH CHART END
+	|
+	|
+	// SECTION RECENT IMPROVEMENTS
+	section.section-recent-improvements.section
+		.section-recent-improvements__block.with-bg-decorations
+			.container
+				.section-recent-improvements__block-content
+					h2.section-recent-improvements__title Recent <mark>Improvements</mark>
+					|
+					|
+					+improvementsReviewCard({
+						photo: "img/improvements-review-card/1.jpg",
+						name: "Emily S., Philadelphia",
+						text: ["Thank you so much for all of your help. It was a lot of work to stay committed, but I am so glad I did it! I think I still have even more room to improve."]
+					})
+					|
+					|
+					.row
+						.col-lg-11.col-xl-9
+							.table-responsive.table-wrap
+								table(class="table-simple mb-0" data-highlighted-column="4")
+									thead
+										tr
+											th(scope="col")
+											th(scope="col") Reading + Writing
+											th(scope="col") Math
+											th(scope="col") Overall
+									tbody
+										tr
+											th(scope="row") Before PrepScholar
+											td 640
+											td 620
+											td 1260
+										tr
+											th(scope="row") After PrepScholar
+											td <strong>760</strong> (+120)
+											td <strong>750</strong> (+130)
+											td <strong>1510</strong> (+250)
+					|
+					|
+					h3.section-recent-improvements__table-title Competitive for Colleges:
+					|
+					|
+					.table-responsive.table-wrap
+						table(class="table-simple mb-0")
+							thead
+								tr
+									th(scope="col") Before PrepScholar
+									th(scope="col" class="text-center") Syracuse
+									th(scope="col" class="text-center") Loyola College
+									th(scope="col" class="text-center") Michigan State
+									th(scope="col" class="text-center")
+							tbody
+								tr
+									th(scope="row") After PrepScholar
+									td(class="text-center")
+										h5.title-default Harvard University
+										img(src="img/colleges-logos/1.png" alt="Logo" class="college-logo")
+									td(class="text-center")
+										h5.title-default Yale University
+										img(src="img/colleges-logos/2.png" alt="Logo" class="college-logo")
+									td(class="text-center")
+										h5.title-default Princeton University
+										img(src="img/colleges-logos/3.png" alt="Logo" class="college-logo")
+									td(class="text-center")
+										h5.title-default MIT
+										img(src="img/colleges-logos/4.png" alt="Logo" class="college-logo")
+		.section-recent-improvements__block.with-gray-bg
+			.container
+				.section-recent-improvements__block-content
+					+improvementsReviewCard({
+						photo: "img/improvements-review-card/2.jpg",
+						name: "Brian Z., San Francisco",
+						text: ["I came in only needing Reading and Writing help. PrepScholar was perfect in finding my weaknesses and focusing me on what I needed most help in. Your program made me familiar with 99% of the SAT problems and gave me amazing strategies to succeed. I improved by 150 points."]
+					})
+					|
+					|
+					.row
+						.col-lg-11.col-xl-9
+							.table-responsive.table-wrap
+								table(class="table-simple mb-0" data-highlighted-column="4")
+									thead
+										tr
+											th(scope="col")
+											th(scope="col") Reading + Writing
+											th(scope="col") Math
+											th(scope="col") Overall
+									tbody
+										tr
+											th(scope="row") Before PrepScholar
+											td 490
+											td 800
+											td 1290
+										tr
+											th(scope="row") After PrepScholar
+											td <strong>640</strong> (+150)
+											td <strong>800</strong> (+0)
+											td <strong>1440</strong> (+150)
+					|
+					|
+					h3.section-recent-improvements__table-title Competitive for Colleges:
+					|
+					|
+					.table-responsive.table-wrap
+						table(class="table-simple mb-0")
+							thead
+								tr
+									th(scope="col") Before PrepScholar
+									th(scope="col" class="text-center") U of Maine
+									th(scope="col" class="text-center") SUNY Purchase
+									th(scope="col" class="text-center") Temple U
+									th(scope="col" class="text-center")
+							tbody
+								tr
+									th(scope="row") After PrepScholar
+									td(class="text-center")
+										h5.title-default Tufts University
+										img(src="img/colleges-logos/5.png" alt="Logo" class="college-logo")
+									td(class="text-center")
+										h5.title-default Rice University
+										img(src="img/colleges-logos/6.png" alt="Logo" class="college-logo")
+									td(class="text-center")
+										h5.title-default U of Pennsylvania
+										img(src="img/colleges-logos/7.png" alt="Logo" class="college-logo")
+									td(class="text-center")
+										h5.title-default Carnegie Mellon
+										img(src="img/colleges-logos/8.png" alt="Logo" class="college-logo")
+	// SECTION RECENT IMPROVEMENTS END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Do you know the 5 questions you should ask of all online prep programs?",
+		button: {
+			text: "Get Our SAT Guide Free"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION REVIEWS
+	section.section-reviews.section
+		.container
+			.section-reviews__title-holder
+				h2 Reviewed to <mark>Be the Best</mark>
+				.text-block
+					p When PrepScholar delivers results, students and parents are overjoyed. They leave ratings around the Internet, making us the highest rated online prep program available. Here's an excerpt of a review:
+			|
+			|
+			.section-reviews__review-without-photo-cards
+				.row
+					.col-lg-6
+						+reviewWithoutPhotoCard({
+							name: "Deb C.",
+							rating: {
+								text: "4.95 out of 5 stars",
+								value: 5
+							},
+							text: ["We liked PrepScholar because the lessons focused on the areas with the greatest upside potential. We were impressed with the way the lessons were presented, the personal attention we received, and their enthusiasm for my daughter's success. After following the PrepScholar program exactly as it was presented she increased her SAT score by 330 points!"]
+						})
+					.col-lg-6
+						+reviewWithoutPhotoCard({
+							name: "Deb C.",
+							rating: {
+								text: "4.95 out of 5 stars",
+								value: 5
+							},
+							text: ["We liked PrepScholar because the lessons focused on the areas with the greatest upside potential. We were impressed with the way the lessons were presented, the personal attention we received, and their enthusiasm for my daughter's success. After following the PrepScholar program exactly as it was presented she increased her SAT score by 330 points!"]
+						})
+			|
+			|
+			.text-center
+				h6.section-reviews__website-reviews-title.title-default Read this and more reviews at each of these independent websites:
+			|
+			|
+			.section-reviews__website-review-cards
+				.row.justify-content-center
+					.col-12.col-sm-auto
+						+websiteReviewCard({
+							logo: "img/website-review-card-logos/1.svg",
+							rating: 5,
+							link: "Reviews"
+						})
+					.col-12.col-sm-auto
+						+websiteReviewCard({
+							logo: "img/website-review-card-logos/2.png",
+							rating: 5,
+							link: "Reviews"
+						})
+					.col-12.col-sm-auto
+						+websiteReviewCard({
+							logo: "img/website-review-card-logos/3.png",
+							rating: 5,
+							link: "Reviews"
+						})
+			|
+			|
+			.row.justify-content-center
+				.col-lg-10
+					.review-with-photo-cards-list
+						+reviewWithPhotoCard({
+							photo: "img/review-with-photo-card/1.jpg",
+							name: "<strong>Eileen H.</strong> Virginia",
+							rating: 5,
+							text: [
+								"You are the absolute best! My son was so happy when he came out. He did much better on this test than he did on the previous SAT.",
+								"When my son came out of the SAT exam in March, he seemed down in the dumps. We knew right then and there, that the results were probably not going to be what we had hoped for, and that we would be exploring other options. After taking Prepscholar, he came out of the test with a huge smile on his face and told us right away that he did so much better."
+							],
+							link: "Read all"
+						})
+						+reviewWithPhotoCard({
+							photo: "img/review-with-photo-card/2.jpg",
+							name: "<strong>Petra C.</strong> California",
+							rating: 5,
+							text: [
+								"Alex improved his SAT score so much with PrepScholar! In January, his reading was 550, math was 600, and writing was 580 with an essay score of 6. In May, his reading 660, math was 690, and writing was 620 with an essay score of 6.",
+								"Given that he improved 240 points (wow!) after working with the PrepScholar program, we can truly attest to the success of your service. We couldn't have asked for more from an online service. I know you are making improvements all of the time. In less than 3 years my other son will be signing..."
+							],
+							link: "Read all"
+						})
+	// SECTION REVIEWS END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Start the journey to improving your SAT today!",
+		button: {
+			text: "Get eBook: 5 Tips for 160+ Points"
+		}
+	})(class="bg-2")
+	// SECTION BANNER END
+	|
+	|
+	// SECTION BANNER
+	+sectionBanner({
+		title: "Do you want to know more? Go to the next page",
+		button: {
+			text: "Pricing Options",
+			withDubleArrow: true
+		},
+		withoutIndents: true,
+	})(class="full-width blue-bg")
+	// SECTION BANNER END

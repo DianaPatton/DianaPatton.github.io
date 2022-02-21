@@ -1,0 +1,120 @@
+.table-responsive {
+	@include customScrollbar(3px, $gray-100, $primary);
+
+	padding-bottom: 10px;
+}
+
+.table-wrap {
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+	margin-bottom: 40px;
+}
+
+.table-simple {
+	width: 100%;
+	color: $gray-600;
+	background-color: $white;
+
+	// highlighted column
+	@for $i from 1 through 5 {
+		&[data-highlighted-column="#{$i}"] {
+			tr {
+				> * {
+					&:nth-child(#{$i}) {
+						background-color: rgba($primary, 0.05);
+					}
+				}
+			}
+		}
+	}
+	// highlighted column END
+
+	thead {
+		th {
+			vertical-align: top;
+			border-bottom: 1px solid $gray-100;
+
+			&:first-child {
+				color: $gray-950;
+				font-weight: 500;
+
+				@include min-w(md) {
+					padding-left: 10px;
+				}
+			}
+
+			&:not(:first-child) {
+				white-space: nowrap;
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			&:last-child {
+				th, td {
+					padding-bottom: 40px;
+				}
+			}
+
+			th {
+				color: $gray-950;
+				font-weight: 500;
+
+				@include min-w(md) {
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+
+	th {
+		border-top: none;
+	}
+
+	td {
+		font-weight: 500;
+		border-top: none;
+		white-space: nowrap;
+	}
+
+	th, td {
+		padding: 15px 18px;
+
+		@include min-w(md) {
+			padding: 17px 20px;
+		}
+
+		@include min-w(xl) {
+			padding: 17px 45px;
+		}
+	}
+
+	strong {
+		color: $primary;
+		padding-right: 5px;
+
+		@include min-w(lg) {
+			padding-right: 15px;
+		}
+	}
+
+	.college-logo {
+		width: 85px;
+		min-width: 85px;
+
+		@include min-w(xl) {
+			width: 132px;
+			min-width: 132px;
+		}
+	}
+}
+
+.table {
+	thead {
+		th {
+			vertical-align: middle;
+			border-width: 1px;
+		}
+	}
+}

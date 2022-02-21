@@ -1,0 +1,14 @@
+.title-with-blog-cards-small-list {
+	@include listreset;
+
+	&__item {
+		&:not(:last-child) {
+			border-bottom: 1px solid #F2F2F2;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+}

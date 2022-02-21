@@ -1,0 +1,89 @@
+.rating {
+	@include listreset;
+
+	position: relative;
+	color: $gray-500;
+	display: inline-flex;
+	align-items: center;
+	font-size: 16px;
+	letter-spacing: 8px;
+
+	li {
+		display: inline-flex;
+		line-height: 1;
+
+		&:last-child {
+			letter-spacing: 0;
+		}
+	}
+
+	&:after {
+		content: "\e903 \e903 \e903 \e903 \e903";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		display: inline-flex;
+		font-family: icomoon!important;
+		line-height: 1;
+		color: $primary;
+		overflow: hidden;
+	}
+
+	&[data-rating="5"] {
+		&:after {
+			width: 100%;
+		}
+	}
+
+	&[data-rating="4"] {
+		&:after {
+			width: 80%;
+		}
+	}
+
+	&[data-rating="3"] {
+		&:after {
+			width: 60%;
+		}
+	}
+
+	&[data-rating="2"] {
+		&:after {
+			width: 40%;
+		}
+	}
+
+	&[data-rating="1"] {
+		&:after {
+			width: 20%;
+		}
+	}
+
+	&[data-rating="0"] {
+		&:after {
+			width: 0%;
+		}
+	}
+}
+
+.rating-with-text {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	&__text {
+		margin-bottom: 0;
+		padding-right: 35px;
+
+		@include min-w(sm) {
+			padding-right: 0;
+		}
+	}
+
+	&__rating {
+		@include min-w(sm) {
+			padding-left: 35px;
+		}
+	}
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="418.36749"
+   height="316.47971"
+   viewBox="0 0 418.36749 316.47971"
+   fill="none"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="bottom-bg-2.svg"
+   inkscape:version="1.0.2 (1.0.2+r75+1)">
+  <metadata
+     id="metadata17">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="968"
+     id="namedview15"
+     showgrid="false"
+     inkscape:zoom="0.87343533"
+     inkscape:cx="719"
+     inkscape:cy="152.47971"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13" />
+  <g
+     clip-path="url(#clip0_621_15363)"
+     id="g6"
+     transform="translate(0,-11.52029)">
+    <rect
+       opacity="0.1"
+       width="409.685"
+       height="96.350899"
+       rx="48.1754"
+       transform="matrix(0.794035,-0.607872,0.605755,0.795651,53.9766,241.222)"
+       fill="#ffcaac"
+       id="rect2"
+       x="0"
+       y="0" />
+    <rect
+       opacity="0.1"
+       width="429.38599"
+       height="152.508"
+       rx="76.253998"
+       transform="matrix(0.794035,-0.607872,0.605755,0.795651,-109.47,245.956)"
+       fill="#b6f1ff"
+       id="rect4"
+       x="0"
+       y="0" />
+  </g>
+  <defs
+     id="defs11">
+    <clipPath
+       id="clip0_621_15363">
+      <rect
+         width="1440"
+         height="328"
+         fill="#ffffff"
+         id="rect8"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+</svg>
